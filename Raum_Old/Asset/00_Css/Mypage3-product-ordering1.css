@@ -1,0 +1,914 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width: 1px){
+	
+	#buttonsOn{
+		display:none;
+		position:fixed;
+		width:100%;
+		height:100%;
+		z-index:99;
+	}
+	.buttonsOnBG{
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:0.7;
+	}
+	
+	.findPostNumberBox{
+		display:none;
+		position:relative;
+		background:#fff;
+		width:100%;
+		height:618px;
+		margin:0 auto;
+	}
+	
+	.PopUpTitle{
+		position:relative;
+		width:100%;
+		height:45px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:16px;
+		text-align:center;
+		line-height:45px;
+		color:#fff;
+		background:#996867;
+	}
+	
+	.PopUpInfo{
+		position:relative;
+		width:100%;
+		height:540px;
+		padding-top:60px;
+	}
+	.PopUpInfoCenter{
+		position:relative;
+		width:95%;
+		height:480px;
+		margin:0 auto;
+		border-top:solid 1px #000;
+		padding-top:30px;
+	}
+	
+	.tapBox{
+		position:absolute;
+		width:100%;
+		height:40px;
+		left:0;
+		top:-40px;
+	}
+	.tap1,.tap2{
+		position:relative;
+		float:left;
+		width:50%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:40px;
+		
+	}
+	.tapOn{
+		border-top:solid 1px #000;
+		border-left:solid 1px #000;
+		border-right:solid 1px #000;
+		background:#FFF;
+	}
+	
+	.PopUpInfoBox1{
+		position:relative;
+		width:100%;
+		height:70px;
+		border:solid 1px #eee;
+	}
+	.addressSearchBox{
+		position:relative;
+		float:left;
+		width:85%;
+		height:100%;
+		padding:10px 0 0 10px;
+	}
+	.addressSearch{
+		position:relative;
+		width:300px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:30px;
+		border:solid 1px #eee;
+		padding-left:5px;
+	}
+	.addressInBoxMent{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		margin-top:5px;
+	}
+	
+	.PopUpInfoBox2{
+		display:none;
+		position:relative;
+		width:100%;
+		height:360px;
+		margin-top:20px;
+		border-top:solid 1px #eee;
+		overflow:hidden;
+	}
+	.addressNoItem{
+		position:relative;
+		width:100%;
+		height:80px;
+		border-bottom:solid 1px #eee;
+	}
+	
+	.addressCover{
+		position:relative;
+		float:left;
+		width:85%;
+		height:100%;
+	}
+	.roadNameAddress,.areaNumberAddress{
+		position:relative;
+		width:100%;
+		height:50%;
+		padding-top:10px;
+	}
+	.addressNumber{
+		position:relative;
+		float:left;
+		width:15%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		text-align:center;
+		line-height:80px;
+	}
+	
+	
+	.tagCover{
+		position:relative;
+		float:left;
+		width:10%;
+		height:100%;
+	}
+	.roadNameTag,.areaNumberTag{
+		position:relative;
+		width:100%;
+		height:12px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		text-align:center;
+		line-height:12px;
+		color:#fff;
+	}
+	.roadNameTag{
+		background:#996867;
+	}
+	.areaNumberTag{
+		background:#9e9e9e;
+	}
+	.address{
+		position:relative;
+		float:left;
+		width:90%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		line-height:12px;
+		padding-left:10px;
+	}
+	
+	.PopUpInfoBox3{
+		position:relative;
+		width:100%;
+		height:15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:30px;
+		margin-top:165px;
+	}
+	
+	.PopUpCloseBox{
+		position:relative;
+		width:100%;
+		height:35px;
+		background:#eeeeee;
+		padding-top:5px;
+	}
+	.PopUpCloseB{
+		position:absolute;
+		width:25px;
+		height:25px;
+		bottom:5px;
+		right:5px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:16px;
+		font-weight:bold;
+		text-align:center;
+		color:#000 !important;
+		background:none !important;
+		border:solid 1px #000 !important;
+		padding:0 !important;
+	}
+	.PopUp_logo{
+		position:relative;
+		width:65px;
+		height:25px;
+		background:url(../01_img/03_Object-detail/popUpLogo.png) center center no-repeat;
+		background-size:contain;
+		margin:0 auto;
+	}
+	
+	.paymentLodingBox{
+		display:none;
+		position:relative;
+		width:90%;
+		height:95px;
+		background:#fff;
+		margin:0 auto;
+		padding-top:20px;
+		border-radius:5px;
+	}
+	
+	.lodingImage{
+		position:absolute;
+		width:50px;
+		height:50px;
+		background:url(../01_img/11_mypage3-product-ordering2/loding_icon.png) center center no-repeat;
+		background-size:contain;
+		left:15px;
+		top:20px;
+	}
+	.Active-on{
+	transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	}
+	
+	.lodingMent{
+		position:relative;
+		width:58%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		text-align:center;
+		line-height:160%;
+		margin:0 auto;
+	}
+	
+	#section1{
+		height:2455px;
+	}
+	.section_Center{
+		position:relative;
+		width:95%;
+		max-width:1020px;
+		height:100%;
+		margin:0 auto;
+		padding-top:120px;
+	}
+	.selectBox{
+		position:absolute;
+		right:0;
+		top:40px;
+		width:260px;
+		height:40px;
+	}
+	#mypageSelect{
+		display:block;
+		float:left;
+		position:relative;
+		width:170px;
+		height:100%;
+		text-indent: 15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		background:url(../01_img/03_Object-calender/selectArrow.jpg) no-repeat 95% 50%;
+		border:solid 1px #000;
+		border-radius:none;
+	}
+	option{
+		height: 30px;
+		padding-top:7px;
+	}
+	option:nth-child(1){
+		border-bottom:dashed 1px #000;
+	}
+	.moveButton{
+		position:relative;
+		float:left;
+		width:60px;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		color:#000 !important;
+		background:#FFF !important;
+		border:solid 1px #eee;
+		margin-left:30px;
+	}
+	
+	.boxTitle{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:15px;
+		margin-bottom:10px;
+	}
+	.boxline{
+		position:relative;
+		width:100%;
+		height:60px;
+		border-bottom:solid 1px #eee;
+	}
+	
+	.infoName{
+		position:relative;
+		width:15%;
+		height:100%;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		text-align:center;
+		line-height:60px;
+		background:#f5f5f5;
+		border-right:solid 1px #eee;
+	}
+	.PopUpInfoBox1 .infoName{
+		line-height:70px;
+	}
+	
+	.customerName,.customerEmail,.customerAddress,.customerPhone,.infoCover{
+		position:relative;
+		float:left;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:60px;
+		color:#4c5462;
+		padding-left:10px;
+		border-right:solid 1px #eee;
+	}
+	.customerName,.customerEmail{
+		width:35%;
+	}
+	.customerAddress,.customerPhone,.infoCover{
+		width:85%;
+	}
+	.customerEmail,.recieverName,.customerAddress,.customerPhone,.infoCover{
+		border-right:none;
+	}
+	.customerAddress{
+		padding-top:12px;
+		line-height:200%;
+	}
+	
+	.section1_box1{
+		position:relative;
+		width:100%;
+		height:300px;
+		border-top: solid 1px #996867;
+		margin-bottom:30px;
+	}
+	.orderItem{
+		position:relative;
+		width:100%;
+		height:120px;
+		border-bottom:solid 1px #eee;
+	}
+	.section1_box1 .boxline .infoName{
+		width:15%;
+	}
+	.section1_box1 .boxline .infoName:nth-child(2){
+		width:40%;
+	}
+	
+	.itemNumber,.itemPrice,.itemCount,.itemOrderPrice{
+		position:relative;
+		float:left;
+		width:15%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:120px;
+		text-align:center;
+		color:#4c5462;
+	}
+	.itemInfoBox{
+		position:relative;
+		float:left;
+		width:40%;
+		height:100%;
+		padding-top:20px;
+	}
+	.itemImage{
+		position:relative;
+		float:left;
+		width:55px;
+		height:80px;
+		background:url(../01_img/03_Object-detail/box1_objectImage.jpg) center center no-repeat;
+		background-size: cover;
+		border:solid 1px #eee;
+		margin-left:10px;
+		margin-right:10px;
+		
+	}
+	.itemInfoText{
+		position:relative;
+		float:left;
+		width:50px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:150%;
+		padding-top:5px;
+	}
+	
+	.section1_box2{
+		position:relative;
+		width:100%;
+		height:200px;
+		border:solid 5px #cbcbcb;
+		margin-bottom:85px;
+	}
+	.section1_box2_1{
+		position:relative;
+		width:95%;
+		height:50%;
+		margin:0 auto;
+		padding-top:20px;
+		border-bottom:dashed 1px #cbcbcb;
+	}
+	
+	.box4_title{
+		position:relative;
+		width: 110px;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:20px;
+	}
+	
+	.boxlineCover{
+		position:relative;
+		width: 220px;
+		height:50px;
+		float:right;
+	}
+	.section1_box2 .boxline{
+		position:relative;
+		width: 100%;
+		height:25px;
+	}
+	.priceName,.totalPrice,.deliveryPrice{
+		position:relativel;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:25px;
+	}
+	.priceName{
+		float:left;
+	}
+	.totalPrice,.deliveryPrice{
+		float:right;
+	}
+	
+	.section1_box2_2{
+		position:relative;
+		width:95%;
+		height:50%;
+		margin:0 auto;
+	}
+	.saveMileage,.section1_box2_2Text{
+		position:relative;
+		float:right;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:100px;
+		margin-right:5px;
+	}
+	.section1_box2_2 .totalPrice{
+		position:relative;
+		float:right;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:23px;
+		line-height:100px;
+		color:#996867;
+		margin-left:5px;
+	}
+	
+	.box4_radioBox{
+		position:absolute;
+		width:230px;
+		height:20px;
+		top:0px;
+		left:150px;
+	}
+	#same,#new{
+		position:relative;
+		float:left;
+		height:100%;
+		margin-top: 0;
+	}
+	.same,.new{
+		position:relative;
+		float:left;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:20px;
+		color:#4c5462;
+		margin-right: 10px;
+	}
+	
+	
+	.section1_box3,.section1_box4,.section1_box5,.section1_box6{
+		position:relative;
+		width:100%;
+		height:120px;
+		border-top: solid 1px #996867;
+		border-right:solid 1px #eee;
+		border-left:solid 1px #eee;
+		margin-bottom:85px;
+	}
+	.section1_box3{
+		height:210px;
+	}
+	.section1_box4{
+		height:270px;
+		margin-bottom:90px;
+	}
+	
+	.section1_box3 .boxline:nth-child(2),.section1_box4 .boxline:nth-child(2){
+		height:90px;
+	}
+	.section1_box3 .boxline:nth-child(2) .infoName,.section1_box4 .boxline:nth-child(2) .infoName{
+		line-height:90px
+	}
+	
+	.infoCover{
+		padding-top:15px;
+	}
+	.section1_box4 .boxline:nth-child(2) .infoCover{
+		padding-top:10px;
+	}
+	
+	.recieverName,.recieverAddressNumber,.recieverAddress1,.recieverAddress2,.recieverPhone1,.recieverPhone2,.recieverPhone3,.deliveryMessage{
+		position:relative;
+		float:left;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:60px;
+		color:#4c5462;
+		padding-left:5px;
+		background:#FFF;
+		border: solid 1px #eeeeee;
+	}
+	.recieverName{
+		width:120px;
+	}
+	.recieverAddressNumber{
+		width:100px;
+	}
+	
+	.adressNumber{
+		position:relative;
+		width:100%;
+		height:50%;
+	}
+	.section1_postNumberB{
+		float:left;
+		width:80px;
+		height:30px;
+		margin-left:15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		text-align:center;
+		line-height:30px;
+	}
+	
+	.recieverAddress1{
+		width:200px;
+	}
+	.recieverAddress2{
+		width:85px;
+		margin-left:15px;
+	}
+	.recieverPhone1,.recieverPhone2,.recieverPhone3{
+		width:55px;
+	}
+	.dat{
+		float:left;
+		width:20px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		text-align:center;
+		line-height:30px;
+	}
+	
+	.deliveryMessage{
+		width:300px;
+	}
+	
+	.section1_box5{
+		height:320px;
+	}
+	.section1_box5 .boxline .infoName{
+		width:33.33%;
+	}
+	.section1_box5 .boxline .infoName:nth-child(3){
+		border-right:none;
+	}
+	
+	.section1_box5 .boxline:nth-child(2){
+		height:90px;
+	}
+	.section1_box5 .boxline:nth-child(3){
+		height:170px;
+		padding-top:20px;
+	}
+	
+	.section1_box5 .totalPrice,.useMileage,.paymentPrice{
+		position:relative;
+		float:left;
+		height:100%;
+		width:33.33%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:18px;
+		text-align:center;
+		line-height:90px;
+		color:#4c5462;
+		border-right:solid 1px #eee;
+	}
+	.paymentPrice{
+		color:#996867;
+	}
+	
+	.section1_box5-1{
+		position:relative;
+		float:left;
+		width:25%;
+		height:140px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		text-align:center;
+		color:#4c5462;
+		padding-top:5px;
+	}
+	.section1_box5-2{
+		position:relative;
+		float:left;
+		width:75%;
+		height:140px;
+	}
+	
+	.box5-2_mileageBox{
+		position:relative;
+		width:100%;
+		height:30px;
+		margin-bottom:10px;
+	}
+	.mileageInput{
+		position:relative;
+		float:left;
+		height:100%;
+		width:100px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:60px;
+		color:#4c5462;
+		padding-left:5px;
+		background:#FFF;
+		border: solid 1px #eeeeee;
+	}
+	.mileageBoxText,.mileage{
+		float:left;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:30px;
+		color:#4c5462;
+	}
+	.mileage{
+		margin-left:5px;
+	}
+	
+	.box5-2Ment{
+		position:relative;
+		width:100%;
+		height:15px;
+		margin-bottom:5px;
+	}
+	.clamp,.box5-2MentText{
+		float:left;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:150%;
+		color:#4c5462;
+	}
+	.clamp{
+		width:5%;
+		text-align:center;
+	}
+	.box5-2MentText{
+		width:95%;
+	}
+	
+	.section1_box6{
+		height:60px;
+		margin-bottom:0;
+	}
+	.paymentWayBox{
+		position:relative;
+		height:100%;
+		width:300px;
+		margin-left:30px;
+	}
+	#way0,#way1,#way2,#way3,#way4{
+		position:relative;
+		float:left;
+		height:50%;
+		margin-top:0;
+	}
+	.paymentWay{
+		position:relative;
+		float:left;
+		height:50%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:30px;
+		margin-right:20px;
+	}
+	
+	.paymentWayMent{
+		position:relative;
+		width:100%;
+		height:150px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		padding:20px 0 0 0;
+	}
+	
+	.section1Buttons{
+		position:relative;
+		width:330px;
+		height:45px;
+		margin:0 auto;
+	}
+	.beforeB,.paymentB{
+		display:block;
+		position:relative;
+		float:left;
+		width:150px;
+		height:100%;
+		
+	}
+	.beforeB{
+		color:#000 !important;
+		background:#fff !important;
+		border:solid 1px #cbcbcb !important;
+		margin-right:30px;
+	}
+}
+@media all and (min-width: 727px){
+	.findPostNumberBox{
+		width:650px;
+	}
+	
+	.addressNoItem{
+		height:60px;
+	}
+	.addressNumber{
+		line-height:60px;
+	}
+	.tagCover{
+		width:30px;
+	}
+	
+	.paymentLodingBox{
+		width:700px;
+	}
+	.lodingImage{
+		left:30px;
+	}
+	.lodingMent{
+		width:100%;
+		height:50px;
+		font-size:13px;
+		line-height:200%;
+	}
+	
+	.infoName{
+		font-size:13px;
+	}
+	.customerName,.customerEmail,.customerAddress,.customerPhone,.recieverName,.recieverPhone,.recieverAddress,.deliveryMessage{
+		font-size:13px;
+	}
+	
+	.section1_box1 .boxline:nth-child(1) .infoName{
+		width:10%;
+	}
+	.section1_box1 .boxline:nth-child(1) .infoName:nth-child(2){
+		width:60%;
+	}
+	
+	.itemNumber,.itemPrice,.itemCount,.itemOrderPrice{
+		width:10%;
+		font-size:13px;
+	}
+	.itemInfoBox{
+		width:60%;
+		padding-top:10px;
+	}
+	
+	.itemImage{
+		width:75px;
+		height:100px;
+		padding-top:10px;
+		margin-right:20px;
+	}
+	.itemInfoText{
+		font-size:13px;
+		width:200px;
+		padding-top:30px;
+	}
+	
+	.boxlineCover{
+		width: 300px;
+	}
+	.priceName,.totalPrice,.deliveryPrice{
+		font-size:13px;
+	}
+	
+	.saveMileage,.section1_box2_2Text{
+		font-size:13px;
+	}
+	
+	.recieverName,.recieverAddressNumber,.recieverAddress1,.recieverAddress2,.recieverPhone1,.recieverPhone2,.recieverPhone3,.deliveryMessage{
+		font-size:13px;
+	}
+	.section1_postNumberB{
+		width:100px;
+		font-size:13px;
+	}
+	
+	.recieverAddress1{
+		width:250px;
+	}
+	.recieverAddress2{
+		width:150px;
+	}
+	.deliveryMessage{
+		width:550px;
+	}
+	
+	.section1_box5 .totalPrice,.useMileage,.paymentPrice{
+		font-size:20px;
+	}
+	
+	.mileageInput{
+		width:150px;
+	}
+	.mileageBoxText,.mileage{
+		font-size:13px;
+	}
+	
+	.box5-2Ment{
+		height:20px;
+	}
+	.clamp,.box5-2MentText{
+		font-size:13px;
+		line-height:20px;
+	}
+	.clamp{
+		width:15px;
+	}
+	
+	.paymentWayBox{
+		width:610px;
+	}
+	#way0,#way1,#way2,#way3,#way4{
+		height:100%;
+	}
+	.paymentWay{
+		height:100%;
+		font-size:13px;
+		line-height:60px;
+	}
+	
+	.paymentWayMent{
+		padding:20px 0 0 30px;
+	}
+}
+@media all and (min-width: 1024px){
+	.deliveryMessage{
+		width:700px;
+	}
+}

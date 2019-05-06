@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width: 1px){
+	.keyContainer_text1{
+		font-family: "Montserrat", sans-serif;
+		font-weight:bold;
+		font-size:35px;
+	}
+	#section1{
+		height:2885px;
+		background:#fff;
+	}
+	.section1-watchword{
+		position:relative;
+		width:100%;
+		font-family:'Montserrat', sans-serif;
+		font-size:25px;
+		text-align:center;
+		color:#333;
+		padding-top:120px;
+	}
+	.section1_textbox1{
+		position:relative;
+		width: 80%;
+    height: 150px;
+    max-width: 680px;
+		margin:0 auto;
+		margin-top: 30px;
+		margin-bottom: 50px;
+	}
+	.section1_textbox1-1,.section1_textbox1-2,.section1_textbox1-3{
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:28px;
+		line-height:30px;
+		color:#fff;
+	}
+	.section1_Innertextbox{
+		position: absolute;
+		text-align: center;
+		width: 40%;
+		height: 100%;
+		top: 100px;
+		opacity: 0;
+	}
+	.section1_Innertextbox:nth-child(2){	left: 30%;	}
+	.section1_Innertextbox:nth-child(3){	left: 60%;	}
+	.section1_octagon{
+		width: 100%;
+		height: 100%;
+		background:url(../01_img/03_About-raum/box.png) center center no-repeat;
+		background-size:contain;
+		line-height: 100%;
+		font-size:25px;
+	}
+	.section1_textbox1-3 .section1_octagon{
+	}
+	.section1_textbox2{
+		position:relative;
+		width:100%;
+		max-width:990px;
+		height:250px;
+		margin:0 auto;
+		padding-top:31px;
+	}
+	.numberBox{
+		position:relative;
+		float:none;
+		margin:0 auto;
+		width:315px;
+		height:85px;
+		border-bottom:2px solid #996867;
+		border-right:none;
+	}
+	.numberBox-text{
+		position:relative;
+		font-family: 'Montserrat', sans-serif;
+		font-size:45px;
+		padding-top:20px;
+		margin-left:none;
+		text-align:center;
+	}
+	.numberBox-number{
+		position:absolute;
+		width:315px;
+		font-family: 'Montserrat', sans-serif;
+		font-size:60px;
+		text-align:center;
+		top:-15px;
+		color:#ebebeb;
+	}
+	.section1_textbox3{
+		position:relative;
+		float:none;
+		width:80%;
+		height:65px;
+		font-family: 'Nanum Gothic', sans-serif;
+		line-height:140%;
+		font-size:14px;
+		text-align:center;
+		padding-left:0;
+		margin:0 auto;
+		margin-top:10px;
+	}
+	.customButton,.serviceButton{
+		position:relative;
+		width:75px;
+		height:23px;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:14px;
+		line-height:23px;
+		color:#996867;
+		margin:0 auto;
+		
+	}
+	.serviceButton{
+		width:105px;
+		
+	}
+	
+	.section1-image1,.section1-image2,.section1-image3,.section1-image4,.section1-image5{
+		position:relative;
+		width:90%;
+		height:200px;
+		max-width:1020px;
+		margin:0 auto;
+	}
+	.section1-image1{
+		background:url(../01_img/03_About-raum/section1-image1.jpg) center center no-repeat;
+	}
+	.section1-image2{
+		background:url(../01_img/03_About-raum/section1-image2.jpg) center center no-repeat;
+	}
+	.section1-image3{
+		background:url(../01_img/03_About-raum/section1-image3.jpg) center center no-repeat;
+	}
+	.section1-image4{
+		background:url(../01_img/03_About-raum/section1-image4.jpg) center center no-repeat;
+	}
+	.section1-image5{
+		background:url(../01_img/03_About-raum/section1-image5.jpg) center center no-repeat;
+	}
+}
+@media all and (min-width: 767px){
+	#section1{
+		height:2735px;
+	}
+	.section1_textbox1{
+		height: 200px;
+	}
+	.section1_textbox1-3 .section1_octagon{
+	}
+	.section1_textbox2{
+		height:220px;
+	}
+	.section1_textbox3{
+		font-size:16px;
+	}
+	.customButton,.serviceButton{
+		font-size:16px;
+		
+	}
+}
+@media all and (min-width: 1020px){
+	#section1{
+		height:2560px;
+		background:#fff;
+	}
+	.section1_textbox2{
+		height:185px;
+		padding-top:62px;
+	}
+	.numberBox{
+		float:left;
+		height:65px;
+		border-right:2px solid #996867;
+		border-bottom:none;
+	}
+	.numberBox-text{
+		margin-left:50px;
+		text-align:left;
+	}
+	.numberBox-number{
+		width:80px;
+		left:50px;
+	}
+	.section1_textbox3{
+		float:left;
+		width:655px;
+		text-align:left;
+		padding-left:20px;
+		margin:0;
+	}
+	.customButton,.serviceButton{
+		margin:0;
+	}
+}

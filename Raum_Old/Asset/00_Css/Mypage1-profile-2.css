@@ -1,0 +1,564 @@
+@charset "utf-8";
+/* CSS Document */
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+@media all and (min-width: 1px){
+	
+	#buttonsOn{
+		display:none;
+		position:fixed;
+		width:100%;
+		height:100%;
+		z-index:99;
+	}
+	.buttonsOnBG{
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:0.7;
+	}
+	
+	.findPostNumberBox{
+		display:none;
+		position:relative;
+		background:#fff;
+		width:100%;
+		height:618px;
+		margin:0 auto;
+	}
+	
+	.PopUpTitle{
+		position:relative;
+		width:100%;
+		height:45px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:16px;
+		text-align:center;
+		line-height:45px;
+		color:#fff;
+		background:#996867;
+	}
+	
+	.PopUpInfo{
+		position:relative;
+		width:100%;
+		height:540px;
+		padding-top:60px;
+	}
+	.PopUpInfoCenter{
+		position:relative;
+		width:95%;
+		height:480px;
+		margin:0 auto;
+		border-top:solid 1px #000;
+		padding-top:30px;
+	}
+	
+	.tapBox{
+		position:absolute;
+		width:100%;
+		height:40px;
+		left:0;
+		top:-40px;
+	}
+	.tap1,.tap2{
+		position:relative;
+		float:left;
+		width:50%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:40px;
+		
+	}
+	.tapOn{
+		border-top:solid 1px #000;
+		border-left:solid 1px #000;
+		border-right:solid 1px #000;
+		background:#FFF;
+	}
+	
+	.PopUpInfoBox1{
+		position:relative;
+		width:100%;
+		height:70px;
+		border:solid 1px #eee;
+	}
+	.addressSearchBox{
+		position:relative;
+		float:left;
+		width:85%;
+		height:100%;
+		padding:10px 0 0 10px;
+	}
+	.addressSearch{
+		position:relative;
+		width:300px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:30px;
+		border:solid 1px #eee;
+		padding-left:5px;
+	}
+	.addressInBoxMent{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		margin-top:5px;
+	}
+	
+	.PopUpInfoBox2{
+		display:none;
+		position:relative;
+		width:100%;
+		height:360px;
+		margin-top:20px;
+		border-top:solid 1px #eee;
+		overflow:hidden;
+	}
+	.addressNoItem{
+		position:relative;
+		width:100%;
+		height:80px;
+		border-bottom:solid 1px #eee;
+	}
+	.PopUpInfoBox1 .infoName{
+		position:relative;
+		width:15%;
+		height:100%;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		text-align:center;
+		line-height:70px;
+		background:#f5f5f5;
+		border-right:solid 1px #eee;
+	}
+	
+	.addressCover{
+		position:relative;
+		float:left;
+		width:85%;
+		height:100%;
+	}
+	.roadNameAddress,.areaNumberAddress{
+		position:relative;
+		width:100%;
+		height:50%;
+		padding-top:10px;
+	}
+	.addressNumber{
+		position:relative;
+		float:left;
+		width:15%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		text-align:center;
+		line-height:80px;
+	}
+	
+	
+	.tagCover{
+		position:relative;
+		float:left;
+		width:10%;
+		height:100%;
+	}
+	.roadNameTag,.areaNumberTag{
+		position:relative;
+		width:100%;
+		height:12px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		text-align:center;
+		line-height:12px;
+		color:#fff;
+	}
+	.roadNameTag{
+		background:#996867;
+	}
+	.areaNumberTag{
+		background:#9e9e9e;
+	}
+	.address{
+		position:relative;
+		float:left;
+		width:90%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		line-height:12px;
+		padding-left:10px;
+	}
+	
+	.PopUpInfoBox3{
+		position:relative;
+		width:100%;
+		height:15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:30px;
+		margin-top:165px;
+	}
+	
+	.PopUpCloseBox{
+		position:relative;
+		width:100%;
+		height:35px;
+		background:#eeeeee;
+		padding-top:5px;
+	}
+	.PopUpCloseB{
+		position:absolute;
+		width:25px;
+		height:25px;
+		bottom:5px;
+		right:5px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:16px;
+		font-weight:bold;
+		text-align:center;
+		color:#000 !important;
+		background:none !important;
+		border:solid 1px #000 !important;
+		padding:0 !important;
+	}
+	.PopUp_logo{
+		position:relative;
+		width:65px;
+		height:25px;
+		background:url(../01_img/03_Object-detail/popUpLogo.png) center center no-repeat;
+		background-size:contain;
+		margin:0 auto;
+	}
+	
+	
+#section1{
+		height:1380px;
+	}
+	.section_Center{
+		position:relative;
+		width:90%;
+		max-width:1020px;
+		height:100%;
+		margin:0 auto;
+		padding-top:120px;
+	}
+	.selectBox{
+		position:absolute;
+		right:0;
+		top:40px;
+		width:260px;
+		height:40px;
+	}
+	#mypageSelect{
+		display:block;
+		float:left;
+		position:relative;
+		width:170px;
+		height:100%;
+		text-indent: 15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		background:url(../01_img/03_Object-calender/selectArrow.jpg) no-repeat 95% 50%;
+		border:solid 1px #000;
+		border-radius:none;
+	}
+	option{
+		height: 30px;
+		padding-top:7px;
+	}
+	option:nth-child(1){
+		border-bottom:dashed 1px #000;
+	}
+	.moveButton{
+		position:relative;
+		float:left;
+		width:60px;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		color:#000 !important;
+		background:#FFF !important;
+		border:solid 1px #eee;
+		margin-left:30px;
+	}
+	
+	.section1_box1{
+		position:relative;
+		width:100%;
+		height:710px;
+	}
+	
+	.section1_title{
+		position:relative;
+		width:100%;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:20px;
+		border-bottom:2px solid #996867;
+	}
+	
+	.mentBox1,.mentBox2{
+		position:relative;
+		width:100%;
+		height:40px;
+	}
+	.warning_icon{
+		position:relative;
+		float:left;
+		width:15px;
+		height:15px;
+		background:url(../01_img/02_Sub/mark.png) center center no-repeat;
+		background-size:contain;
+		margin-top:15px;
+		display:none;
+	}
+	.warning_coment{
+		position:relative;
+		float:left;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:12px;
+		color:#F30;
+		margin-top:15px;
+		margin-bottom:10px;
+	}
+	
+	.section1_coment{
+		position:absolute;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:10px;
+		color:#F30;
+		top: 0px;
+		right: 10px;
+	}
+	
+	.section1_infoBox{
+		position:relative;
+		width:100%;
+		height:70px;
+		padding-top:20px;
+		border-bottom:2px solid #eeeeee;
+	}
+	
+	.section1_infoBox:nth-child(6){
+		height:170px
+	}
+	.section1_infoBox:nth-child(6) .dasi{
+		display:none;
+	}
+	.section1_infoBox:nth-child(8){
+		height:120px;
+	}
+	.InfoName{
+		position:relative;
+		float:left;
+		width:100px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		line-height:30px;
+	}
+	.IDinput,.NameInput,.PhonInput1,.PhonInput2,.PhonInput3,.AdressInput1,.AdressInput2,.AdressInput3,.EmailInput1,.EmailInput2,.PwInput,.NewPwInput,.NewPwCheckInput{
+		position:relative;
+		float:left;
+		width:120px;
+		height:30px;
+		background:#f5f5f5;
+		border: solid 2px #eeeeee;
+	}
+	.PhonInput1,.PhonInput2,.PhonInput3{
+		width:50px;
+	}
+	.dasi{
+		float:left;
+		width:20px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		text-align:center;
+		line-height:30px;
+		color:#a4a4a4;
+	}
+	
+	.adressBox{
+		position:relative;
+		float:left;
+		width:220px;
+		height:150px;
+	}
+	.adressNumber{
+		width:100%;
+		height:30px;
+		margin-bottom:20px;
+	}
+	.AdressInput1{
+		width:100px;
+		
+	}
+	.AdressInput2{
+		width:220px;
+		margin-bottom:20px;
+		margin-right:0;
+		
+	}
+	.AdressInput3{
+		width:130px;
+	}
+	.EmailInput1,.EmailInput2{
+		width:100px;
+	}
+	
+	.section1_postNumberB{
+		float:left;
+		width:80px;
+		height:30px;
+		margin-left:15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:30px;
+		color:#fff;
+		background:#996867;
+	}
+	.section1_postNumberB{
+		width:95px;
+	}
+	
+	.ReceiveInfoCheckList{
+		position:relative;
+		float:left;
+		width:230px;
+		height:65px;
+	}
+	.CheckListMent{
+		position:relative;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		color:#707070;
+		line-height:30px;
+		padding-bottom:10px;
+		
+	}
+	.CheckList{
+		position:relative;
+		width:100%;
+		height:15px;
+		margin-bottom:7px;
+	}
+	
+	label {
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		line-height:13px;
+		color:#707070;
+		
+	}
+	
+	.profileChangeB,.pwChangeB{
+		display:block;
+		position:relative;
+		width:120px;
+		height:30px;
+		margin:0 auto;
+		margin-top:40px;
+	}
+	
+	.section1_box2{
+		position:relative;
+		width:100%;
+		height:350px;
+		margin-top:90px;
+	}
+	.leaveMemershipB{
+		position:absolute;
+		width:100px;
+		height:30px;
+		right:0;
+		bottom:0;
+		color: #000 !important;
+		background: #FFF !important;
+		border: solid 1px #eee;
+	}
+}
+@media all and (min-width: 727px){
+	
+	.findPostNumberBox{
+		width:650px;
+	}
+	
+	.addressNoItem{
+		height:60px;
+	}
+	.addressNumber{
+		line-height:60px;
+	}
+	.tagCover{
+		width:30px;
+	}
+	
+	
+	.section1_box{
+		height:825px;
+	}
+	.section1_infoBox:nth-child(6){
+		height:120px
+	}
+	
+	.section1_coment{
+		right: -200px;
+	}
+	.section1_infoBox:nth-child(7) .section1_coment{
+		right: -310px;
+	}
+	
+	.InfoName{
+		width:150px;
+	}
+	
+	.IDinput,.NameInput,.PhonInput1,.PhonInput2,.PhonInput3,.AdressInput1,.AdressInput2,.AdressInput3,.EmailInput1,.EmailInput2,.PwInput,.NewPwInput,.NewPwCheckInput{
+		width:150px;
+		
+	}
+	.PhonInput1,.PhonInput2,.PhonInput3{
+		width:70px;
+	}
+	.adressBox{
+		width:72%;
+		height:100px;
+	}
+	.AdressInput1{
+		width:120px;
+		
+	}
+	.AdressInput2{
+		width:240px;
+		margin-bottom:0;
+		margin-right:20px;
+	}
+	.AdressInput3{
+		width:150px;
+	}
+	
+	.EmailInput1,.EmailInput2{
+		width:120px;
+	}
+}
+@media all and (min-width: 1024px){
+	.InfoName{
+		width:180px;
+	}
+	.AdressInput2{
+		width:240px;
+		
+	}
+}

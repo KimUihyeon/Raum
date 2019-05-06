@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width: 1px){
+	#section1{
+		height:1100px;
+		padding-top: 120px;
+	}
+	*{
+		font-family: 'Nanum Gothic', sans-serif;}
+		
+	.Level-04-Title{
+		width: 90%;
+		max-width: 800px;
+		border-bottom: 1px solid #666;
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 80px;
+		padding-bottom: 30px;
+		font-size:16px;
+	}
+	.Title-Icon{
+		left: 0;
+		height: 60px;
+		width: 60px;
+		position: absolute;
+		background:url(../01_img/12315_Center/Center-Icon1.jpg) center center no-repeat;
+		background-size: contain;
+	}
+	.title-Text{
+		padding-left: 70px;
+		padding-top: 15px;
+		font-size:13px;
+	}
+	.Level-04-SectionBox{
+		width: 90%;
+		max-width: 800px;
+		height: 350px;
+		margin: 0 auto;
+	}
+	.Level-04-SectionTitle{
+		position: relative;
+		width:100%;
+		height: 50px;
+		line-height: 50px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #666;
+		font-size:14px;
+	}
+	.AddButton{
+		text-indent: 20px;
+		color: #fff;
+		font-size: 11px;
+		position: absolute;
+		width: 80px;
+		height: 26px;
+		top: 12px;
+		right: 0px;
+		background:url(../01_img/12315_Center/Arrow.png) center center no-repeat;
+		line-height: 30px;
+	}
+	.Level-04-Item{
+		position: relative;
+		margin: 0 auto;
+		margin-top: 15px;
+		width: 100%;
+		height: 30px;
+		border-bottom: 1px solid #666;
+		padding-bottom: 35px;
+		cursor: pointer;
+	}
+	.Level-04-Item .Text-Q{
+		font-size:14px;
+		position: absolute;
+		width: 95%;
+		height: 100%;
+		line-height: 30px;
+		text-indent: 15px;
+	}
+	.Level-04-Item .Text-A{
+		position: absolute;
+		right: 15px;
+		top:7px;
+		width: 16px;
+		height: 16px;
+		background: #fff;
+	}
+	.Level-04-SectionBox .Level-04-DropItem{
+		font-size:12px;
+		position: relative;
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		margin-bottom: 0px;
+		height: auto;
+		background: #666;
+		overflow: hidden;
+		color:#fff;
+		transition: all 0.3s;
+	}
+
+	.Level-04-SectionBox .Drop-Active{
+		height: 0px;
+		padding: 0px;
+	}
+	.Level-04-SectionBox .Text-A{
+		transition:  all 0.5s;
+	}
+	.Level-04-SectionBox .Text-A-Ative{
+		transform: rotate(90deg);
+	}
+	.ohter-section,.ohter-section2{
+		width: 80%;
+		margin: 0 auto;
+		height: 90px;
+		margin-top: 75px;
+		max-width: 800px;
+		position: relative;
+	}
+	.ohter-icon{
+		height: 90px;
+		width: 90px;
+		background: #0f0;
+		float: left;
+		background:url(../01_img/12315_Center/Center-Icon2.jpg) center center no-repeat;
+		background-size: 70% 70%;
+
+	}
+	.ohter-Text{
+		font-size:13px;
+		float: left;
+		width: 100%;
+		height: auto;
+		line-height: 22px;
+		padding: 2%;
+		padding-right: 0;
+		padding-left: 0;
+		position: absolute;
+		left: 90px;
+		color: #000;
+	}
+	.ohter-section2 .ohter-icon{
+		background:url(../01_img/12315_Center/Center-Icon3.jpg) center center no-repeat;
+	}
+	.other-Button{
+		position: absolute;
+		width: 180px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		background: #996867;
+		color: #fff;
+		top: 70px;
+		right: 0px;
+	}
+}
+@media all and (min-width: 727px){
+
+	.Title-Icon{
+		left: 15px;
+		height: 60px;
+		width: 60px;
+		position: absolute;
+		background:url(../01_img/12315_Center/Center-Icon1.jpg) center center no-repeat;
+		background-size: contain;
+	}
+	.title-Text{
+		padding-left:95px;
+	}
+	.Level-04-SectionTitle{
+		font-size:16px;
+	}
+	.ohter-Text{
+		font-size:14px;
+	}
+	.other-Button{
+		top:45px;;
+	}
+}
+
+@media all and (min-width: 1020px){
+	.title-Text{
+		font-size:16px;
+	}
+	.ohter-Text{
+		font-size:16px;
+	}
+	.other-Button{
+		top:15px;
+	}
+}

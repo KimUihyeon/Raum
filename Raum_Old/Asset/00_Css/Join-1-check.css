@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width: 1px){
+	#section1{
+		height:930px;
+		padding-top:115px;
+		
+	}
+	
+	.section1_box{
+		position:relative;
+		width:80%;
+		max-width:750px;
+		height:640px;
+		margin:0 auto;
+		border-bottom:2px solid #996867;
+	}
+	.section1_Title{
+		position:relative;
+		width:100%;
+		height:35px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:21px;
+		line-height:30px;
+		border-bottom:2px solid #996867;
+	}
+	
+	.checkingComent{
+		position:relative;
+		width:100%;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:12px;
+		line-height:30px;
+		color:#F30;
+		opacity:0;
+		
+	}
+	
+	.checkingListBox{
+		position:relative;
+		width:100%;
+		height:140px;
+		margin-top:30px;
+	}
+	.checkTitle{
+		position:relative;
+		height:15px;
+	}
+	.checkTitle1{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:14px;
+	}
+	.checkTitle2{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		color:#F30;
+		padding:4px;
+	}
+	.checkInfoBox{
+		position:relative;
+		width:100%;
+		height:110px;
+		margin-top:15px;
+		border:solid 2px #eeeeee;
+		resize:none;
+	}
+	.chkBox{
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	.section1_buttons{
+		position:relative;
+		width:215px;
+		height:30px;
+		margin:0 auto;
+		margin-top:60px;
+	}
+	.section1_button{
+		float:left;
+		width:100px;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:30px;
+		color:#999;
+		border:solid 1px #999999;
+	}
+	.section1_button:nth-child(1){
+		margin-right:15px;
+	}
+	.section1_buttonActive{
+		color:#fff;
+		background:#996867;
+		border:solid 1px #996867;
+	}
+	
+}
+@media all and (min-width: 727px){
+}
+@media all and (min-width: 1020px){
+}
+

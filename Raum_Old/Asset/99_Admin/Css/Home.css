@@ -1,0 +1,306 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.sectionInner{
+	width:300px;
+	height:100%;
+	float:left;
+	margin:30px;
+}
+.sectionInner1{
+	margin-left:15px;
+	width:450px;
+}
+.InnerItem{
+	width:100%;
+	height:40px;
+	position:relative;
+	overflow:hidden;
+    color: #fff;
+    font-size: 12px;
+    line-height: 35px;
+    text-indent: 50px;
+}
+.InnerIcon{
+	background:url(../img/pic5.png) center center no-repeat;
+	position:absolute;
+	top:10px;
+	left:10px;
+	width:35px;
+	height:35px;
+	background-size:35px;
+}
+.InnerItem:nth-child(1){
+    font-size: 20px;
+    color: #fff;
+    line-height: 50px;
+    text-indent: 50px;
+	height:50px;
+	background:#996867;
+    border-bottom: 1px solid #bba7a7;
+}
+.EfectItem{
+	position:absolute;
+	width:100%;
+	height:100%;
+	transform:rotateX(0deg);
+	transform-origin:center;
+    background: #676767;
+    border-bottom: 1px solid #bba7a7;
+	transition:all 1.5s;
+}
+.Active_Item{
+	transform:rotateX(-90deg);
+}
+.ItemDate,.ItemCtg,.ItemTitle{
+	display:inline-block;
+	height:40px;
+	text-align:left;
+	text-indent:0px;
+	margin-right:5px;
+	
+}
+.ItemCtg{
+	height:30px;
+	border-radius:5px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-top:10px;
+	background:#9CC;
+	display:inline-block;
+	margin-top:3px;
+}
+.Re1{background:#347729;}
+.Re2{ background:#772929;}
+.Re3{ background:#757729;}
+.Re4{ background:#294b77;}
+
+.sectionInner1 .BestLine{
+	
+    margin-top: 60px;
+}
+.sectionInner1 .BestText{
+	width:350px;
+	top:20px;
+}
+.sectionInner1 .BestText:nth-child(3){
+	top:40px;
+}
+.sectionInner1 .BestText:nth-child(4){
+	top:60px;
+}
+.Bi{
+	background:url(../img/pic.png) no-repeat;
+    background-size: 40px;
+    background-position: 7px 7px;
+    border: 2px solid #000;
+    left: 120px;
+	top:35px;
+}
+
+
+
+
+/*레벨2*/
+.BestLine{
+	width:100%;
+	height:100px;
+	margin-bottom:60px;
+	position:relative;
+}
+.BestLine:nth-child(1){
+	height:200px;
+}
+.BestLine:nth-child(1) .BestText ,.BestLine:nth-child(1) .BestText2 {
+	width:100%;
+	text-align:center;
+}
+.BestLine:nth-child(1) .BestText{
+	top:125px
+}
+.BestLine:nth-child(1) .BestText2{
+	top:140px;
+}
+.BestIcon{
+	width:60px;
+	height:60px;
+	border-radius:50px;
+    left: 30px;
+    position: absolute;
+    top: 20px;
+}
+.BestInnerLine{
+	position:relative;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	opacity:1;
+	transition: all 1s cubic-bezier(0.66, 0.04, 0.28, 0.99);;
+	background:#FFF;
+	border:#666 1px solid;
+}
+.Active_Best{
+	top:70px;
+	opacity:0;
+}
+.Bi0{
+	background:url(../img/pic0.png) no-repeat;
+    background-size: 40px;
+    background-position: 6px 8px;
+    border: 2px solid #000;
+    left: 120px;
+	top:35px;
+}
+
+.Bi1{background:url(../img/icon1.png) no-repeat; 
+    background-size: 40px;
+    background-position: 8px 5px;
+    border: 2px solid #ecadad;
+	}
+.Bi2{background:url(../img/icon2.png) no-repeat; 
+    background-size: 40px;
+    background-position: 8px 5px;
+    border: 2px solid #ccc46a;
+	}
+.Bi3{background:url(../img/icon3.png) no-repeat; 
+    background-size: 40px;
+    background-position: 8px 8px;
+    border: 2px solid #2c99ff;
+	}
+.Bi4{background:url(../img/icon4.png) no-repeat; 
+    background-size: 40px;
+    background-position: 8px 8px;
+    border: 2px solid #00ae00;
+	}
+.Bi5{background:url(../img/pic4.png) no-repeat;
+    background-size: 40px;
+    background-position: 8px 8px;
+    border: 2px solid #999;
+	}
+
+
+.BestText{
+	width:190px;
+	position:absolute;
+	right:0;
+	top:25px;
+	font-size:14px;
+	text-align:left;
+	font-family: ‘Noto Sans KR’ ;
+	font-weight:700;
+}
+.BestText2{
+	position:absolute;
+	width:190px;
+	right:0;
+	font-family: 'Baloo', cursive;
+	top:45px;
+	font-size:20px;
+}
+.Inner3{
+	width:550px;
+	position:relative;
+}
+.Inner3Title{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	font-family:20px;
+	position:relative;
+	background:#996867;
+	text-indent:55px;
+	color:#fff;
+}
+.Inner3Logo{
+	width:40px;
+	height:40px;
+	background:url(../img/pic1.png) no-repeat;
+	background-size:40px;
+	position:absolute;
+	left:10px;
+	top:5px;
+}
+
+.MainBox{
+	width:100%;
+	height:991px;
+	position:relative;
+	background:url(../img/main.png) top left no-repeat;
+	background-size:contain;
+	border:1px solid #000;
+}
+.Key,.Bg,.Event{
+	width:100%;
+	height:300px;
+	position:absolute;
+}
+.Key{
+	height:190px;
+	top:28px;
+}
+.Bg{
+	top:624px;
+	height:115px;
+}
+.Event{
+	height:213px;
+	top:410px;
+}
+.Rel{
+	position:relative;
+	width:100%;
+	height:100%;
+	color:#fff;
+}
+.click{
+	position:relative;
+	top:150px;
+	text-align:center;
+	display:inline-block;
+	margin:0 auto;
+	border:#FFF 1px solid;
+	padding:5px 15px;
+}
+.RelFillter{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	background:rgba(0,0,0,0.7);
+	opacity:0;
+}
+.Key .Rel{
+	background:url(../../01_img/05_showRoom-mordern/--.jpg) center center no-repeat;
+	background-size:cover;
+}
+.Event .Rel { 
+	background:url(../../01_img/05_showRoom-mordern/--.jpg) center center no-repeat;
+	background-size:cover;
+}
+.Bg .Rel{
+	background:url(../../01_img/05_showRoom-mordern/--.jpg) center center no-repeat;
+	background-size:cover;
+}
+.Key .click { 
+    top: 75px;
+    left: 15px;
+    left: 195px;
+}
+.Event .click { 
+    top: 100px;
+    left: 195px;
+}
+.Bg .click{
+    top: 40px;
+    left: 195px;
+}
+.Inner3Efect{
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:80px;
+	opacity:0;
+}

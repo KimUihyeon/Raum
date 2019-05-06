@@ -1,0 +1,361 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media all and (min-width: 1px){
+	#section1{
+		height:2020px;
+	}
+	.section_Center{
+		position:relative;
+		width:95%;
+		max-width:1020px;
+		height:100%;
+		margin:0 auto;
+		padding-top:120px;
+	}
+	.selectBox{
+		position:absolute;
+		right:0;
+		top:40px;
+		width:260px;
+		height:40px;
+	}
+	#mypageSelect{
+		display:block;
+		float:left;
+		position:relative;
+		width:170px;
+		height:100%;
+		text-indent: 15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		background:url(../01_img/03_Object-calender/selectArrow.jpg) no-repeat 95% 50%;
+		border:solid 1px #000;
+		border-radius:none;
+	}
+	option{
+		height: 30px;
+		padding-top:7px;
+	}
+	option:nth-child(1){
+		border-bottom:dashed 1px #000;
+	}
+	.moveButton{
+		position:relative;
+		float:left;
+		width:60px;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		color:#000 !important;
+		background:#FFF !important;
+		border:solid 1px #eee;
+		margin-left:30px;
+	}
+	
+	.section1_box1{
+		position:relative;
+		width:90%;
+		height:90px;
+		border-bottom:solid 1px #996867;
+		margin:0 auto;
+		margin-bottom:60px;
+	}
+	.box1Ment{
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:20px;
+		text-align:center;
+		font-weight:bold;
+		margin-bottom:25px;
+	}
+	.box1Info{
+		position:relative;
+		width:90%;
+		max-width:375px;
+		height:15px;
+		margin:0 auto;
+	}
+	.box1-infoName,.orderNumber,.orderDate{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:15px;
+		color:#4c5462;
+	}
+	.box1-infoName:nth-child(4),.orderDate{
+		float:right;
+	}
+	.orderNumber,.orderDate{
+		margin-left:3px;
+	}
+	
+	.boxTitle{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:15px;
+		margin-bottom:10px;
+	}
+	.section1_box2,.section1_box5,.section1_box6{
+		position:relative;
+		width:100%;
+		height:120px;
+		border-top: solid 1px #996867;
+		border-right:solid 1px #eee;
+		border-left:solid 1px #eee;
+		margin-bottom:85px;
+	}
+	.section1_box6{
+		height:180px;
+		margin-bottom:120px;
+	}
+	
+	.boxline{
+		position:relative;
+		width:100%;
+		height:60px;
+		border-bottom:solid 1px #eee;
+	}
+	.infoName{
+		position:relative;
+		width:15%;
+		height:100%;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		text-align:center;
+		line-height:60px;
+		background:#f5f5f5;
+		border-right:solid 1px #eee;
+	}
+	.paymentWay,.paymentDate,.paymentPrice,.customerName,.customerEmail,.customerPhone,.recieverName,.recieverPhone,.recieverAddress,.deliveryMessage{
+		position:relative;
+		float:left;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:60px;
+		color:#4c5462;
+		padding-left:10px;
+		border-right:solid 1px #eee;
+	}
+	.paymentWay,.paymentDate,.customerName,.customerEmail,.recieverName,.recieverPhone{
+		width:35%;
+	}
+	.paymentPrice,.customerPhone,.recieverAddress,.deliveryMessage{
+		width:85%;
+	}
+	.paymentDate,.paymentPrice,.customerEmail,.customerPhone,.recieverPhone,.recieverAddress,.deliveryMessage{
+		border-right:none;
+	}
+	
+	.section1_box3{
+		position:relative;
+		width:100%;
+		height:300px;
+		border-top: solid 1px #996867;
+		margin-bottom:30px;
+	}
+	.orderItem{
+		position:relative;
+		width:100%;
+		height:120px;
+		border-bottom:solid 1px #eee;
+	}
+	.section1_box3 .boxline .infoName{
+		width:15%;
+	}
+	.section1_box3 .boxline .infoName:nth-child(2){
+		width:40%;
+	}
+	
+	.itemNumber,.itemPrice,.itemCount,.itemOrderPrice{
+		position:relative;
+		float:left;
+		width:15%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:120px;
+		text-align:center;
+		color:#4c5462;
+	}
+	.itemInfoBox{
+		position:relative;
+		float:left;
+		width:40%;
+		height:100%;
+		padding-top:20px;
+	}
+	.itemImage{
+		position:relative;
+		float:left;
+		width:55px;
+		height:80px;
+		background:url(../01_img/03_Object-detail/box1_objectImage.jpg) center center no-repeat;
+		background-size: cover;
+		border:solid 1px #eee;
+		margin-left:10px;
+		margin-right:10px;
+		
+	}
+	.itemInfoText{
+		position:relative;
+		float:left;
+		width:50px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:150%;
+		padding-top:5px;
+	}
+	
+	.section1_box4{
+		position:relative;
+		width:100%;
+		height:200px;
+		border:solid 5px #cbcbcb;
+		margin-bottom:85px;
+	}
+	.section1_box4_1{
+		position:relative;
+		width:95%;
+		height:50%;
+		margin:0 auto;
+		padding-top:20px;
+		border-bottom:dashed 1px #cbcbcb;
+	}
+	
+	.box4_title{
+		position:relative;
+		width: 110px;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:20px;
+	}
+	
+	.boxlineCover{
+		position:relative;
+		width: 220px;
+		height:50px;
+		float:right;
+	}
+	.section1_box4 .boxline{
+		position:relative;
+		width: 100%;
+		height:25px;
+	}
+	.priceName,.totalPrice,.deliveryPrice{
+		position:relativel;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:25px;
+	}
+	.priceName{
+		float:left;
+	}
+	.totalPrice,.deliveryPrice{
+		float:right;
+	}
+	
+	.section1_box4_2{
+		position:relative;
+		float:right;
+		width:310px;
+		height:50%;
+	}
+	.mileage,.section1_box4_2Text{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		line-height:100px;
+		margin-right:5px;
+	}
+	.section1_box4_2 .totalPrice{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:23px;
+		line-height:100px;
+		color:#996867;
+		margin-left:5px;
+	}
+	
+	.section1Buttons{
+		position:relative;
+		width:330px;
+		height:45px;
+		margin:0 auto;
+	}
+	.orderSearchB,.shoppingB{
+		display:block;
+		position:relative;
+		float:left;
+		width:150px;
+		height:100%;
+		
+	}
+	.orderSearchB{
+		color:#000 !important;
+		background:#fff !important;
+		border:solid 1px #cbcbcb !important;
+		margin-right:30px;
+	}
+}
+@media all and (min-width: 727px){
+	.box1-infoName,.orderNumber,.orderDate{
+		font-size:13px;
+	}
+	.infoName{
+		font-size:13px;
+	}
+	.paymentWay,.paymentDate,.paymentPrice,.customerName,.customerEmail,.customerPhone,.recieverName,.recieverPhone,.recieverAddress,.deliveryMessage{
+		font-size:13px;
+	}
+	
+	.section1_box3 .boxline:nth-child(1) .infoName{
+		width:10%;
+	}
+	.section1_box3 .boxline:nth-child(1) .infoName:nth-child(2){
+		width:60%;
+	}
+	
+	.itemNumber,.itemPrice,.itemCount,.itemOrderPrice{
+		width:10%;
+		font-size:13px;
+	}
+	.itemInfoBox{
+		width:60%;
+		padding-top:10px;
+	}
+	
+	.itemImage{
+		width:75px;
+		height:100px;
+		padding-top:10px;
+		margin-right:20px;
+	}
+	.itemInfoText{
+		font-size:13px;
+		width:200px;
+		padding-top:30px;
+	}
+	
+	.boxlineCover{
+		width: 300px;
+	}
+	.priceName,.totalPrice,.deliveryPrice{
+		font-size:13px;
+	}
+	
+	.section1_box4_2{
+		width:350px;
+	}
+	.mileage,.section1_box4_2Text{
+		font-size:13px;
+	}
+}
+@media all and (min-width: 1024px){
+}

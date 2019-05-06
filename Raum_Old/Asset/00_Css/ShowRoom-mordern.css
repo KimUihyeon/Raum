@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width: 1px){
+	#section1{
+		height:1680px;
+		padding-top:120px;
+	}
+	.section1_box0{
+		position:relative;
+		width:80%;
+		height:90px;
+		border-bottom:solid 1px #996867;
+		margin:0 auto;
+	}
+	.box1_ment1{
+		position:relative;
+		width:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:25px;
+		text-align:center;
+		line-height:25px;
+		color:#666;
+	}
+	.box1_ment2{
+		position:relative;
+		width:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:15px;
+		text-align:center;
+		line-height:18px;
+		margin-top:17px;
+	}
+	
+	.section1_box1{
+		position:relative;
+		width:80%;
+		max-width:1020px;
+		height:1200px;
+		margin:0 auto;
+		margin-top:90px;
+	}
+	.showRoomList{
+		position:relative;
+		width:100%;
+		height:1200px;
+	}
+	.showRoomItem{
+		position:relative;
+		width:100%;
+		height:240px;
+		margin-bottom:60px;
+		overflow:hidden;
+	}
+	.showRoomItem:nth-child(1){
+		background:url(../01_img/05_showRoom-mordern/showRoomItem_1.jpg) center center no-repeat;
+		background-size:cover;
+	}
+	.showRoomItem:nth-child(2){
+		background:url(../01_img/05_showRoom-mordern/showRoomItem_2.jpg) center center no-repeat;
+		background-size:cover;
+	}
+	.showRoomItem:nth-child(3){
+		background:url(../01_img/05_showRoom-mordern/showRoomItem_3.jpg) center center no-repeat;
+		background-size:cover;
+	}
+	.showRoomItem:nth-child(4){
+		background:url(../01_img/05_showRoom-mordern/showRoomItem_4.jpg) center center no-repeat;
+		background-size:cover;
+	}
+	.showRoomItem *{
+		transition:none;
+	}
+	
+	.ItemInfoBackground{
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:0.6;
+		top:-100%;
+	}
+	.ItemInfo{
+		position:absolute;
+		width:100%;
+		height:100%;
+		margin:0 auto;
+		opacity:0;
+		display:none;
+	}
+	.item_name{
+		position:relative;
+		width:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size: 16px;
+		text-align:center;
+		color:#fff;
+		margin-top:60px;
+	}
+	.item_ment{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size: 14px;
+		text-align:center;
+		line-height:25px;
+		color:#fff;
+		margin-top:25px;
+	}
+	.item_button_center{
+		position:relative;
+		width:130px;
+		height:30px;
+		margin:0 auto;
+	}
+	.item_button{
+		width:130px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size: 16px;
+		text-align:center;
+		line-height:30px;
+		color:#000;
+		background:#fff;
+		border-radius:7px;
+		margin-top:20px;
+		opacity:0.8;
+		box-shadow: 2px 2px 2px 0px #000000;
+	}
+	
+	.section1-Buttons{
+		position:relative;
+		width:165px;
+		height:45px;
+		margin:0 auto;
+	}
+	.section1_controller{
+		position:relative;
+		float:left;
+		width:45px;
+		height:45px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size: 12px;
+		text-align:center;
+		line-height:45px;
+		margin: 0 5px;
+		background:none !important;
+		color:#000 !important;
+		border: solid 1px #eeeeee;
+		
+	}
+}
+@media all and (min-width: 727px){
+}
+@media all and (min-width: 1020px){
+	.section1_box0{
+		width:990px;
+	}
+}
+

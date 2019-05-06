@@ -1,0 +1,1142 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media all and (min-width: 1px){
+	#reviewAllPopUp,#reviewWritePopUp{
+		display:none;
+		position:fixed;
+		width:100%;
+		height:100%;
+		z-index:99;
+    	top: 0;
+	    left: 0;
+	}
+	.intro-3D div{
+		width: 100% !important;
+		height: 100% !important;
+	}
+	.intro-3D canvas{
+		width: 100% !important;
+		height: 100% !important;
+	}
+	#reviewWritePopUp{
+		display:block;
+	}
+	.PopUpBG{
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:0.7;
+	}
+	.PopUpWindow{
+		position:relative;
+		background:#fff;
+		width:100%;
+		height:618px;
+		margin:0 auto;
+	}
+	.PopUpTitle{
+		position:relative;
+		width:100%;
+		height:45px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:16px;
+		text-align:center;
+		line-height:45px;
+		color:#fff;
+		background:#996867;
+	}
+	
+	.PopUpInfo{
+		position:relative;
+		width:100%;
+		height:540px;
+	}
+	.PopUpInfoCenter{
+		position:relative;
+		width:90%;
+		height:100%;
+		margin:0 auto;
+		padding-top:20px;
+	}
+	.popUpObjectBox{
+		position:relative;
+		width:100%;
+		height:90px;
+		background:#eeeeee;
+		padding-top:10px;
+	}
+	.popUpObjectImage{
+		position:relative;
+		float:left;
+		width:60px;
+		height:70px;
+		background:url(../01_img/03_Object-detail/box1_objectImage.jpg) center center no-repeat;
+		background-size: cover;
+		margin-left:10px;
+	}
+	.popUpObjectInfo{
+		position:relative;
+		float:left;
+		width:150px;
+		height:70px;
+		margin-left:10px;
+	}
+	.popUpObjectName{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:16px;
+		font-weight:bold;
+		color: #4c5462;
+	}
+	.popUpObjectPriceBox{
+		position:relative;
+		width:100%;
+		height:25px;
+	}
+	.popUpObjectPriceBox .salePrice,.popUpObjectPriceBox .price{
+		
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		line-height:25px;
+	}
+	
+	#reviewAllPopUp .reviewList{
+		margin-top:25px;
+		border-top: solid 1px #eeeeee;
+	}
+	#reviewAllPopUp .reviewItem{
+		height:60px;
+	}
+	#reviewAllPopUp .reviewStar{
+		margin:0 10px;
+		width:50px;
+		height:20px;
+	}
+	#reviewAllPopUp .reviewPost{
+		line-height:20px;
+		height:100%;
+		width:50%;
+		
+	}
+	#reviewAllPopUp .reviewInfoBox{
+		width:90px;
+		padding-top:5px;
+	}
+	#reviewAllPopUp .reviewDate,#reviewAllPopUp .reviewID{
+		width:100%;
+		height:25px;
+		line-height: 25px;
+	}
+	
+	.PopUpCloseBox{
+		position:relative;
+		width:100%;
+		height:35px;
+		background:#eeeeee;
+		padding-top:5px;
+	}
+	.PopUpCloseB{
+		position:absolute;
+		width:25px;
+		height:25px;
+		bottom:5px;
+		right:5px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:16px;
+		font-weight:bold;
+		text-align:center;
+		color:#000 !important;
+		background:none !important;
+		border:solid 1px #000 !important;
+		padding:0 !important;
+	}
+	.PopUp_logo{
+		position:relative;
+		width:65px;
+		height:25px;
+		background:url(../01_img/03_Object-detail/popUpLogo.png) center center no-repeat;
+		background-size:contain;
+		margin:0 auto;
+	}
+	
+	
+	.reviewForm{
+		position:relative;
+		width:100%;
+		height:260px;
+		margin-top:25px;
+		border-bottom:solid 1px #eeeeee;
+		border-top: solid 1px #eeeeee;
+	}
+	.Form_starBox{
+		position:relative;
+		width:100%;
+		height:60px;
+		border-bottom:solid 1px #eeeeee;
+	}
+	.Form_starTitle{
+		position:relative;
+		float:left;
+		width:20%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		text-align:center;
+		line-height:60px;
+		border-right: solid 1px #eeeeee;
+	}
+	.Form_stars{
+		position:relative;
+		float:left;
+		width:265px;
+		height:100%;
+	}
+	
+	#star0,#star1,#star2,#star3,#star4,#star5{
+		position:relative;
+		float:left;
+		height:50%;
+		margin-left:10px;
+		margin-top:0;
+	}
+	.star0,.star1,.star2,.star3,.star4,.star5{
+		position:relative;
+		float:left;
+		width:50px;
+		height:50%;
+		margin-right:10px;
+	}
+	.star0{
+		background:url(../01_img/03_Object-detail/box1_reviewStar.png) center center no-repeat;
+		background-size:contain;
+	}
+	.star1{
+		background:url(../01_img/03_Object-detail/box1_reviewStar1.png) center center no-repeat;
+		background-size:contain;
+	}
+	.star2{
+		background:url(../01_img/03_Object-detail/box1_reviewStar2.png) center center no-repeat;
+		background-size:contain;
+	}
+	.star3{
+		background:url(../01_img/03_Object-detail/box1_reviewStar3.png) center center no-repeat;
+		background-size:contain;
+	}
+	.star4{
+		background:url(../01_img/03_Object-detail/box1_reviewStar4.png) center center no-repeat;
+		background-size:contain;
+	}
+	.star5{
+		background:url(../01_img/03_Object-detail/box1_reviewStar5.png) center center no-repeat;
+		background-size:contain;
+	}
+	.Form_TextTitle{
+		position:relative;
+		float:left;
+		width:20%;
+		height:60px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		text-align:center;
+		line-height:60px;
+	}
+	.Form_text{
+		position:relative;
+		float:left;
+		width:80%;
+		height:150px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		line-height:150%;
+		border:solid 1px #eeeeee;
+		margin-top:25px;
+	}
+	.reviewWriteButtons{
+		position:relative;
+		width:200px;
+		height:45px;
+		margin:0 auto;
+		margin-top:30px;
+	}
+	.reviewWriteCancel,.reviewWriteButton{
+		position:relative;
+		float:left;
+		width:46%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		line-height:45px;
+	}
+	.reviewWriteCancel{
+		margin-right:8%;
+	}
+	
+	#section1{
+		height:5460px;
+	}
+	.section1_Center{
+		position:relative;
+		width:90%;
+		max-width:1020px;
+		height:100%;
+		margin:0 auto;
+		padding-top:60px;
+	}
+	.section1_box1{
+		width:100%;
+		height:700px;
+	}
+	.simpleInfo_objectImage{
+		position:relative;
+		float:left;
+		width:100%;
+		height:45%;
+		background:url(../01_img/03_Object-detail/box1_objectImage.jpg) center center no-repeat;
+		background-size:cover;
+		border:solid 1px #eeeeee;
+	}
+	.simpleInfo_textBox{
+		position:relative;
+		float:left;
+		width:100%;
+		height:55%;
+	}
+	
+	.simpleInfo_title{
+		position:relative;
+		width:100%;
+		height:50px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:25px;
+		font-weight:bold;
+		line-height:50px;
+		color:#4c5462;
+	}
+	.simpleInfo_reviewBox{
+		position:relative;
+		width:100%;
+		height:20px;
+	}
+	.simpleInfo_reviewStar{
+		position:relative;
+		float:left;
+		width:66px;
+		height:20px;
+		background:url(../01_img/03_Object-detail/box1_reviewStar.png) center center no-repeat;
+	}
+	.simpleInfo_reviewWrite{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		line-height:20px;
+		margin-left:10px;
+	}
+	.simpleInfo_priceBox{
+		position:relative;
+		width:95%;
+		height:55px;
+		border-bottom:solid 1px #eeeeee;
+	}
+	.salePrice{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:17px;
+		font-weight:bold;
+		line-height:55px;
+		color:#4c5462;
+	}
+	.price{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:17px;
+		font-weight:bold;
+		line-height:55px;
+		color:#cccccc;
+		text-decoration: line-through;
+		margin-left:10px;
+	}
+	.simpleInfo_explanation{
+		display:none;
+		position:relative;
+		width:95%;
+		height:140px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:12px;
+		line-height:150%;
+		padding-top:20px;
+		color:#4c5462;
+	}
+	.simpleInfo_MileageBox,.simpleInfo_StockBox,.simpleInfo_ObjectNumBox,.simpleInfo_ColorBox{
+		position:relative;
+		width:100%;
+		height:25px;
+	}
+	.simpleInfo_MileageBox{
+		margin-top:10px;
+	}
+	.simpleInfo_name,.simpleInfo_valu{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		line-height:25px;
+		color:#4c5462;
+	}
+	.simpleInfo_valu{
+		margin-left:5px;
+	}
+	
+	.simpleInfo_buyBox{
+		position:relative;
+		width:95%;
+		height:55px;
+		border-bottom:solid 1px #eeeeee;
+	}
+	.simpleInfo_buyBox .simpleInfo_name{
+		height:35px;
+		line-height:35px;
+	}
+	#spinner{
+		position:relative;
+		float:left;
+		width:55px;
+		height:30px;
+		border:solid 1px #eeeeee;
+		font-family: "Montserrat", sans-serif;
+		font-size:14px;
+		color:#4c5462;
+		margin-top:5px;
+		margin-left:25px;
+		text-indent: 15px;
+	}
+	.simpleInfo_buttons{
+		position:relative;
+		float:left;
+		width:175px;
+		height:30px;
+		margin-top:5px;
+	}
+	.cartButtonCover{
+		position:relative;
+		float:left;
+		width:110px;
+		height:30px;
+		margin-right:15px;
+		margin-left:20px;
+	}
+	.simpleInfo_cartButton{
+		position:relative;
+		float:left;
+		width:110px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+	}
+	.cart_popUpBox{
+		display:none;
+		position:absolute;
+		width:270px;
+		height:135px;
+		background:url(../01_img/03_Object-detail/cart_popUp.png) center center no-repeat;
+		background-size:contain;
+		top:-145px;
+		left:-60px;
+		padding-top:30px;
+	}
+	.cart_popUpMent{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:150%;
+	}
+	.cart_popUpCloseB{
+		position:absolute;
+		width:30px;
+		height:30px;
+		top:-25px;
+		right:12px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:30px;
+	}
+	.cart_popUpButtons{
+		position:relative;
+		width:210px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		margin:0 auto;
+		margin-top:10px;
+	}
+	.cart_popUpButton{
+		position:relative;
+		float:left;
+		width:47%;
+		height:100%;
+	}
+	.cart_popUpButton:nth-child(1){
+		background:#fff;
+		color:#000;
+		border:solid 1px #999999;
+		margin-right:6%;
+	}
+	
+	.simpleInfo_loveButton,.simpleInfo_linkButton{
+		position:relative;
+		float:left;
+		width:30px;
+		height:30px;
+		background:#fff !important;
+		border:solid 1px #cccccc;
+	}
+	.simpleInfo_loveButton{
+		background:url(../01_img/03_Object-detail/box1_loveButton.jpg) center center no-repeat !important;
+		background-size:contain;
+	}
+	.simpleInfo_linkButton{
+		display:none;
+		background:url(../01_img/03_Object-detail/box1_linkButton.jpg) center center no-repeat !important;
+		background-size:contain;
+	}
+	
+	
+	.simpleInfo_deliveryType{
+		position:relative;
+		width:100%;
+		height:55px;
+	}
+	.deliveryTypeIcon{
+		position:relative;
+		float:left;
+		width:15px;
+		height:100%;
+		background:url(../01_img/03_Object-detail/box1_busIcon.jpg) center center no-repeat;
+		
+	}
+	.deliveryType{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		line-height:55px;
+		margin-left:10px;
+		color:#4c5462;
+	}
+	
+	.simpleInfo_snsButtons{
+		position:relative;
+		width:100%;
+		height:35px;
+	}
+	.simpleInfo_snsButton{
+		position:relative;
+		float:left;
+		width:25px;
+		height:25px;
+		margin:0 10px;
+	}
+	.simpleInfo_snsButton:nth-child(2){
+		background:url(../01_img/03_Object-detail/box1_twiIcon.png) center center no-repeat;
+		background-size:contain;
+		margin-left:20px;
+	}
+	.simpleInfo_snsButton:nth-child(3){
+		background:url(../01_img/03_Object-detail/box1_fbIcon.png) center center no-repeat;
+		background-size:contain;
+	}
+	.simpleInfo_snsButton:nth-child(4){
+		background:url(../01_img/03_Object-detail/box1_pinIcon.png) center center no-repeat;
+		background-size:contain;
+	}
+	
+	.section1_box2{
+		position:relative;
+		width:100%;
+		height:1800px;
+		border-top:solid 1px #000;
+		margin-top:145px;
+		padding-top:60px;
+	}
+	.boxsName{
+		position:absolute;
+		width:300px;
+		height:35px;
+		top:-35px
+	}
+	.sectionName_info,.sectionName_review,.sectionName_delivery{
+		position:relative;
+		float:left;
+		width:33.3%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:14px;
+		text-align:center;
+		line-height:35px;
+	}
+	.section1_box2 .sectionName_info{
+		background:#fff;
+		color:#996867;
+		border-top:solid 1px #000;
+		border-right:solid 1px #000;
+		border-left:solid 1px #000;
+	}
+	
+	.box2_objectImage{
+		position:relative;
+		width:100%;
+		height:500px;
+		background:#999;
+		margin-bottom:60px;
+	}
+	
+	.objectInfoBox{
+		position:relative;
+		width:100%;
+		height:500px;
+	}
+	.objectInfoTitle-box{
+		position:absolute;
+		width:30px;
+		height:30px;
+		background:#996867;
+		top:0;
+		left:0;
+	}
+	.objectInfoTitle{
+		position:relative;
+		width:100%;
+		height:60px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:19px;
+		line-height:35px;
+		padding-left:10px;
+	}
+	.objectInfoTitle-1{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:14px;
+		font-weight:bold;
+		color: #4c5462;
+	}
+	.objectInfo1{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		line-height:180%;
+		color: #4c5462;
+		margin-top:30px;
+	}
+	
+	.section1_box3{
+		position:relative;
+		width:100%;
+		height:410px;
+		border-top:solid 1px #000;
+		margin-top:290px;
+		padding-top:60px
+	}
+	.section1_box3 .sectionName_review{
+		background:#fff;
+		color:#996867;
+		border-top:solid 1px #000;
+		border-right:solid 1px #000;
+		border-left:solid 1px #000;
+	}
+	
+	.reviewButtons{
+		position:absolute;
+		width:180px;
+		height:25px;
+		top:18px;
+		right:0;
+	}
+	.reviewAllButton,.reviewWrite{
+		position:relative;
+		float:left;
+		width:47%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		
+	}
+	.reviewAllButton{
+		color:#fff !important;
+		background:#cccccc !important;
+		margin-right:6%;
+	}
+	
+	.reviewNone{
+		display:none;
+		position:absolute;
+		width:100%;
+		height:120px;
+		background:#069;
+		padding-top:35px;
+		//후기없을때이거블럭한다음box3세로길이줄이기180px로
+	}
+	.reviewNoneMent{
+		position:relative;
+		width:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:12px;
+		text-align:center;
+		line-height:25px;
+	}
+	.reviewNoneMent:nth-child(2){
+		color: #4c5462;
+	}
+	
+	.reviewList{
+		position:relative;
+		width:100%;
+		height:300px;
+	}
+	.reviewItem{
+		position:relative;
+		width:100%;
+		height:60px;
+		border-bottom:solid 1px #eeeeee;
+	}
+	.reviewStar{
+		position:relative;
+		float:left;
+		width:60px;
+		height:100%;
+		margin:0 15px;
+		background:url(../01_img/03_Object-detail/box1_reviewStar5.png) center center no-repeat;
+		background-size:contain;
+	}
+	.reviewPost{
+		position:relative;
+		float:left;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:12px;
+		line-height:60px;
+		color: #4c5462;
+	}
+	.reviewInfoBox{
+		position:absolute;
+		width:100px;
+		height:100%;
+		top:0;
+		right:0;
+	}
+	.reviewDate,.reviewID{
+		position:relative;
+		float:left;
+		width:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:12px;
+		text-align:center;
+		line-height:30px;
+	}
+	
+	.review-controllers{
+		position:relative;
+		width:165px;
+		height:45px;
+		margin:0 auto;
+	}
+	.review_controller{
+		position:relative;
+		float:left;
+		width:45px;
+		height:45px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size: 12px;
+		text-align:center;
+		line-height:45px;
+		margin: 0 5px;
+		background:none !important;
+		color:#000 !important;
+		border: solid 1px #eeeeee;
+	}
+	
+	.section1_box4{
+		position:relative;
+		width:100%;
+		height:915px;
+		border-top:solid 1px #000;
+		margin-top:145px;
+	}
+	.section1_box4 .sectionName_delivery{
+		background:#fff;
+		color:#996867;
+		border-top:solid 1px #000;
+		border-right:solid 1px #000;
+		border-left:solid 1px #000;
+	}
+	
+	.deliveryBox{
+		position:relative;
+		width:100%;
+		border-bottom:solid 1px #eeeeee;
+		padding-top:15px;
+	}
+	.deliveryBox:nth-child(2){
+		height:395px;
+	}
+	.deliveryBox:nth-child(3){
+		height:290px;
+	}
+	.deliveryBox:nth-child(4){
+		height:230px;
+	}
+	
+	.deliveryTitle{
+		position:relative;
+		float:left;
+		width:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size: 12px;
+		text-align:center;
+	}
+	.deliveryBox:nth-child(2) .deliveryTitle{
+		line-height:65px;
+	}
+	.deliveryBox:nth-child(3) .deliveryTitle{
+		line-height:65px;
+	}
+	.deliveryBox:nth-child(4) .deliveryTitle{
+		line-height:150%;
+		padding:10px 0;
+	}
+	
+	.deliveryInfo{
+		position:relative;
+		float:left;
+		width:100%;
+		height:45px;
+		margin-top:6px;
+	}
+	.clamp{
+		float:left;
+		width:5%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size: 12px;
+		text-align:center;
+		color:#996867;
+	}
+	.deliveryInfoText{
+		float:left;
+		width:95%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size: 12px;
+	}
+	
+}
+@media all and (min-width: 727px){
+	.PopUpWindow{
+		width:650px;
+	}
+	#reviewAllPopUp .reviewPost{
+		width:300px;
+	}
+	#reviewAllPopUp .reviewInfoBox{
+		width:150px;
+	}
+	
+	#reviewWritePopUp .PopUpWindow{
+		width:700px;
+	}
+	.Form_starTitle{
+		width:100px;
+	}
+	.Form_stars{
+		width:530px;
+	}
+	
+	#star0,#star1,#star2,#star3,#star4,#star5{
+		height:100%;
+	}
+	.star0,.star1,.star2,.star3,.star4,.star5{
+		height:100%;
+	}
+	.Form_TextTitle{
+		width:100px;
+	}
+	.Form_text{
+		width:530px;
+	}
+	
+	.reviewWriteButtons{
+		width:360px;
+	}
+	
+	
+	#section1{
+		height:4960px;
+	}
+	
+	.section1_Center{
+		width:80%;
+		padding-top:120px;
+	}
+	
+	.section1_box1{
+		height:605px;
+	}
+	
+	.simpleInfo_objectImage{
+		width:45%;
+		height:100%;
+	}
+	.simpleInfo_textBox{
+		width:55%;
+		height:100%;
+		padding-left:25px;
+	}
+	
+	
+	.simpleInfo_title{
+		position:relative;
+		width:100%;
+		height:70px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:29px;
+		font-weight:bold;
+		line-height:70px;
+		color:#4c5462;
+	}
+	
+	.simpleInfo_reviewWrite{
+		font-size:14px;
+	}
+	
+	.simpleInfo_priceBox{
+		height:75px;
+	}
+	.salePrice{
+		font-size:20px;
+		line-height:75px;
+	}
+	.price{
+		font-size:20px;
+		line-height:75px;
+	}
+	
+	.simpleInfo_explanation{
+		display:block;
+	}
+	
+	.simpleInfo_MileageBox,.simpleInfo_StockBox,.simpleInfo_ObjectNumBox,.simpleInfo_ColorBox{
+		height:30px;
+	}
+	.simpleInfo_MileageBox{
+		margin-top:0;
+	}
+	.simpleInfo_name,.simpleInfo_valu{
+		font-size:14px;
+		line-height:30px;
+	}
+	
+	.simpleInfo_buyBox{
+		height:95px;
+	}
+	.simpleInfo_buyBox .simpleInfo_name{
+		height:40px;
+		line-height:40px;
+	}
+	#spinner{
+		height:40px;
+		margin-left:45px;
+		margin-top:0;
+	}
+	.simpleInfo_buttons{
+		width:100%;
+		margin-top:10px;
+	}
+	.cartButtonCover{
+		margin-left:0;
+	}
+	.simpleInfo_cartButton{
+		font-size:14px;
+	}
+	
+	
+	.simpleInfo_loveButton{
+		margin-right:15px;
+	}
+	.simpleInfo_linkButton{
+		display:block;
+	}
+	
+	.deliveryType{
+		font-size:14px;
+		line-height:55px;
+		margin-left:10px;
+	}
+	
+	.simpleInfo_snsButton{
+		width:32px;
+		height:32px;
+		margin:0 10px;
+	}
+	.simpleInfo_snsButton:nth-child(2){
+		margin-left:20px;
+	}
+	
+	.section1_box2{
+		height:2400px;
+	}
+	.boxsName{
+		width:400px;
+	}
+	.objectInfoBox{
+		height:485px;
+	}
+	.objectInfo1{
+		font-size:14px;
+	}
+	
+	.section1_box3{
+		height:350px;
+		padding-top:0;
+		margin-top:35px;
+	}
+	.reviewButtons{
+		top:-30px;
+	}
+	.reviewStar{
+		margin:0 30px;
+	}
+	
+	.reviewInfoBox{
+		width:315px;
+	}
+	.reviewDate,.reviewID{
+		width:50%;
+		line-height:60px;
+	}
+	
+	.section1_box4{
+		height:585px;
+	}
+	.deliveryBox:nth-child(2){
+		height:255px;
+	}
+	.deliveryBox:nth-child(3){
+		height:185px;
+	}
+	.deliveryBox:nth-child(4){
+		height:145px;
+	}
+	
+	.deliveryBox:nth-child(2) .deliveryTitle{
+		line-height:225px;
+	}
+	.deliveryBox:nth-child(3) .deliveryTitle{
+		line-height:155px;
+	}
+	.deliveryBox:nth-child(4) .deliveryTitle{
+		line-height:150%;
+		padding:40px 0;
+	}
+	
+	.deliveryTitle{
+		width:20%;
+		border-right:solid 1px #eeeeee;
+	}
+	.deliveryInfo{
+		width:80%;
+		height:30px;
+	}
+}
+@media all and (min-width: 1024px){
+	
+	#section1{
+		height:4760px;
+	}
+	
+	.section1_Center{
+		width:100%;
+	}
+	
+	
+	
+	.simpleInfo_explanation{
+		font-size:14px;
+	}
+	
+	.simpleInfo_buyBox{
+		height:75px;
+	}
+	
+	.simpleInfo_buttons{
+		width:320px;
+		height:45px;
+		margin-top:0;
+	}
+	.cartButtonCover{
+		width:150px;
+		height:40px;
+		margin:0 25px
+	}
+	.simpleInfo_cartButton{
+		width:150px;
+		height:40px;
+	}
+	.cartInCheckBox{
+		left:-55px;
+	}
+	.simpleInfo_loveButton,.simpleInfo_linkButton{;
+		width:40px;
+		height:40px;
+	}
+	
+	.simpleInfo_loveButton{
+		margin-right:25px;
+	}
+	
+	.simpleInfo_deliveryType{
+		height:75px;
+	}
+	.deliveryType{
+		line-height:75px;
+	}
+	
+	.section1_box4{
+		height:515px;
+	}
+	.deliveryBox:nth-child(2){
+		height:190px;
+	}
+	.deliveryBox:nth-child(3){
+		height:125px;
+	}
+	.deliveryBox:nth-child(4){
+		height:100px;
+	}
+	
+	.deliveryBox:nth-child(2) .deliveryTitle{
+		line-height:160px;
+	}
+	.deliveryBox:nth-child(3) .deliveryTitle{
+		line-height:95px;
+	}
+	.deliveryBox:nth-child(4) .deliveryTitle{
+		line-height:150%;
+		padding:17px 0;
+	}
+	
+	
+	.deliveryTitle{
+		width:130px;
+	}
+	.deliveryInfo{
+		height:15px;
+	}
+	/*높이수정*/
+	.section1_box2{
+		height:2785px;
+	}
+
+}

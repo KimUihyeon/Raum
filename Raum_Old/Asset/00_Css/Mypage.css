@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width: 1px){
+	#section1{
+		height:950px;
+	}
+	.section_Center{
+		position:relative;
+		width:95%;
+		max-width:1020px;
+		height:100%;
+		margin:0 auto;
+		padding-top:120px;
+		padding-top:120px;
+	}
+	
+	.section1Box{
+		position:relative;
+		float:left;
+		width:48%;
+		height:160px;
+		padding-top:30px;
+		margin-right:4%;
+		margin-bottom:20px;
+		border: solid 1px #ccc;
+		cursor:pointer;
+	}
+	.section1Box:nth-child(2),.section1Box:nth-child(4),.section1Box:nth-child(6),.section1Box:nth-child(8){
+		margin-right:0;
+	}
+	
+	.section1Box_icon{
+		position:relative;
+		width:25px;
+		height:25px;
+		background:url(../01_img/03_Experience/section1-icon.png) center center no-repeat;
+		background-size:contain;
+		margin:0 auto;
+	}
+	.section1Box_title{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:17px;
+		font-weight:bold;
+		text-align:center;
+		letter-spacing:1px;
+		margin-top:5px;
+	}
+	.section1Box_ment{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:12px;
+		text-align:center;
+		color:#444;
+		margin-top:15px;
+	}
+	
+	.section1ButtonBG{
+		display:none;
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		background:#996867;
+	}
+	.section1Button{
+		position:relative;
+		width:100%;
+		height:100%;
+		opacity:0;
+		cursor:pointer;
+		
+	}
+}
+@media all and (min-width: 727px){
+	#section1{
+		height:580px;
+	}
+	.section1Box{
+		width:23.3%;
+		height:160px;
+		margin-right:2%;
+	}
+	.section1Box:nth-child(2),.section1Box:nth-child(6){
+		margin-right:2%;
+	}
+	.section1Box_ment{
+		font-size:13px;
+	}
+}
+@media all and (min-width: 1024px){
+}
+

@@ -1,0 +1,18 @@
+<%@page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.sql.*" %>
+<%
+
+
+		String DB_URL="jdbc:mysql://localhost:3306/dkrnl1318";
+		String DB_ID="dkrnl1318";
+		String DB_PW="dkrl1318";
+
+		String Query_2 = "디비1";
+		Class.forName("org.gjt.mm.mysql.Driver");
+		 Query_2 = "디비3";
+		Connection con = DriverManager.getConnection(DB_URL, DB_ID, DB_PW);
+
+		 Query_2 = "디비4";
+		String TestMent = "테스트중입니다";
+		 Query_2 = "디비";
+%>

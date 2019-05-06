@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media all and (min-width: 1px){
+	#section1{
+		height:1170px;
+		padding-top:120px;
+	}
+	.section1_box{
+		position:relative;
+		height:350px;
+		width:100%;
+		max-width:1020px;
+		margin:0 auto;
+	}
+	.section1_boxCenter{
+		position:relative;
+		height:100%;
+		width:80%;
+		margin:0 auto;
+	}
+	.section1_title{
+		position:relative;
+		width:100%;
+		height:25px;
+	}
+	.title-icon{
+		float:left;
+		width:25px;
+		height:100%;
+		background:url(../01_img/04_Find-IDPW/title-icon.png) center center no-repeat;
+		background-size: contain;
+	}
+	.title-text{
+		float:left;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:16px;
+		line-height:25px;
+		margin-left:10px;
+		
+	}
+		
+	.mentBox{
+		position:relative;
+		width:100%;
+		height:40px;
+	}
+	.warning_icon{
+		position:relative;
+		float:left;
+		width:15px;
+		height:15px;
+		background:url(../01_img/02_Sub/mark.png) center center no-repeat;
+		background-size:contain;
+		margin-top:15px;
+		display:none;
+	}
+	.section1_coment{
+		position:relative;
+		float:left;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:12px;
+		color:#999;
+		margin-top:15px;
+		margin-bottom:10px;
+		
+	}
+	.section1_inputBoxs{
+		position:relative;
+		width:100%;
+		height:285px;
+		background:#fff;
+		border:solid 2px #eeeeee;
+		padding-top:45px;
+	}
+
+	.inputBox{
+		position:relative;
+		width:80%;
+		height:45px;
+		background:#f5f5f5;
+		border: solid 2px #eeeeee;
+		margin:0 auto;
+		margin-bottom:30px;
+		padding-left:35px;
+		padding-top:3px;
+	}
+	.inputText{
+		width:80%;
+		height:35px;
+		margin:0 auto;
+		background:transparent;
+		border:none;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:12px;
+		line-height:35px;
+		color:#999;
+	}
+	.findButton{
+		float:right;
+		width:115px;
+		height:45px;
+		background:#996867;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:12px;
+		line-height:45px;
+		text-align:center;
+		color:#fff;
+		margin-right:10%;
+	}
+	
+	.section1_box:nth-child(2){
+		height:425px;
+		margin-top:120px;
+	}
+	.section1_box:nth-child(2) .section1_inputBoxs{
+		height:360px;
+	}
+}
+@media all and (min-width: 727px){
+	.section1_boxCenter{
+		width:570px;
+	}
+	.section1_inputBoxs{
+		width:570px;
+	}
+	.inputBox{
+		width:510px;
+	}
+	.findButton{
+		margin-right:30px;
+	}
+}
+@media all and (min-width: 1020px){
+}
+

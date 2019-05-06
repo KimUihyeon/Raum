@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width: 1px){
+	#section1{
+		height:1145px;
+		padding-top:120px;
+		
+	}
+	
+	
+	.section1_box{
+		position:relative;
+		width:80%;
+		max-width:750px;
+		height:875px;
+		margin:0 auto;
+	}
+	
+	.section1_title{
+		position:relative;
+		width:100%;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:20px;
+		border-bottom:2px solid #996867;
+	}
+	
+	.mentBox{
+		position:relative;
+		width:100%;
+		height:40px;
+	}
+	.warning_icon{
+		position:relative;
+		float:left;
+		width:15px;
+		height:15px;
+		background:url(../01_img/02_Sub/mark.png) center center no-repeat;
+		background-size:contain;
+		margin-top:15px;
+		display:none;
+	}
+	.section1_coment{
+		position:relative;
+		float:left;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:12px;
+		color:#F30;
+		margin-top:15px;
+		margin-bottom:10px;
+		
+	}
+	
+	.section1_infoBox{
+		position:relative;
+		width:100%;
+		height:70px;
+		padding-top:20px;
+		border-bottom:2px solid #eeeeee;
+	}
+	
+	.section1_infoBox:nth-child(8){
+		height:170px
+	}
+	.section1_infoBox:nth-child(8) .dasi{
+		display:none;
+	}
+	.section1_infoBox:nth-child(10){
+		height:150px;
+		border-bottom:2px solid #996867;
+	}
+	.InfoName{
+		position:relative;
+		float:left;
+		width:100px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		line-height:30px;
+	}
+	.IDinput,.PwInput,.PwReInput,.NameInput,.PhonInput1,.PhonInput2,.PhonInput3,.AdressInput1,.AdressInput2,.AdressInput3,.EmailInput1,.EmailInput2{
+		position:relative;
+		float:left;
+		width:120px;
+		height:30px;
+		background:#f5f5f5;
+		border: solid 2px #eeeeee;
+		
+	}
+	.PhonInput1,.PhonInput2,.PhonInput3{
+		width:50px;
+	}
+	.dasi{
+		float:left;
+		width:20px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		text-align:center;
+		line-height:30px;
+		color:#a4a4a4;
+	}
+	
+	.adressBox{
+		position:relative;
+		float:left;
+		width:220px;
+		height:150px;
+	}
+	.adressNumber{
+		width:100%;
+		height:30px;
+		margin-bottom:20px;
+	}
+	.AdressInput1{
+		width:100px;
+		
+	}
+	.AdressInput2{
+		width:220px;
+		margin-bottom:20px;
+		margin-right:0;
+		
+	}
+	.AdressInput3{
+		width:130px;
+	}
+	.EmailInput1,.EmailInput2{
+		width:100px;
+	}
+	
+	.section1_doubleCheckB,.section1_postNumberB{
+		float:left;
+		width:80px;
+		height:30px;
+		margin-left:15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:30px;
+		color:#fff;
+		background:#996867;
+	}
+	.section1_postNumberB{
+		width:95px;
+	}
+	
+	.ReceiveInfoCheckList{
+		position:relative;
+		float:left;
+		width:230px;
+		height:65px;
+	}
+	.CheckListMent{
+		position:relative;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		color:#707070;
+		line-height:30px;
+		padding-bottom:10px;
+		
+	}
+	.CheckList{
+		position:relative;
+		width:100%;
+		height:15px;
+		margin-bottom:7px;
+	}
+	
+	label {
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		line-height:13px;
+		color:#707070;
+		
+	}
+	
+	.section1_buttons{
+		position:relative;
+		width:215px;
+		height:30px;
+		margin:0 auto;
+	}
+	.section1_button{
+		float:left;
+		width:100px;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:30px;
+		color:#999;
+		border:solid 1px #999999;
+	}
+	.section1_button:nth-child(1){
+		margin-right:15px;
+	}
+	.section1_buttonActive{
+		color:#fff;
+		background:#996867;
+		border:solid 1px #996867;
+	}
+	
+}
+@media all and (min-width: 727px){
+	#section1{
+		height:1095px;
+		
+	}
+	.section1_box{
+		height:825px;
+	}
+	.section1_infoBox:nth-child(8){
+		height:120px
+	}
+	
+	.InfoName{
+		width:150px;
+	}
+	
+	.IDinput,.PwInput,.PwReInput,.NameInput,.PhonInput1,.PhonInput2,.PhonInput3,.AdressInput1,.AdressInput2,.AdressInput3,.EmailInput1,.EmailInput2{
+		width:150px;
+		
+	}
+	.PhonInput1,.PhonInput2,.PhonInput3{
+		width:70px;
+	}
+	.adressBox{
+		width:72%;
+		height:100px;
+	}
+	.AdressInput1{
+		width:120px;
+		
+	}
+	.AdressInput2{
+		width:240px;
+		margin-bottom:0;
+		margin-right:20px;
+	}
+	.AdressInput3{
+		width:150px;
+	}
+	
+	.EmailInput1,.EmailInput2{
+		width:120px;
+	}
+}
+@media all and (min-width: 1020px){
+	.InfoName{
+		width:180px;
+	}
+	.AdressInput2{
+		width:240px;
+		
+	}
+}

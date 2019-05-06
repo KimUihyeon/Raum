@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media all and (min-width: 1px){
+	#section1{
+		background:#fff;
+		height:1520px;
+	}
+	.section1-title{
+		position:relative;
+		height:245px;
+		width:100%;
+		max-width:990px;
+		padding-top:115px;
+		margin:0 auto;
+	}
+	.section1-titleText{
+		position:relative;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:27px;
+		text-align:center;
+		line-height:30px;
+	}
+	.section1-titleIcon{
+		position:relative;
+		width:140px;
+		height:12px;
+		background:url(../01_img/03_Deilvery/title-icon.jpg) center center no-repeat;
+		margin:0 auto;
+		margin-top:30px;
+	}
+	
+	.section1-textbox1{
+		width:80%;
+		height:150px;
+		margin:0 auto;
+	}
+	.section1-text1{
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:20px;
+	}
+	.section1-text2{
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:16px;
+		margin-top:20px;
+		line-height:150%;
+	}
+	
+	.section1-textbox2{
+		position:relative;
+		width:100%;
+		max-width:990px;
+		height:300px;
+		margin:0 auto;
+	}
+	.section1-textbox2-1,.section1-textbox2-2{
+		position:relative;
+		width:80%;
+		height:150px;
+		margin:0 auto;
+		
+	}
+	
+	.deileryIcons{
+		position:relative;
+		width:475px;
+		height:165px;
+		margin:0 auto;
+	}
+	.deilery-icon1,.deilery-icon1-3,.deilery-icon2,.deilery-icon3,.deilery-icon3,.deilery-icon4,.deilery-icon5,.deilery-icon6{
+		position:relative;
+		float:left;
+		height:100%;
+		
+	}
+	.deilery-icon1{
+		width:118px;
+		background:url(../01_img/03_Deilvery/deilery-icon1.jpg) center center no-repeat;
+	}
+	.deilery-icon1-3{
+		width:30px;
+		background:url(../01_img/03_Deilvery/deilery-icon1-3.jpg) center center no-repeat;
+		display:block;
+	}
+	.deilery-icon2{
+		width:232px;
+		background:url(../01_img/03_Deilvery/deilery-icon2.jpg) center center no-repeat;
+	}
+	.deilery-icon3{
+		width:118px;
+		background:url(../01_img/03_Deilvery/deilery-icon3.jpg) center center no-repeat;
+	}
+	.deilery-icon4{
+		width:200px;
+		background:url(../01_img/03_Deilvery/deilery-icon4.jpg) center center no-repeat;
+	}
+	.deilery-icon5{
+		width:179px;
+		background:url(../01_img/03_Deilvery/deilery-icon5.jpg) center center no-repeat;
+	}
+	.deilery-icon6{
+		width:143px;
+		background:url(../01_img/03_Deilvery/deilery-icon6.jpg) center center no-repeat;
+	}
+	.deilery-iconText{
+		position:absolute;
+		top:170px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:16px;
+	}
+	.deilery-icon1 .deilery-iconText{
+		left:45px;
+	}
+	.deilery-icon2 .deilery-iconText{
+		left:65px;
+	}
+	.deilery-icon3 .deilery-iconText{
+		left:45px;
+	}
+	.deilery-icon4 .deilery-iconText{
+		left:80px;
+	}
+	.deilery-icon5 .deilery-iconText{
+		left:75px;
+	}
+	.deilery-icon6 .deilery-iconText{
+		left:70px;
+	}
+		
+	.deilery-icon2,.deilery-icon4,.deilery-icon6{
+		display:none;
+	}
+}
+@media all and (min-width: 767px){
+	#section1{
+	height:1470px;
+	}
+	.section1-textbox2{
+		height:290px;
+	}
+	.section1-textbox1,.section1-textbox2-1,.section1-textbox2-2{
+		width:705px;
+	}
+	.section1-textbox1{
+		height:110px;
+	}
+	.section1-textbox2-1,.section1-textbox2-2{
+		height:50%;
+	}
+}
+@media all and (min-width: 1020px){
+	#section1{
+		height:1325px;
+	}
+	.section1-textbox2{
+		height:145px;
+	}
+	.section1-textbox2-1,.section1-textbox2-2{
+		float:left;
+		height:100%;
+		width:465px;
+	}
+	.section1-textbox2-1{
+		margin-right:60px;
+	}
+	.deileryIcons{
+		width:990px;
+	}
+	.deilery-icon2,.deilery-icon4,.deilery-icon6{
+		display:block;
+	}
+	.deilery-icon1-3{
+		display:none;
+	}
+}

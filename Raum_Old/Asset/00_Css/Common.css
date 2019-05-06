@@ -1,0 +1,562 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Karla|Montserrat');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+/* 수형아 만들때 이렇게 주석으로 표시하면 나중에 편해*/
+/* 초기화 */
+CICOlor{
+	color:#996867
+}
+	
+*{
+	font-family:"돋움";
+	box-sizing:border-box;
+	transition:all 0.5s;
+}
+
+body{
+	overflow-x: hidden;
+}
+input{
+	background: none;
+	border: none;
+}
+body , h1 , h2 ,h3 ,h4 ,h5 ,h6{
+	padding:0;
+	margin:0;
+	display:block;
+}
+a,a:link,a:visited,a:hover,a:active{
+	color:inherit;
+	width:100%;
+	height:100%;
+	/*
+	background:rgba(0,0,255,0.3);*/
+	text-decoration:none;
+	font-family:inherit;
+}
+.a_box{
+	display:block !important;
+}
+.a_box_a{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display:block !important;
+}
+ul,li{
+	padding:0;
+	margin:0;
+	display:inline-block;
+	list-style:none;
+}
+html, body{
+	width:100%;
+}
+input{
+	border:none;
+	background:none;
+}
+select{
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	-ms-appearance:none;
+	-o-appearance:none;
+}
+/* 모바일 */
+
+@media all and (min-width: 1px){
+	#wrap{
+		position:relative;
+		width:100%;
+	}
+	#Amenu{
+		display:none;
+		position:fixed;
+		width:100%;
+		height:100%;
+		z-index:99;
+	}
+	.AmenuBack{
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:0.7;
+	}
+	.Amenu_boxs{
+		position:absolute;
+		right:-60%;
+		width:60%;
+		height:100%;
+		background:#f8f8f8;
+	}
+	.Amenu_box1{
+		position:relative;
+		width:100%;
+		height:10%;
+	}
+	.Amenu_login{
+		position:absolute;
+		width:20%;
+		height:30%;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:10px;
+		text-align:center;
+		line-height:20px;
+		margin: 25px 0 0 20px;
+		border: solid 1px #CCCCCC;
+
+	}
+	.closeB{
+		cursor:pointer;
+		position:absolute;
+		width:30px;
+		height:25px;
+		right:0;
+		background:url(../01_img/00_Common/Amenu_closeB.jpg) center center no-repeat;
+		background-size:contain;
+		margin: 25px 20px 0 0;
+	}
+
+	.Amenu_box2{
+		position:relative;
+		width:100%;
+		height:10%;
+		background:#e6e6e6;
+	}
+	.Amenu_box2Item{
+		float:left;
+		width:30%;
+		height:100%;
+		margin-right:5%;
+		padding-top:20px;
+	}
+	.Amenu_box2Item:nth-child(3){
+		margin-right:0;
+	}
+
+	.Amenu_userIcon,.Amenu_cartIcon,.Amenu_favoriteIcon{
+		position:relative;
+		width:30%;
+		height:40%;
+		margin:0 auto;
+	}
+	.Amenu_userIcon{
+		background:url(../01_img/00_Common/Amenu_user.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.Amenu_cartIcon{
+		background:url(../01_img/00_Common/Amenu_cart.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.Amenu_favoriteIcon{
+		background:url(../01_img/00_Common/Amenu_favorite.jpg) center center no-repeat;
+		background-size:contain;
+	}
+
+	.Amenu_iconText{
+		position:relative;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:11px;
+		text-align:center;
+		margin:0 auto;
+		margin-top:5px
+	}
+
+	.Amenu_box3{
+		position:relative;
+		width:100%;
+		height:70%;
+	}
+	.Amenu_box3Box{
+		width:100%;
+		height:21%;
+		border-bottom:solid 1px #e6e6e6;
+	}
+	.Amenu_box3Box:nth-child(2){
+		height:14%;
+	}
+	.Amenu_box3Box:nth-child(3){
+		height:28%;
+	}
+	.Amenu_box3Box:nth-child(4){
+		height:7%;
+	}
+	.Amenu_box3Box:nth-child(5){
+		border:none;
+	}
+	.Amenu_box3Center{
+		position:relative;
+		width:80%;
+		height:100%;
+		margin:0 auto;
+	}
+	.Amenu_menu{
+		position:absolute;
+		left:0;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:15px;
+		height:35px;
+		line-height:35px;
+	}
+	.Amenu_submenu{
+		position:absolute;
+		right:0;
+		width:100px;
+		height:100%;
+	}
+	.Amenu_item{
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size:15px;
+		height:35px;
+		line-height:35px;
+	}
+
+	.Amenu_box4{
+		position:relative;
+		width:100%;
+		height:10%;
+		padding-top:20px;
+	}
+	.Amenu_logo{
+		width:150px;
+		height:40px;
+		margin:0 auto;
+		background:url(../01_img/00_Common/Amenu_logo.jpg) center center no-repeat;
+	}
+
+
+	#header{
+		position:relative;
+		width:100%;
+		height:100px;
+		background:#fff;
+		border-bottom:2px solid #996867;
+		box-shadow: -1px 1px 20px 0px #000000;
+		z-index: 10;
+	}
+	.Aheader_box{
+		position:relative;
+		width:100%;
+		height:100%;
+	}
+	.Aheader_logo{
+		position:absolute;
+		width:150px;
+		height:40px;
+		margin:30px 0 0 20px;
+		background:url(../01_img/00_Common/logo.jpg) center center no-repeat;
+		background-size:cover;
+		z-index:1;
+	}
+	.Aheader_icons{
+		position:absolute;
+		right:0;
+		height:45px;
+		margin:30px 20px 0 0;
+	}
+	.Aheader_icons .search_icon{
+		background:url(../01_img/00_Common/search_iconB.png) center center no-repeat;
+	}
+	.Amenu_icon{
+		position:relative;
+		float:left;
+		width:35px;
+		height:35px;
+		margin:0 10px 0 10px;
+		background:url(../01_img/00_Common/Amenu_icon.jpg) center center no-repeat;
+		background-size:contain;
+	}
+
+	.header_box{
+		display:none;
+		position:relative;
+		max-width:1020px;
+		width:100%;
+		height:100%;
+		margin:0 auto;
+	}
+	.header_logo{
+		position:absolute;
+		left:0;
+		width:150px;
+		height:40px;
+		margin-top:30px;
+		background:url(../01_img/00_Common/logo.jpg) center center no-repeat;
+		background-size:cover;
+		z-index:1;
+	}
+/*	.menuTotal{
+		position:absolute;
+		left:150px;
+		width:50px;
+		height:50px;
+		background:#03C;
+	}*/
+	.header_icons{
+		position:absolute;
+		right:0;
+		height:50px;
+		margin-top:25px;
+
+	}
+	.user_icon,.cart_icon,.favourite_icon,.search_icon,.Logout_icon,.Login_icon{
+		position:relative;
+		float:left;
+		width:20px;
+		height:20px;
+		margin:10px;
+	}
+	.Login_icon{
+		background:url(../01_img/00_Common/Login_icon.png) center center no-repeat;
+		background-size:contain;
+	}
+	.Logout_icon{
+		background:url(../01_img/00_Common/Logout_icon.png) center center no-repeat;
+		background-size:contain;
+	}
+	.user_icon{
+		background:url(../01_img/00_Common/user_icon.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.cart_icon{
+		background:url(../01_img/00_Common/cart_icon.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.cart_iconIn{
+		position:absolute;
+		top:10px;
+		left:10px;
+		width:18px;
+		height:18px;
+		border-radius:50%;
+		background:#996867;
+
+	}
+	.cart_iconIn_text{
+		width:18px;
+		height:18px;
+		font-family: 'Montserrat', sans-serif;
+		font-size:13px;
+		text-align:center;
+		line-height:18px;
+		color:#FFF;
+		margin:0 auto;
+	}
+
+	.favourite_icon{
+		background:url(../01_img/00_Common/favourite_icon.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.search_icon{
+		background:url(../01_img/00_Common/search_icon.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.search_window{
+		display:none;
+		position:absolute;
+		width:0px;
+		height:35px;
+		right:-5px;
+		top:-7px;
+		border-radius:30px;
+		background:#fff;
+		border:solid 1px #996867;
+		overflow:hidden;
+		z-index:1;
+	}
+	.search_input{
+		position:relative;
+		width:100px;
+		height:30px;
+		background:transparent;
+		border:none;
+		font-size:15px;
+		font-family: 'Nanum Gothic', sans-serif;
+		margin:2px 0 0 15px;
+	}
+	.search_iconB{
+		position:absolute;
+		right:0;
+		width:20px;
+		height:20px;
+		margin-top:6px;
+		margin-right:4px;
+		background: url(../01_img/00_Common/search_iconB.png) center center no-repeat;
+	}
+
+
+	.menu{
+		position:relativel;
+		width:450px;
+		height:100%;
+		margin:0 auto;
+		padding-top:30px;
+		z-index:0;
+	}
+	.menu_item{
+		position:relative;
+		width:20%;
+		height:100%;
+		float:left;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-weight:bold;
+		font-size:13px !important;
+		text-align:center;
+		line-height:40px;
+	}
+	.menu_item:nth-child(5){
+		margin-right:0;
+	}
+
+	.submenu{
+		position:absolute;
+		width:120px;
+		height:0;
+		z-index:1;
+		top:68px;
+		left:-15px;
+		overflow:hidden;
+	}
+	.submenu_box{
+		position:relative;
+		width:100%;
+		height:100%;
+	}
+	.submenu_item{
+		width:100%;
+		height:40px;
+		opacity: 0;
+		position:absolute;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-weight:bold;
+		font-size:13px;
+		text-align:center;
+		line-height:40px;
+		background:#FFF;
+	}
+	menu_item:nth-child(1) .submenu_item:nth-child(1){
+		font-family: 'Montserrat', sans-serif;
+	}
+	.submenu_item:nth-last-child(1){
+		border-bottom:2px solid #996867;
+	}
+
+
+
+	#putter{
+		position:relative;
+		width:100%;
+		height:320px;
+		background:#3e3535;
+	}
+	.putter_box{
+		position:relative;
+		width:390px;
+		height:100%;
+		margin:0 auto;
+		padding-top:70px;
+	}
+
+	.putter_boxTop{
+		position:relative;
+		width:100%;
+		height:40px;
+	}
+	.putter_logo{
+		width:150px;
+		height:40px;
+		margin:0 auto;
+		background:url(../01_img/00_Common/putter_logo.jpg) center center no-repeat;
+		background-size:cover;
+	}
+
+	.putter_boxMid{
+		position:relative;
+		width:100%;
+		height:70px;
+		padding:20px 0;
+		border-bottom:2px solid #4e4445;
+	}
+	.putter_icons{
+		width:255px;
+		height:25px;
+		margin:0 auto;
+	}
+	.twiter_icon,.facebook_icon,.insta_icon{
+		float:left;
+		width:25px;
+		height:25px;
+		margin:0 30px;
+	}
+	.twiter_icon{
+		background:url(../01_img/00_Common/twiter_icon.jpg) center center no-repeat;
+		background-size:cover;
+	}
+	.facebook_icon{
+		background:url(../01_img/00_Common/facebook_icon.jpg) center center no-repeat;
+		background-size:cover;
+	}
+	.insta_icon{
+		background:url(../01_img/00_Common/insta_icon.jpg) center center no-repeat;
+		background-size:cover;
+	}
+
+	.putter_boxBottom{
+		position:relative;
+		width:100%;
+		height:110px;
+		padding-top:30px;
+	}
+	.putter_info:nth-child(1){
+		font-family: "Karla", sans-serif;
+	}
+	.putter_info:nth-child(2){
+		font-family: "Nanum Gothic", sans-serif;
+	}
+	.putter_info{
+		font-size:14px;
+		text-align:center;
+		color:#FFF;
+		margin:0 auto;
+		line-height:25px;
+	}
+	
+	.RelWidth{
+/*		width:5% !important;*/
+	}
+	.FixedHeight{
+		top:-80px !important;
+	}
+	.PC{
+		display:none !important;
+		
+	}
+	.Mobile{
+		display:none !important;
+	}
+
+}
+
+/* 타블릿 */
+
+@media all and (min-width: 767px){
+	.header_box{
+		display:block;
+	}
+	.header_logo{
+		margin-left:15px;
+	}
+	.Aheader_box{
+		display:none;
+	}
+
+
+/* pc */
+@media all and (min-width: 1020x){
+
+
+}

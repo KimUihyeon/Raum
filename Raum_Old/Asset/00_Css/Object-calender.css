@@ -1,0 +1,343 @@
+@charset "utf-8";
+/* CSS Document */
+
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+		
+select::-ms-expand{
+	display: none;
+}
+@media all and (min-width: 1px){
+	#section1{
+		height:1486px;
+	}
+	.section1_Center{
+		position:relative;
+		width:80%;
+		max-width:1020px;
+		height:100%;
+		margin:0 auto;
+		padding-top:30px;
+	}
+	
+	.section1_box1{
+		position:relative;
+		width:100%;
+		height:160px;
+	}
+	.section1_box1-1{
+		position:relative;
+		width:100%;
+		height:60px;
+		border-bottom:solid 2px #eeeeee;
+	}
+	.section1_title{
+		position:absolute;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:15px;
+		bottom:0;
+		left:10px;
+	}
+	.sortIcons{
+		position:absolute;
+		width:50px;
+		height:35px;
+		bottom:0;
+		right:0;
+	}
+	.sortIcon{
+		position:relative;
+		float:left;
+		width:20px;
+		height:20px;
+	}
+	.sortIcon:nth-child(1){
+		background:url(../01_img/03_Object-calender/calenderIcon.jpg) center center no-repeat;
+		margin-right:10px;
+	}
+	.sortIcon:nth-child(2){
+		background:url(../01_img/03_Object-calender/listIcon.jpg) center center no-repeat;
+	}
+	
+	.section1_box1-2{
+		position:relative;
+		width:100%;
+		height:85px;
+		margin-top:15px;
+	}
+	.kinds{
+		position:absolute;
+		width:130px;
+		height:20px;
+		margin-top:10px;
+		top:0;
+		left:0;
+	}
+	.kind{
+		position:relative;
+		float:left;
+		width:33.3%;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:14px;
+		text-align:center;
+		line-height:20px;
+		
+	}
+	
+	.sortWayBox{
+		position:absolute;
+		width:120px;
+		height:80px;
+		right:0;
+		top:0;
+	}
+	#sortTypeSelect,#exposureTypeSelect{
+		display:block;
+		float:left;
+		position:relative;
+		width:120px;
+		height:35px;
+		text-indent: 15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		background:url(../01_img/03_Object-calender/selectArrow.jpg) no-repeat 95% 50%;
+		border:solid 1px #eeeeee;
+		border-radius:none;
+		
+	}
+	
+
+	#sortTypeSelect{
+		margin-right:0;
+	}
+	#exposureTypeSelect{
+		margin-top:10px;
+	}
+	
+	
+	.section1_box2{
+		position:relative;
+		width:100%;
+		height:1070px;
+		margin-top:30px;
+	}
+	.objectCalender{
+		position:relative;
+		width:100%;
+		height:100%;
+	}
+	.object_Item{
+		position:relative;
+		float:left;
+		width:45%;
+		height:285px;
+		margin-right:10%;
+		border:2px solid #FFF;
+    	margin-bottom: 50px;
+	}
+	.object_Itemover{
+	border:solid 2px #996867;
+	}
+	.object_Item:nth-child(2),.object_Item:nth-child(4),.object_Item:nth-child(6),.object_Item:nth-child(8),.object_Item:nth-child(10),.object_Item:nth-child(12),.object_Item:nth-child(14),.object_Item:nth-child(16),.object_Item:nth-child(18),.object_Item:nth-child(20){
+		margin-right:0;
+	}
+	
+	.object_Image{
+		position:relative;
+		width:100%;
+		height:190px;
+		background:url(../01_img/03_Object-detail/box1_objectImage.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.object_Info,.object_choice{
+		position:absolute;
+		width:100%;
+		height:92px;
+		padding-top:5px;
+	}
+	.object_Info{
+		background:#FFF;
+	}
+	.object_choice{
+		display:none;
+		background:#FFF;
+	}
+
+	.object_name{
+		position:relative;
+		width:100%;
+		height:35px;
+		font-family:'Karla', sans-serif;
+		font-size:9px;
+		font-weight:bold;
+		line-height:180%;
+		color:#4c5462;
+		margin: 0 auto;
+		text-align: center;
+
+	}
+	.object_price{
+		position:relative;
+		width:100%;
+		height:25px;
+		font-family:'Karla', sans-serif;
+		font-size:12px;
+		font-weight:bold;
+		line-height:25px;
+		color:#4c5462;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.object_buttons{
+		position:relative;
+		width:100%;
+		height:40px;
+		padding-top:5px;
+		margin:0 auto;
+	}
+	.object_button{
+		float:left;
+		width:20%;
+		height:100%;
+		margin-left:4%;
+		background:#0CF;
+		border:solid 1px #CCC;
+	}
+	.object_button:nth-child(1){
+		background:url(../01_img/01_Main/detail_out.jpg) center center no-repeat;
+		margin-left:15%;
+	}
+	.object_button:nth-child(2){
+		background:url(../01_img/01_Main/favorite_out.jpg) center center no-repeat;
+	}
+	.object_button:nth-child(3){
+		background:url(../01_img/01_Main/cart_out.jpg) center center no-repeat;
+		margin-right:0;
+	}
+
+	.object_buttonChoice{
+		border:none;
+		background:#996867 !important;
+	}
+	.object_buttonCBG{
+		display:none;
+		position:relative;
+		width:100%;
+		height:100%;
+	}
+	.object_button:nth-child(1) .object_buttonCBG{
+		background:url(../01_img/01_Main/detail_over.jpg) center center no-repeat;
+	}
+	.object_button:nth-child(2) .object_buttonCBG{
+		background:url(../01_img/01_Main/favorite_over.jpg) center center no-repeat;
+	}
+	.object_button:nth-child(3) .object_buttonCBG{
+		background:url(../01_img/01_Main/cart_over.jpg) center center no-repeat;
+	}
+	
+	.section1-Buttons{
+		position:relative;
+		width:165px;
+		height:45px;
+		margin:0 auto;
+	}
+	.section1_controller{
+		position:relative;
+		float:left;
+		width:45px;
+		height:45px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size: 12px;
+		text-align:center;
+		line-height:45px;
+		margin: 0 5px;
+		background:none !important;
+		color:#000 !important;
+		border: solid 1px #eeeeee;
+		
+	}
+}
+@media all and (min-width: 727px){
+	.kinds{
+		width:165px;
+		height:20px;
+		margin-top:10px;
+	}
+	.kind{
+		font-size:15px;
+		line-height:20px;
+		
+	}
+	
+	.sortWayBox{
+		width:370px;
+		height:40px;
+	}
+	#sortTypeSelect,#exposureTypeSelect{
+		width:170px;
+		height:100%;
+		font-size:15px;
+	}
+	
+	#sortTypeSelect{
+		margin-right:28px;
+	}
+	#exposureTypeSelect{
+		margin-top:0;
+	}
+}
+@media all and (min-width: 1024px){
+	.object_Item{
+		width:23.1%;
+		height:450px;
+		margin-right:2.5%;
+	}
+	.object_Item:nth-child(2),.object_Item:nth-child(6),.object_Item:nth-child(10){
+		margin-right:2.5%;
+	}
+	.object_Image{
+		height:300px;
+	}
+	.object_Info,.object_choice{
+		height:147px;
+		padding-top:25px;
+	}
+	.object_name{
+		height:50px;
+		font-family:'Karla', sans-serif;
+		font-size:12px;
+
+	}
+	.object_price{
+		height:50px;
+		font-size:15px;
+		line-height:50px;
+	}
+	.object_buttons{
+		margin-left:0;
+		margin: 0 auto;
+		width:160px;
+		height:72px;
+		padding-top:10px;
+	}
+	.object_button{
+		width:35px;
+		height:35px;
+		margin:0;
+		margin-left:15px;
+	}
+	.object_button:nth-child(1){
+		margin-left:0%;
+		margin-left:9px;
+	}
+	.object_buttonCBG{
+		display:none;
+	}
+}
+

@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 모바일 */
+
+@media all and (min-width: 1px){
+	#section1{
+		padding-top: 80px;
+		height: 950px;
+	}
+	.section1-Box{
+		width: 95%;
+		max-width: 1040px;
+		height: 100%;
+		margin: 0 auto;
+	}
+	.itemBox{
+		width: 100%;
+		height: 35px;
+		display: block;
+		margin-bottom: 30px;
+	}
+	.itemBox:nth-child(1){
+		height: 70px;
+	}
+	.itemTextBox{
+		width: 15%;
+		max-width:150px;
+		height: 100%;
+		float: left;
+		background: #ff0;
+		border-right: 1px solid #000;
+	}
+	.itemText,.itemArrow{
+		float: left;
+		height: 100%;
+		width: 15%;
+	}
+	.itemText{
+		width: 84%;
+	}
+	.inputBox{
+		width: 84%;
+		max-width: 890px;
+		height: 100%;
+		float:right;
+		background: #0ff;
+	}
+	.itemBox:nth-child(1) .innput{
+		height: 50%;
+	}
+	.innput{
+		height: 100%;
+		width: 20%;
+		background:#f00;
+		float: left;
+	}
+	.input-Section1,.input-Section2,.input-Section3,.input-Section4{
+		width: 100%;
+		max-width:750px;
+		margin:0 auto;
+		height: 40px;
+		margin-bottom: 30px;
+		position:relative;
+	}
+	.input-Section3{
+		height: 350px;
+	}
+	.input-Section4{
+		width: 300px;
+		margin: 0 auto;
+		height: 60px;
+	}
+	.input1{
+		width: 48%;
+		height: 100%;
+		display: block;
+		float: left;
+		border: 1px solid #eee;
+		background: #eee;
+		text-indent: 15px;
+	}
+	.input-Active{
+		background:#fff;
+		border: 1px solid #333;
+	}
+	.input1:nth-child(1){
+		margin-right: 4%;
+	}
+	.input-Section2 .input1{
+		width: 100%;
+	}
+	.textarea{
+		width: 100%;
+		height: 90%;
+		text-indent: 15px;
+	}
+	h1{
+		display: block;
+		width: 100%;
+		text-indent: 15px;
+		font-weight: normal;;
+		font-size: 15px;
+		margin-bottom: 10px;
+		margin-top:15px;
+	}
+	.input2{
+		padding: 15px;
+		width: 120px;
+		background: #ff0;
+	}
+	.input2:nth-child(1){
+		margin-right:50px;
+	}
+
+/* 타블릿 */
+@media all and (min-width: 767px){
+
+	.innput{
+		width: 33.3333%;
+	}
+	.inputBox{
+		width: 80%;
+	}
+	.itemTextBox{
+		width: 20%;
+	}
+}
+/* pc */
+@media all and (min-width: 1020px){
+
+	.innput{
+		width: 20%;
+	}
+	.inputBox{
+		width: 84%;
+	}
+	.itemTextBox{
+		width: 15%;
+	}
+}

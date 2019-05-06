@@ -1,0 +1,247 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width: 1px){
+	#section1{
+		height:900px;
+	}
+	
+	.section_Center{
+		position:relative;
+		width:90%;
+		max-width:1020px;
+		height:100%;
+		margin:0 auto;
+		padding-top:155px;
+	}
+	.selectBox{
+		position:absolute;
+		right:0;
+		top:40px;
+		width:260px;
+		height:40px;
+	}
+	#mypageSelect{
+		display:block;
+		float:left;
+		position:relative;
+		width:170px;
+		height:100%;
+		text-indent: 15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		background:url(../01_img/03_Object-calender/selectArrow.jpg) no-repeat 95% 50%;
+		border:solid 1px #000;
+		border-radius:none;
+	}
+	option{
+		height: 30px;
+		padding-top:7px;
+	}
+	option:nth-child(1){
+		border-bottom:dashed 1px #000;
+	}
+	.moveButton{
+		position:relative;
+		float:left;
+		width:60px;
+		height:100%;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		color:#000 !important;
+		background:#FFF !important;
+		border:solid 1px #eee;
+		margin-left:30px;
+	}
+	
+	.section1Box{
+		position:relative;
+		width:100%;
+		height:510px;
+		margin:0 auto;
+		border-top:solid 1px #000;
+	}
+	
+	.tapTitle1,.tapTitle2{
+		position:absolute;
+		width:130px;
+		height:35px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+		line-height:35px;
+		text-align:center;
+		top:-35px;
+		left:0;
+	}
+	.tapTitle2{
+		left:130px;
+	}
+	.tapOn{
+		color:#996867;
+		background:#FFF;
+		border-top:solid 1px #000;
+		border-right:solid 1px #000;
+		border-left:solid 1px #000;
+	}
+	
+	.tapBox1,.tapBox2{
+		position:absolute;
+		width:100%;
+		height:100%;
+	}
+	.tapBox1{
+		padding-top:20px;
+	}
+	.tapBox2{
+		padding-top:40px;
+	}
+	
+	.reviewItem{
+		position:relative;
+		width:95%;
+		max-width:980px;
+		height:160px;
+		padding-top:20px;
+		border-bottom:solid 1px #eee;
+		margin:0 auto;
+	}
+	.reviewImage{
+		position:relative;
+		float:left;
+		width:95px;
+		height:120px;
+		background:url(../01_img/03_Object-detail/box1_objectImage.jpg) center center no-repeat;
+		background-size:cover;
+		border:solid 1px #eee;
+	}
+	.reviewInfoBox{
+		position:relative;
+		float:left;
+		width:45%;
+		height:120px;
+		margin-left:15px;
+	}
+	.reviewInfo1{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:13px;
+	}
+	.reviewStar{
+		position:relative;
+		width:60px;
+		height:13px;
+		background:url(../01_img/03_Object-detail/box1_reviewStar5.png) center center no-repeat;
+		margin:10px 0 10px 0;
+	}
+	.reviewInfo2{
+		position:relative;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:12px;
+		color:#4c5462;
+		line-height:120%;
+	}
+	
+	.reviewButtons{
+		position:relative;
+		float:right;
+		width:65px;
+		height:120px;
+	}
+	.reviewDate{
+		position:relative;
+		width:100%;
+		height:15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:11px;
+		margin-bottom:15px;
+	}
+	.reviewModifiedB,.reviewDeleteB{
+		position:relative;
+		width:100%;
+		height:35px;
+		background:#ccc !important;
+	}
+	.reviewModifiedB{
+		margin-bottom:10px;
+	}
+	
+	.reviewWriteItem{
+		position:relative;
+		float:left;
+		width:45%;
+		height:285px;
+		margin-right:10%;
+		border:2px solid #FFF;
+    	margin-bottom: 40px;
+	}
+	.Itemover{
+	border:solid 2px #996867;
+	}
+	.reviewWriteItem:nth-child(2),.reviewWriteItem:nth-child(4),.reviewWriteItem:nth-child(6),.reviewWriteItem:nth-child(8),.reviewWriteItem:nth-child(10){
+		margin-right:0;
+	}
+	.reviewWriteImage{
+		position:relative;
+		width:100%;
+		height:180px;
+		background:url(../01_img/03_Object-detail/box1_objectImage.jpg) center center no-repeat;
+		background-size:cover;
+		margin-bottom:10px;
+	}
+	.reviewWriteInfo1,.reviewWriteInfo2,.reviewWriteInfo3{
+		position:relative;
+		width:100%;
+		height:15px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:10px;
+		text-align:center;
+		line-height:15px;
+	}
+	.reviewWriteB{
+		display:block;
+		position:relative;
+		width:120px;
+		height:30px;
+		margin:0 auto;
+		margin-top:5px;
+	}
+}
+@media all and (min-width: 727px){
+	.reviewInfoBox{
+		width:65%;
+		margin-left:20px;
+	}
+	.reviewInfo2{
+		font-size:14px;
+	}
+}
+@media all and (min-width: 1024px){
+	.reviewWriteItem{
+		width:23.1%;
+		height:450px;
+		margin-right:2.5%;
+	}
+	.reviewWriteItem:nth-child(2),.reviewWriteItem:nth-child(6),.reviewWriteItem:nth-child(10){
+		margin-right:2.5%;
+	}
+	.reviewWriteImage{
+		height:300px;
+		margin-bottom:25px;
+	}
+	.reviewWriteInfo1,.reviewWriteInfo2,.reviewWriteInfo3{
+		font-size:12px;
+	}
+	.reviewWriteB{
+		width:155px;
+		height:40px;
+		background:#ccc !important;
+		margin-top:15px;
+		
+	}
+	.reviewWriteBover{
+		background:#996867 !important;
+	}
+	
+}
+

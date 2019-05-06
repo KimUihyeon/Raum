@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+.name{ top: 560px;;}
+.client{ top :620px}
+.Date{top : 680px;}
+.reset, .submit{ top:800px;}
+#graphicBox{
+  border: 1px solid #676767;
+  top: 120px;
+}
+.fileBox{
+	top: 560px;
+	left: 375px;
+}
+.ctg{
+	top: 620px;
+	left: 375px;
+}

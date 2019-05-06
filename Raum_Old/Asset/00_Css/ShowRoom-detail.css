@@ -1,0 +1,408 @@
+@charset "utf-8";
+/* CSS Document */
+@media all and (min-width: 1px){
+	#showRoomDetail{
+		left:0;
+		top:0;
+		display:none;
+		position:fixed;
+		width:100%;
+		height:100%;
+		z-index:99;
+	}
+	.showRoomDetailBG{
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:0.7;
+	}
+	.showRoomDetailImage{
+		position:relative;
+		width:90%;
+		height:40%;
+		background:url(../01_img/05_showRoom-detail/section1_box1.jpg) center center no-repeat;
+		background:url(../01_img/03_Object_Upload/stan_wood_01.jpg) center center no-repeat;
+		background-size:cover;
+		margin:0 auto;
+		
+	}
+	.showRoomDetail_closeB{
+		position:absolute;
+		width:30px;
+		height:30px;
+		right:0;
+		top:-35px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:14px;
+		text-align:center;
+		line-height:30px;
+		background:#FFF;
+		border:solid 1px #000;
+	}
+	.showRoomDetail_item{
+		position:absolute;
+		width:30px;
+		height:30px;
+		top:20%;
+		left:68%;
+	}
+	.showRoomDetail_pluseB{
+		position:relative;
+		width:100%;
+		height:100%;
+		background:url(../01_img/05_showRoom-detail/showRoomDetail_pluseB.png) center center no-repeat !important;
+		background-size:contain !important;
+		opacity:0.8;
+	}
+	.Active-on{
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	}
+	.Detail_infoBoxborder{
+		display:none;
+		position:absolute;
+		width:0;
+		height:100px;
+		border:2px solid #996867;
+		top:15px;
+		left:15px;
+		overflow:hidden;
+	}
+	.Detail_infoBoxCover{
+		display:none;
+		position:relative;
+		width:100%;
+		height:0;
+		overflow:hidden;
+	}
+	.Detail_infoBox{
+		position:relative;
+		width:100%;
+		height:100%;
+		background:#FFF;
+		padding-top:11px;
+	}
+	.Detail_infoImage{
+		position:relative;
+		float:left;
+		width:50px;
+		height:74px;
+		background:#FCF;
+		margin:0 10px;
+	}
+	.Detail_infoText{
+		position:relative;
+		float:left;
+		width:120px;
+		height:30px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:12px;
+	}
+	.Detail_buttons{
+		position:relative;
+		float:left;
+		width:85px;
+		height:25px;
+		margin-left:35px;
+		margin-top:20px;
+	}
+	.Detail_button{
+		float:left;
+		width:30%;
+		height:100%;
+		margin-left:4%;
+		background:#0CF;
+		border:solid 1px #CCC;
+	}
+	.Detail_button:nth-child(1){
+		background:url(../01_img/01_Main/detail_out.jpg) center center no-repeat;
+		background-size:contain;
+		margin-left:0;
+	}
+	.Detail_button:nth-child(2){
+		background:url(../01_img/01_Main/favorite_out.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.Detail_button:nth-child(3){
+		background:url(../01_img/01_Main/cart_out.jpg) center center no-repeat;
+		background-size:contain;
+	}
+
+	.Detail_buttonChoice{
+		border:none;
+		background:#996867 !important;
+	}
+	.Detail_buttonCBG{
+		display:none;
+		position:relative;
+		width:100%;
+		height:100%;
+	}
+	.Detail_button:nth-child(1) .Detail_buttonCBG{
+		background:url(../01_img/01_Main/detail_over.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.Detail_button:nth-child(2) .Detail_buttonCBG{
+		background:url(../01_img/01_Main/favorite_over.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.Detail_button:nth-child(3) .Detail_buttonCBG{
+		background:url(../01_img/01_Main/cart_over.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	
+	
+	#section1{
+		height:1475px;
+	}
+	.section1_center{
+		position:relative;
+		width:80%;
+		max-width:1020px;
+		height:100%;
+		margin:0 auto;
+		padding-top:120px;
+	}
+	.section1_box1{
+		position:relative;
+		width:100%;
+		height:260px;
+		margin-bottom:155px;
+		background:url(../01_img/03_Object_Upload/stan_wood_01.jpg) center center no-repeat;
+		background-size:cover;
+	}
+	.box1_fiter{
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:#000;
+		opacity:0;
+		
+	}
+	.box1_iconCover{
+		position:absolute;
+		width:100%;
+		height:100%;
+		display:none;
+	}
+	.box1_icon{
+		position:relative;
+		width:90px;
+		height:90px;
+		background:url(../01_img/05_showRoom-detail/containerIcon-5.png) center center no-repeat;
+		background-size:contain;
+		margin:0 auto;
+		margin-top:85px;
+	}
+	
+	.section1_box2{
+		position:relative;
+		width:100%;
+		height:645px;
+		border-top:1px solid #000;
+		padding-top:45px;
+	}
+	.section1_box2Title{
+		position:absolute;
+		width:130px;
+		height:35px;
+		font-family: "Nanum Gothic", sans-serif;
+		font-size:14px;
+		text-align:center;
+		line-height:35px;
+		color:#996867;
+		background:#fff;
+		border-top:1px solid #000;
+		border-right:1px solid #000;
+		border-left:1px solid #000;
+		top:-35px;
+	}
+	.objectList{
+		position:relative;
+		width:100%;
+		
+	}
+	.best_Item{
+		position:relative;
+		float:left;
+		width:45%;
+		height:285px;
+		margin-right:10%;
+		border:2px solid #FFF;
+    	margin-bottom: 20px;
+	}
+	.best_Itemover{
+	border:solid 2px #996867;
+	}
+	.best_Item:nth-child(2),.best_Item:nth-child(4),.best_Item:nth-child(6),.best_Item:nth-child(8),.best_Item:nth-child(10){
+		margin-right:0;
+	}
+	
+	.best_Image{
+		position:relative;
+		width:100%;
+		height:190px;
+		background:url(../01_img/05_showRoom-detail/best_Image_1.jpg) center center no-repeat;
+		background-size:contain;
+	}
+	.best_Info,.best_choice{
+		position:absolute;
+		width:100%;
+		height:92px;
+		padding-top:5px;
+	}
+	.best_Info{
+		background:#FFF;
+	}
+	.best_choice{
+		display:none;
+		background:#FFF;
+	}
+
+	.best_name{
+		position:relative;
+		width:100%;
+		height:35px;
+		font-family:'Karla', sans-serif;
+		font-size:9px;
+		font-weight:bold;
+		line-height:180%;
+		color:#4c5462;
+		margin: 0 auto;
+		text-align: center;
+
+	}
+	.best_price{
+		position:relative;
+		width:100%;
+		height:25px;
+		font-family:'Karla', sans-serif;
+		font-size:12px;
+		font-weight:bold;
+		line-height:25px;
+		color:#4c5462;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.best_buttons{
+		position:relative;
+		width:100%;
+		height:40px;
+		padding-top:5px;
+		margin:0 auto;
+	}
+	.best_button{
+		float:left;
+		width:20%;
+		height:100%;
+		margin-left:4%;
+		background:#0CF;
+		border:solid 1px #CCC;
+	}
+	.best_button:nth-child(1){
+		background:url(../01_img/01_Main/detail_out.jpg) center center no-repeat;
+		margin-left:15%;
+	}
+	.best_button:nth-child(2){
+		background:url(../01_img/01_Main/favorite_out.jpg) center center no-repeat;
+	}
+	.best_button:nth-child(3){
+		background:url(../01_img/01_Main/cart_out.jpg) center center no-repeat;
+		margin-right:0;
+	}
+
+	.best_buttonChoice{
+		border:none;
+		background:#996867 !important;
+	}
+	.best_buttonCBG{
+		display:none;
+		position:relative;
+		width:100%;
+		height:100%;
+	}
+	.best_button:nth-child(1) .best_buttonCBG{
+		background:url(../01_img/01_Main/detail_over.jpg) center center no-repeat;
+	}
+	.best_button:nth-child(2) .best_buttonCBG{
+		background:url(../01_img/01_Main/favorite_over.jpg) center center no-repeat;
+	}
+	.best_button:nth-child(3) .best_buttonCBG{
+		background:url(../01_img/01_Main/cart_over.jpg) center center no-repeat;
+	}
+}
+@media all and (min-width: 727px){
+	.section1_box1{
+		height:410px;
+	}
+	.box1_icon{
+		width:120px;
+		height:120px;
+		margin-top:145px;
+	}
+	
+	
+}
+@media all and (min-width: 1020px){
+	.section1_box1{
+		height:560px;
+	}
+	.box1_icon{
+		width:190px;
+		height:190px;
+		margin-top:186px;
+	}
+	
+	.best_Item{
+		width:23.1%;
+		height:450px;
+		margin-right:2.5%;
+	}
+	.best_Item:nth-child(2),.best_Item:nth-child(6),.best_Item:nth-child(10){
+		margin-right:2.5%;
+	}
+	.best_Image{
+		height:300px;
+	}
+	.best_Info,.best_choice{
+		height:147px;
+		padding-top:25px;
+	}
+	.best_name{
+		height:50px;
+		font-family:'Karla', sans-serif;
+		font-size:12px;
+
+	}
+	.best_price{
+		height:50px;
+		font-size:15px;
+		line-height:50px;
+	}
+	.best_buttons{
+		margin-left:0;
+		margin: 0 auto;
+		width:160px;
+		height:72px;
+		padding-top:10px;
+	}
+	.best_button{
+		width:35px;
+		height:35px;
+		margin:0;
+		margin-left:15px;
+	}
+	.best_button:nth-child(1){
+		margin-left:0%;
+		margin-left:9px;
+	}
+	.best_buttonCBG{
+		display:none;
+	}
+
+}
+
