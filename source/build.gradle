@@ -29,16 +29,20 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'com.oracle.ojdbc:ojdbc8'
-    runtimeOnly 'mysql:mysql-connector-java'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
     annotationProcessor 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper
+    compile group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '9.0.22' // spring boot jsp template engine
+    compile('javax.servlet:jstl:1.2')// jstl 구
     testImplementation 'io.projectreactor:reactor-test'
 }
 
+//runtimeOnly 'mysql:mysql-connector-java'
 test {
     useJUnitPlatform()
 }
