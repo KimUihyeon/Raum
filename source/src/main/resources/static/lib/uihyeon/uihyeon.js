@@ -49,9 +49,6 @@ var uihyeon = {};
         this.message = new tempMessage();
     }
 
-
-    console.log('load');
-
     uihyeon = new tempUh();
 
 })();
