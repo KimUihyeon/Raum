@@ -15,8 +15,8 @@ public class MemberController {
     public Member getMember(@PathVariable int id){
 
         Member member = Member.builder()
-                .id(id)
-                .name("test").build();
+                                .id(id)
+                                .name("test").build();
         return member;
     }
 }
