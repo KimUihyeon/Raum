@@ -19,4 +19,5 @@ public class MemberController {
                                 .name("test").build();
         return member;
     }
+
 }
