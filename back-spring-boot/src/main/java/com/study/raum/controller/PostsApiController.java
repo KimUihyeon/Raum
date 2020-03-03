@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("api/posts")
-public class PostApiController {
+public class PostsApiController {
 
     private final PostsService postsService;
 
@@ -29,8 +29,8 @@ public class PostApiController {
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.PATCH)
-    public PostsDto update(@RequestBody PostsDto postsDto){
-        return this.postsService.update(postsDto);
+    public PostsDto update(@PathVariable Long id, @RequestBody PostsDto postsDto){
+        return this.postsService.update(id,postsDto);
     }
 
 }

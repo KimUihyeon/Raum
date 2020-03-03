@@ -37,10 +37,10 @@ public class Posts {
             this.title = title;
         }
         if(content != null){
-            this.title = content;
+            this.content = content;
         }
         if(author != null){
-            this.title = author;
+            this.content = author;
         }
     }
 

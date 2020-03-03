@@ -4,6 +4,7 @@ import com.study.raum.domain.posts.Posts;
 import lombok.*;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

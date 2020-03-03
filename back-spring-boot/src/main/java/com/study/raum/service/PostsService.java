@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import javax.annotation.Resources;
 
-@Service
+@Service("postsService")
 @RequiredArgsConstructor
 public class PostsService {
 

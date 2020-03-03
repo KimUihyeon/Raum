@@ -21,6 +21,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.assertj.core.api.Assertions.*;
 
+/**
+ * MemberController Test Class
+ *
+ * @author 김의현
+ * @since 20.03.02
+ */
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers = MemberController.class)
 public class MemberControllerTest {
