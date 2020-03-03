@@ -36,10 +36,10 @@ public class PostsRepositoryTest {
         this.postsRepository.save(Posts.builder()
                                     .title(title)
                                     .content(content)
+                                    .author("5")
                                     .build());
 
         // when
-
         List<Posts> postsList = this.postsRepository.findAll();
 
         // then

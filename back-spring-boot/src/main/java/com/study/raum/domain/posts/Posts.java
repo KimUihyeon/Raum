@@ -32,5 +32,17 @@ public class Posts {
         this.author = author;
     }
 
+    public void patch(String title, String content, String author){
+        if(title != null){
+            this.title = title;
+        }
+        if(content != null){
+            this.title = content;
+        }
+        if(author != null){
+            this.title = author;
+        }
+    }
+
 
 }
