@@ -1,14 +1,8 @@
 package com.study.raum.controller;
 
-import com.study.raum.domain.posts.Posts;
-import com.study.raum.domain.posts.PostsRepository;
 import com.study.raum.dto.PostsDto;
 import com.study.raum.service.PostsService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
