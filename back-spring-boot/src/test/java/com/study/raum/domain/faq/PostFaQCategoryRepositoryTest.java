@@ -1,6 +1,6 @@
 package com.study.raum.domain.faq;
 
-import org.junit.After;
+import com.study.raum.setting.util.test.IUihyeonJapTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,44 +16,42 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 /**
+ * JapRepository Test Class
+ *
  * @author kuh
  * @since 2020.03.07
  */
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PostFaQCategoryRepositoryTest {
+public class PostFaQCategoryRepositoryTest implements IUihyeonJapTest {
 
     @Autowired
     private PostFaQCategoryRepository postFaQCategoryRepo;
 
-    @After
-    public void cleanup() {
-        postFaQCategoryRepo.deleteAll();
-    }
-
+    @Override
     @Test
     @Rollback
-    public void createDate() {
+    public void jpaTest() {
 
         //given
         List<PostFaQCategory> collection = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             PostFaQCategory category = PostFaQCategory.builder()
-                                                    .id(i)
-                                                    .name("항목 "+String.valueOf(i)).build();
+                    .id(i)
+                    .name("항목 " + String.valueOf(i)).build();
             collection.add(category);
         }
 
         this.postFaQCategoryRepo.saveAll(collection);
 
         //when
-
         List<PostFaQCategory> categories = this.postFaQCategoryRepo.findAll(Sort.by("id").descending());
-        categories.forEach(t->{
+        categories.forEach(t -> {
             String printStr = t.getId() + " // " + t.getName();
             System.out.println(printStr);
         });
+
         //then
         assertThat(categories).isNotNull();
 

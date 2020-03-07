@@ -1,54 +1,46 @@
-package com.study.raum.domain.faq;
+package com.study.raum.domain.system;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 /**
- * FaQ 자주찾는 질문답변 Domain Object
+ * SystemFiles Domain object
  *
  * @author kuh
- * @since 20.03.06
+ * @since 2020.03.07
  */
 
-@Getter
 @Builder
-@NoArgsConstructor
+@Getter
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-@Table(name = "postFaQ")
-public class PostFaQ {
+@Table(name = "systemFiles")
+public class SystemFile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column
-    private long faqCategoryId;
+    @Column(length = 25)
+    private String fileType;
 
-    @Column
-    private long memberId;
+    private String path;
 
-    @Column
-    private String answer;
+    private double fileSize;
 
-    @Column
-    private String question;
+    private String orgFileName;
 
-    @Column
-    private int hit;
+    private String extension;
 
     @CreatedDate
     private LocalDateTime regDate;
-
-    @LastModifiedDate
-    private LocalDateTime editDate;
 }

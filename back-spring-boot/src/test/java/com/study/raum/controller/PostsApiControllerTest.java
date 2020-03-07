@@ -7,29 +7,21 @@ import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 /**
  * PostsApiController Test Class
  *
- * @since 김의현
- * @author 20.03.03
+ * @author 김의현
+ * @since 20.03.03
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -45,12 +37,12 @@ public class PostsApiControllerTest {
     private PostsRepository postsRepository;
 
     @After
-    public void tearDown() throws Exception{
+    public void tearDown() throws Exception {
         this.postsRepository.deleteAll();
     }
 
     @Test
-    public void getPostsAllList(){
+    public void getPostsAllList() {
 
         String title = "테스트 게시글";
         String content = "테스트 본문";
@@ -66,31 +58,31 @@ public class PostsApiControllerTest {
         List<Posts> postsList = this.postsRepository.findAll();
 
         // then
-        postsList.forEach(t-> System.out.println(t.getTitle()));
+        postsList.forEach(t -> System.out.println(t.getTitle()));
 
         assertThat(postsList.get(0).getTitle()).isEqualTo(title);
         assertThat(postsList.get(0).getContent()).isEqualTo(content);
     }
 
     @Test
-    public void update() throws Exception{
+    public void update() throws Exception {
         //given
         Posts newPosts = Posts.builder()
-                                .title("Test")
-                                .author("김의현")
-                                .content("내용")
-                                .build();
+                .title("Test")
+                .author("김의현")
+                .content("내용")
+                .build();
 
         Posts savedPosts = this.postsRepository.save(newPosts);
         PostsDto dto = new PostsDto(savedPosts);
         dto.setTitle("변경된 제목");
-        String url = "http://localhost:"+ port +"/api/posts/" + savedPosts.getId();
+        String url = "http://localhost:" + port + "/api/posts/" + savedPosts.getId();
 
         //when
-        PostsDto responseDto =  this.testRestTemplate.patchForObject( url, dto , PostsDto.class  );
+        PostsDto responseDto = this.testRestTemplate.patchForObject(url, dto, PostsDto.class);
 
         //then
         assertThat(responseDto.getTitle()).isEqualTo("변경된 제목");
 
     }
- }
+}

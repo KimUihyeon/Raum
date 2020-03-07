@@ -1,18 +1,20 @@
-package com.study.raum.domain.faq;
+package com.study.raum.domain.system;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 /**
- * FaQ 자주찾는 질문답변 카테고리 Domain Object
+ * systemlogs Domain object
  *
  * @author kuh
- * @since 20.03.06
+ * @since 2020.03.07
  */
 
 @Getter
@@ -20,13 +22,18 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "postFaQCategories")
-public class PostFaQCategory {
+@EntityListeners(AuditingEntityListener.class)
+@Table(name = "systemLogs")
+public class SystemLog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column
-    private String name;
+    @CreatedDate
+    private LocalDateTime date;
+
+    private String exception;
+
+    private String message;
 }

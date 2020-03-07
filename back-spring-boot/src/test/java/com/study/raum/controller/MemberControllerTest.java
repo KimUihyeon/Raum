@@ -2,24 +2,19 @@ package com.study.raum.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.study.raum.model.Member;
-import org.json.JSONObject;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.transaction.AfterTransaction;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 
-
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.assertj.core.api.Assertions.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 /**
  * MemberController Test Class
@@ -36,7 +31,7 @@ public class MemberControllerTest {
 
     @Test
     @Rollback
-    public void MvcTest() throws Exception{
+    public void MvcTest() throws Exception {
 
         Member member = new Member();
         member.setName("test");
@@ -56,9 +51,9 @@ public class MemberControllerTest {
         int memberID = 2;
 
         Member member = Member.builder()
-                                .id(memberID)
-                                .name("김의현")
-                                .build();
+                .id(memberID)
+                .name("김의현")
+                .build();
 
 
         mock.perform(get("/api/member/" + memberID))
@@ -72,7 +67,6 @@ public class MemberControllerTest {
         Member member = new Member();
         member.setName("test");
         String data = String.valueOf(member.getName());
-
 
 
         assertThat(member).isNotNull();
