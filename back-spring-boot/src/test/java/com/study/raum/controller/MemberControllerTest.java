@@ -40,7 +40,7 @@ public class MemberControllerTest {
         ObjectMapper mapper = new ObjectMapper();
         String memberSerializeStr = mapper.writeValueAsString(member);
 
-        mock.perform(get("/api/member/3"))
+        mock.perform(get("/api/v1/member/3"))
                 .andDo(print())
                 .andExpect(content().string(memberSerializeStr))
                 .andExpect(jsonPath("$.id").value(3));
