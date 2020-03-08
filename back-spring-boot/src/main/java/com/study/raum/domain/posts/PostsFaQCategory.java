@@ -1,10 +1,9 @@
-package com.study.raum.domain.faq;
+package com.study.raum.domain.posts;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
@@ -20,8 +19,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "postFaQCategories")
-public class PostFaQCategory {
+@Table(name = "postsFaQCategories")
+public class PostsFaQCategory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,4 +1,4 @@
-package com.study.raum.domain.faq;
+package com.study.raum.domain.posts;
 
 import com.study.raum.setting.util.test.IUihyeonJapTest;
 import org.junit.Test;
@@ -24,10 +24,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PostFaQRepositoryTest implements IUihyeonJapTest {
+public class PostsFaQRepositoryTest implements IUihyeonJapTest {
 
     @Resource
-    private PostFaQRepository postFaQRepository;
+    private PostsFaQRepository postsFaQRepository;
 
     @Override
     @Test
@@ -35,18 +35,18 @@ public class PostFaQRepositoryTest implements IUihyeonJapTest {
     public void jpaTest() {
         // TODO : jap Test 작성하기
         //given
-        List<PostFaQ> collection = new ArrayList<>();
+        List<PostsFaQ> collection = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            PostFaQ faq = PostFaQ.builder()
+            PostsFaQ faq = PostsFaQ.builder()
                     .question("질문번호 " + i)
                     .answer("답변번호 " + i)
                     .build();
             collection.add(faq);
         }
-        this.postFaQRepository.saveAll(collection);
+        this.postsFaQRepository.saveAll(collection);
 
         //when
-        List<PostFaQ> postFaQs = this.postFaQRepository.findAll(Sort.by("id").ascending());
+        List<PostsFaQ> postFaQs = this.postsFaQRepository.findAll(Sort.by("id").ascending());
         postFaQs.forEach(t->{
             String testStr = t.getId() + "//" + t.getQuestion() + "//" + t.getAnswer();
             System.out.println(testStr);

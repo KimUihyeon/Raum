@@ -1,4 +1,4 @@
-package com.study.raum.domain.faq;
+package com.study.raum.domain.posts;
 
 import com.study.raum.setting.util.test.IUihyeonJapTest;
 import org.junit.Test;
@@ -24,10 +24,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PostFaQCategoryRepositoryTest implements IUihyeonJapTest {
+public class PostsFaQCategoryRepositoryTest implements IUihyeonJapTest {
 
     @Autowired
-    private PostFaQCategoryRepository postFaQCategoryRepo;
+    private PostsFaQCategoryRepository postsFaQCategoryRepo;
 
     @Override
     @Test
@@ -35,18 +35,18 @@ public class PostFaQCategoryRepositoryTest implements IUihyeonJapTest {
     public void jpaTest() {
 
         //given
-        List<PostFaQCategory> collection = new ArrayList<>();
+        List<PostsFaQCategory> collection = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            PostFaQCategory category = PostFaQCategory.builder()
+            PostsFaQCategory category = PostsFaQCategory.builder()
                     .id(i)
                     .name("항목 " + String.valueOf(i)).build();
             collection.add(category);
         }
 
-        this.postFaQCategoryRepo.saveAll(collection);
+        this.postsFaQCategoryRepo.saveAll(collection);
 
         //when
-        List<PostFaQCategory> categories = this.postFaQCategoryRepo.findAll(Sort.by("id").descending());
+        List<PostsFaQCategory> categories = this.postsFaQCategoryRepo.findAll(Sort.by("id").descending());
         categories.forEach(t -> {
             String printStr = t.getId() + " // " + t.getName();
             System.out.println(printStr);

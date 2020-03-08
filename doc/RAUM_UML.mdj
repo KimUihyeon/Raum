@@ -8093,7 +8093,7 @@
 									"top": 21,
 									"width": 200.93603515625,
 									"height": 13,
-									"text": "postFaQ"
+									"text": "postsFaQ"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -10598,7 +10598,7 @@
 									"top": 261,
 									"width": 207.68994140625,
 									"height": 13,
-									"text": "postQnA"
+									"text": "postsQnA"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -10737,11 +10737,11 @@
 										"$ref": "AAAAAAFwr+MKOaK4ga4="
 									},
 									"font": "Arial;13;1",
-									"left": 344,
+									"left": 336,
 									"top": 29,
 									"width": 191.4373779296875,
 									"height": 13,
-									"text": "postFaQCategories"
+									"text": "postsFaQCategories"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -10763,7 +10763,7 @@
 												"$ref": "AAAAAAFwr+MKPaO7HmQ="
 											},
 											"font": "Arial;13;0",
-											"left": 349,
+											"left": 341,
 											"top": 52,
 											"width": 181.4373779296875,
 											"height": 13
@@ -10778,21 +10778,21 @@
 												"$ref": "AAAAAAFwr+MKPaO8uzs="
 											},
 											"font": "Arial;13;0",
-											"left": 349,
+											"left": 341,
 											"top": 67,
 											"width": 181.4373779296875,
 											"height": 13
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 344,
+									"left": 336,
 									"top": 47,
 									"width": 191.4373779296875,
 									"height": 38
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 344,
+							"left": 336,
 							"top": 24,
 							"width": 191.4373779296875,
 							"height": 61,
@@ -11427,7 +11427,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 563,
+									"left": 559,
 									"top": 60,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -11444,7 +11444,7 @@
 										"$ref": "AAAAAAFwr+MKOaLewCc="
 									},
 									"font": "Arial;13;0",
-									"left": 559,
+									"left": 551,
 									"top": 60,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -11479,7 +11479,7 @@
 								"$ref": "AAAAAAFwr+MKOaK4ga4="
 							},
 							"lineStyle": 2,
-							"points": "534:81;592:81",
+							"points": "526:81;592:81",
 							"nameLabel": {
 								"$ref": "AAAAAAFwr+MKOaLfhvM="
 							},
@@ -13517,7 +13517,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFwr+MKNqH7C0E="
 					},
-					"name": "postFaQ",
+					"name": "postsFaQ",
 					"columns": [
 						{
 							"_type": "ERDColumn",
@@ -14570,7 +14570,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFwr+MKNqH7C0E="
 					},
-					"name": "postQnA",
+					"name": "postsQnA",
 					"columns": [
 						{
 							"_type": "ERDColumn",
@@ -14823,7 +14823,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFwr+MKNqH7C0E="
 					},
-					"name": "postFaQCategories",
+					"name": "postsFaQCategories",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",

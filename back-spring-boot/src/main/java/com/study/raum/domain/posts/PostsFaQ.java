@@ -1,4 +1,4 @@
-package com.study.raum.domain.faq;
+package com.study.raum.domain.posts;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,8 +24,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-@Table(name = "postFaQ")
-public class PostFaQ {
+@Table(name = "postsFaQ")
+public class PostsFaQ {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
