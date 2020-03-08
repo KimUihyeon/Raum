@@ -7611,6 +7611,21 @@
 										},
 										{
 											"_type": "ERDColumnView",
+											"_id": "AAAAAAFwuO3I+353Z1c=",
+											"_parent": {
+												"$ref": "AAAAAAFwr+MKNqH/MHU="
+											},
+											"model": {
+												"$ref": "AAAAAAFwuO3I3X50ge8="
+											},
+											"font": "Arial;13;0",
+											"left": 941,
+											"top": 142,
+											"width": 227.81591796875,
+											"height": 13
+										},
+										{
+											"_type": "ERDColumnView",
 											"_id": "AAAAAAFwr+MKNqIGNfA=",
 											"_parent": {
 												"$ref": "AAAAAAFwr+MKNqH/MHU="
@@ -7620,7 +7635,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 941,
-											"top": 142,
+											"top": 157,
 											"width": 227.81591796875,
 											"height": 13
 										},
@@ -7635,7 +7650,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 941,
-											"top": 157,
+											"top": 172,
 											"width": 227.81591796875,
 											"height": 13
 										},
@@ -7650,7 +7665,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 941,
-											"top": 172,
+											"top": 187,
 											"width": 227.81591796875,
 											"height": 13
 										},
@@ -7665,7 +7680,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 941,
-											"top": 187,
+											"top": 202,
 											"width": 227.81591796875,
 											"height": 13
 										}
@@ -7674,7 +7689,7 @@
 									"left": 936,
 									"top": 47,
 									"width": 237.81591796875,
-									"height": 158
+									"height": 173
 								}
 							],
 							"font": "Arial;13;0",
@@ -8538,7 +8553,7 @@
 									"top": 21,
 									"width": 234.92138671875,
 									"height": 13,
-									"text": "supplier"
+									"text": "suppliers"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -13078,9 +13093,19 @@
 							"_parent": {
 								"$ref": "AAAAAAFwr+MKOqMJy/4="
 							},
-							"name": "email",
+							"name": "emailSuffix",
 							"type": "VARCHAR",
-							"length": "100"
+							"length": "50"
+						},
+						{
+							"_type": "ERDColumn",
+							"_id": "AAAAAAFwuO3I3X50ge8=",
+							"_parent": {
+								"$ref": "AAAAAAFwr+MKOqMJy/4="
+							},
+							"name": "emailPrefix",
+							"type": "VARCHAR",
+							"length": "50"
 						},
 						{
 							"_type": "ERDColumn",
@@ -13801,7 +13826,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFwr+MKNqH7C0E="
 					},
-					"name": "supplier",
+					"name": "suppliers",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",

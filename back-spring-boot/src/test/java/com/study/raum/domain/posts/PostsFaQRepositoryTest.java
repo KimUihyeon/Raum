@@ -33,7 +33,6 @@ public class PostsFaQRepositoryTest implements IUihyeonJapTest {
     @Test
     @Rollback
     public void jpaTest() {
-        // TODO : jap Test 작성하기
         //given
         List<PostsFaQ> collection = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
