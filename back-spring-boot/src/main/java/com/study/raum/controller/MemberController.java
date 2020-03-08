@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/member/")
+@RequestMapping("/api/v1/member/")
 public class MemberController {
 
     @RequestMapping(value="/{id}" , method = RequestMethod.GET)

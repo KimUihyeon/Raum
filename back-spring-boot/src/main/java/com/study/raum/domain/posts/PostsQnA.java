@@ -48,4 +48,16 @@ public class PostsQnA {
                 ", contactWay='" + contactWay + '\'' +
                 '}';
     }
+
+    public void patch(String question, String contact, String contactWay) {
+        if (question != null) {
+            this.question = question;
+        }
+        if (contact != null) {
+            this.contact = contact;
+        }
+        if (contactWay != null) {
+            this.contactWay = contactWay;
+        }
+    }
 }

@@ -51,4 +51,18 @@ public class PostsFaQ {
 
     @LastModifiedDate
     private LocalDateTime editDate;
+
+
+    public void patch(String answer, String question, int hit) {
+        if (this.hit != hit && hit != 0) {
+            this.hit = hit;
+        }
+        if (answer != null) {
+            this.answer = answer;
+        }
+        if (question != null) {
+            this.question = question;
+        }
+
+    }
 }
