@@ -5,8 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @author kuh
@@ -20,6 +19,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "products")
 public class Product {
+
+    @Id
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    private long id;
 
     private String name;
 }
