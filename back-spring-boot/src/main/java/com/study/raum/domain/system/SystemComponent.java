@@ -19,8 +19,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "systemMeuns")
-public class SystemMenu {
+@Table(name = "SystemComponent")
+public class SystemComponent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +44,7 @@ public class SystemMenu {
 
     @Override
     public String toString() {
-        return "SystemMenu{" +
+        return "SystemComponent{" +
                 "id=" + id +
                 ", displayName='" + displayName + '\'' +
                 ", menuType='" + menuType + '\'' +

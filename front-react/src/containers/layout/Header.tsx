@@ -1,10 +1,23 @@
 import React from "react";
+import { MenuItem } from "../../data/Interfacies";
+import { BrowserRouter as Route , Link } from "react-router-dom";
 
 
-export function Header (){
-    console.log("??")
+type HeaderProps = {
+    menuItems : MenuItem[] | undefined
+}
+
+export function Header ( {...headerProps} : HeaderProps){
+
+    let listToComponents = headerProps.menuItems?.map((t,i)=>{
+        return (
+            <Link key={i} to={t.url}>{t.displayName}</Link>
+        )
+    })
 
     return (
-        <div>header</div>
+        <div>
+            {listToComponents}
+        </div>
     )
 }

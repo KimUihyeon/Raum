@@ -30,7 +30,6 @@ public class MemberLevelRepositoryTest implements IUihyeonJapTest {
 
     @Override
     @Test
-    @Rollback
     public void jpaTest() {
         //given
         List<MemberLevel> collection = new ArrayList<>();
