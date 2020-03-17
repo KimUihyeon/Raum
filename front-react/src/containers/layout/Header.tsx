@@ -11,7 +11,7 @@ export function Header ( {...headerProps} : HeaderProps){
 
     let listToComponents = headerProps.menuItems?.map((t,i)=>{
         return (
-            <Link key={i} to={t.url}>{t.displayName}</Link>
+            <Link key={i} to={t.url}>{t.name}</Link>
         )
     })
 

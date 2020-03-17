@@ -11,12 +11,9 @@ type BodyProps = {
 export function Body({...bodyProps} : BodyProps) {
 
     let listToComponents = bodyProps.menuItems?.map((t,i)=>{
-        let component = userComponents[t.componentName];
+        let component = userComponents[t.name];
         return (
-            <Route 
-                exact={t.isExact}
-                path={t.definitionUrl} key={i} 
-                component={component} ></Route>
+            <div key={i}></div>
         )
     });
 

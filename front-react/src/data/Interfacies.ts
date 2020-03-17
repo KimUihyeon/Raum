@@ -1,8 +1,7 @@
 export type MenuItem = {
     name : string ,
-    displayName : string ,
-    isExact : boolean | undefined ,
-    definitionUrl : string,
     url : string ,
-    componentName : string ,
+    id: Number,
+    children: MenuItem[]| undefined,
+    etc: string | undefined
 }
