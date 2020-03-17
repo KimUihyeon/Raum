@@ -1,10 +1,11 @@
 package com.study.raum.controller;
 
-import com.study.raum.domain.system.SystemComponent;
-import com.study.raum.domain.system.SystemComponentRepository;
+import com.study.raum.domain.system.SystemMenu;
+import com.study.raum.domain.system.SystemMenuRepository;
+import com.study.raum.dto.SystemMenuDto;
+import com.study.raum.service.SystemMenuService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,14 +19,16 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins={"http://localhost:3000", "http://localhost:8080"})
 @RequestMapping(value = "/api/v1/system", produces = "application/json; charset=utf-8")
 public class SystemApiController {
 
-    private final SystemComponentRepository systemComponentRepository;
+    private final SystemMenuService systemMenuService;
 
     @GetMapping("/menus")
-    public List<SystemComponent> getMenus() {
-        return this.systemComponentRepository.findAll(Sort.by("id").ascending());
+    public List<SystemMenuDto> getMenus() {
+
+        return this.systemMenuService.getList();
     };
+
+
 }

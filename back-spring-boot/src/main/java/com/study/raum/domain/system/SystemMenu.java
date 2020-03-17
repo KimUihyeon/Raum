@@ -20,39 +20,30 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "systemMenus")
-public class SystemComponent {
+public class SystemMenu {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //private Long parentMenuId;
+    private Long parentId;
 
     private String displayName;
 
-    private String menuType;
-
-    private String componentName;
-
-    private String definitionUrl;
+//    private String menuType;
 
     private String etc;
 
     private String url;
 
-    private boolean isMenu;
-
     @Override
     public String toString() {
-        return "SystemComponent{" +
+        return "SystemMenu{" +
                 "id=" + id +
+                ", parentId=" + parentId +
                 ", displayName='" + displayName + '\'' +
-                ", menuType='" + menuType + '\'' +
-                ", componentName='" + componentName + '\'' +
-                ", definitionUrl='" + definitionUrl + '\'' +
                 ", etc='" + etc + '\'' +
                 ", url='" + url + '\'' +
-                ", isMenu=" + isMenu +
                 '}';
     }
 }

@@ -23,16 +23,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @ActiveProfiles("localDB")
 @SpringBootTest
-public class SystemComponentRepositoryTest implements IUihyeonJapTest {
+public class SystemMenuRepositoryTest implements IUihyeonJapTest {
 
     @Resource
-    private SystemComponentRepository systemComponentRepository;
+    private SystemMenuRepository systemMenuRepository;
 
     @Override
     @Test
     public void jpaTest() {
         //when
-        List<SystemComponent> menus = this.systemComponentRepository.findAll(Sort.by("id").descending());
+        List<SystemMenu> menus = this.systemMenuRepository.findAll(Sort.by("id").descending());
         menus.forEach(t -> {
             System.out.println(t.toString());
         });
