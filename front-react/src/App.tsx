@@ -13,18 +13,26 @@ import axios from "axios";
 function App() {  
   const [menuItems, setMenuItems] = useState<MenuItem[]>();
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    // TODO : 서버터져요!
-    // TODO : 서버터져요!
+  //   // TODO : 서버터져요!
+  //   // TODO : 서버터져요!
+  //   axios.get('http://localhost:8080/api/v1/system/menus').then(res=>{
+  //     let data = Convert.toMenuItems(res.data);
+  //     setMenuItems(data);
+  //   });
+  // }, [menuItems]);
+  
+  let handleClick = () =>{
+    let startDate = new Date();
     axios.get('http://localhost:8080/api/v1/system/menus').then(res=>{
       let data = Convert.toMenuItems(res.data);
       setMenuItems(data);
+      let endDate = new Date();
+
+      console.log(startDate.getTime()-endDate.getTime());
     });
-  }, [menuItems]);
-  //let menuItems = Convert.toMenuItems(menus);
-
-
+  }
 
 
   return (
@@ -32,6 +40,7 @@ function App() {
       <Header menuItems={menuItems}></Header>
       <Body menuItems={menuItems}></Body>
       <Footer></Footer>
+      <button type="button" onClick={handleClick} ></button>
     </div>
   );
 }
