@@ -10,6 +10,9 @@ type BodyProps = {
 
 export function Body({...bodyProps} : BodyProps) {
 
+    console.log('Body 다시 랜더됨')
+    let jwt : string = '';
+    
     let listToComponents = bodyProps.menuItems?.map((t,i)=>{
         let component = userComponents[t.name];
         return (
@@ -19,7 +22,13 @@ export function Body({...bodyProps} : BodyProps) {
 
     return (
         <div>
-            {listToComponents}
+            <Route path='/' exact={true} component={userComponents.ConsultingMain}/>
+            <Route path='/' exact={true} component={userComponents.ConsultingFaQ}/>
+            <Route path='/' exact={true} component={userComponents.ConsultingAS}/>
+            <Route path='/' exact={true} component={userComponents.Custom}/>
+            <Route path='/' exact={true} component={userComponents.InfoMain}/>
+            <Route path='/' exact={true} component={userComponents.InfoStory}/>
+            <Route path='/' exact={true} component={userComponents.InfoFactory}/>
         </div>
     )
 }
