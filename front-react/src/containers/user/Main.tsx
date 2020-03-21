@@ -5,7 +5,8 @@ type MainProps = {
 }
 
 export function Main({ match }: MainProps) {
-    console.log(match.params)
+
+    console.log('생성됨');  
     return (
         <div>mainPage 뜸 어드민 ??</div>
     )

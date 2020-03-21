@@ -4,7 +4,7 @@ import { ConsultingFaQ } from "./ConsultingFaQ";
 import { ConsultingAS } from "./ConsultingAS";
 import { Custom } from "./Custom";
 
-import { InfoMain } from "./InfoMain";
+import { InfoRaum } from "./InfoRaum";
 import { InfoStory } from "./InfoStory";
 import { InfoFactory } from "./InfoFactory";
 
@@ -13,7 +13,7 @@ import { Main } from "./Main";
 import { ShowRoom } from "./ShowRoom";
 
 export type stackInstances = typeof ConsultingMain | typeof ConsultingFaQ | typeof ConsultingAS | typeof Custom |
-                            typeof InfoMain | typeof InfoStory | typeof InfoFactory |
+                            typeof InfoRaum | typeof InfoStory | typeof InfoFactory |
                             typeof Main | typeof Object | typeof ShowRoom;
 
 export default {
@@ -21,7 +21,7 @@ export default {
     ConsultingFaQ,
     ConsultingAS,
     Custom,
-    InfoMain,
+    InfoRaum,
     InfoStory,
     InfoFactory,
 

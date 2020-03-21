@@ -15,13 +15,11 @@ export function Body({...bodyProps} : BodyProps) {
     let jwt : string = '';
     
     let listToComponents = bodyProps.menuItems?.map((t,i)=>{
-        console.log(i);
+
+        console.log(`${t.componentName} -> ${t.urls.join("\t\t")}` );
         let component = userComponents[t.componentName];
         return (
             <div key={i}>
-                <div>
-                    {i}
-                </div>
                 <Route path={t.urls} exact={t.exact} component={component}/>
             </div>
         )
@@ -32,8 +30,10 @@ export function Body({...bodyProps} : BodyProps) {
 
     return (
         <div>
+            <Route path='/showroom:type' component={userComponents.ShowRoom}/>
 
             { listToComponents }
+
             {/* <Route path='/' exact={true} component={userComponents.ConsultingMain}/>
             <Route path='/' exact={true} component={userComponents.ConsultingFaQ}/>
             <Route path='/' exact={true} component={userComponents.ConsultingAS}/>

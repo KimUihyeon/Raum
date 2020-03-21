@@ -28,8 +28,10 @@ INSERT INTO systemComponents (  componentName , definitionUrl )
         ('Custom','/custom,/custom/main'),
         ('Main','/main,/'),
         ('Object','/object,/object/main'),
-        ('ShowRoom','/showRoom/{type}');
+        ('ShowRoom','/showRoom/:type');
 commit;
+
+UPDATE systemComponents t1 SET  t1.isExact = false , t1.definitionUrl = '/showRoom/:type' WHERE t1.componentName = 'ShowRoom';
 
 SELECT * FROM systemComponents;
 
