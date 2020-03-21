@@ -5,3 +5,12 @@ export type MenuItem = {
     children: MenuItem[]| undefined,
     etc: string | undefined
 }
+
+
+
+
+export type ComponentItem = {
+    componentName : string,
+    urls : string[],
+    exact : boolean;
+}

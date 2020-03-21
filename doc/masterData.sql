@@ -1,4 +1,8 @@
-SELECT * FROM systemMenus t1 ORDER BY t1.parentId ASC ;
+use raum_spring;
+show databases like '%raum_spring%';
+
+SELECT * FROM systemComponents;
+
 -- 컴포넌트 아이템 systemComponents
 -- 컴포넌트 아이템 systemComponents
 CREATE TABLE systemComponents(
@@ -14,10 +18,17 @@ start transaction;
 delete from systemComponents WHERE 1=1;
 INSERT INTO systemComponents (  componentName , definitionUrl )
 	values
-		('Main','/,/main'),
 		('InfoRaum','/info,/info/main,/info/raum'),
 		('InfoStory','/info/story'),
-		('InfoFactory','/info/factory');
+		('InfoFactory','/info/factory'),
+
+        ('ConsultingMain','/consulting,/consulting/main'),
+        ('ConsultingFaQ','/consulting/faq'),
+        ('ConsultingAS','/consulting/as'),
+        ('Custom','/custom,/custom/main'),
+        ('Main','/main,/'),
+        ('Object','/object,/object/main'),
+        ('ShowRoom','/showRoom/{type}');
 commit;
 
 SELECT * FROM systemComponents;
@@ -68,5 +79,3 @@ INSERT INTO systemMenus ( id , parentId ,  displayName , url)
 commit;
 
 SELECT * FROM systemMenus;
-
-

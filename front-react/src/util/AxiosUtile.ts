@@ -21,7 +21,7 @@ class AxiosUtil {
         return [server_connection_str, url].join('');
     }
 
-    data(url : string){
+    get(url : string){
         return axios.get(this.getUrl(url));
     }
 

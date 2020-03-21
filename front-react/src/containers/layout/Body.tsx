@@ -1,10 +1,11 @@
-import React from 'react'
+import React , { useState } from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import { MenuItem } from '../../data/Interfacies';
+import { MenuItem, ComponentItem } from '../../data/Interfacies';
 import userComponents from "../user";
+import { axiosUtil } from '../../util/AxiosUtile';
 
 type BodyProps = {
-    menuItems : MenuItem[] | undefined
+    menuItems : ComponentItem[] | undefined
 }
 
 
@@ -14,21 +15,32 @@ export function Body({...bodyProps} : BodyProps) {
     let jwt : string = '';
     
     let listToComponents = bodyProps.menuItems?.map((t,i)=>{
-        let component = userComponents[t.name];
+        console.log(i);
+        let component = userComponents[t.componentName];
         return (
-            <div key={i}></div>
+            <div key={i}>
+                <div>
+                    {i}
+                </div>
+                <Route path={t.urls} exact={t.exact} component={component}/>
+            </div>
         )
     });
 
+    console.log(listToComponents);
+
+
     return (
         <div>
-            <Route path='/' exact={true} component={userComponents.ConsultingMain}/>
+
+            { listToComponents }
+            {/* <Route path='/' exact={true} component={userComponents.ConsultingMain}/>
             <Route path='/' exact={true} component={userComponents.ConsultingFaQ}/>
             <Route path='/' exact={true} component={userComponents.ConsultingAS}/>
             <Route path='/' exact={true} component={userComponents.Custom}/>
             <Route path='/' exact={true} component={userComponents.InfoMain}/>
             <Route path='/' exact={true} component={userComponents.InfoStory}/>
-            <Route path='/' exact={true} component={userComponents.InfoFactory}/>
+            <Route path='/' exact={true} component={userComponents.InfoFactory}/> */}
         </div>
     )
 }

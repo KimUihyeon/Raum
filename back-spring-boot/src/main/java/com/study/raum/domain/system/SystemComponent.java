@@ -10,12 +10,12 @@ import javax.persistence.*;
  */
 
 
-@Setter
+@Getter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "systemComponent")
+@Table(name = "systemComponents")
 public class SystemComponent {
 
     @Id
