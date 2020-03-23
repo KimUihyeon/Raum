@@ -1,18 +1,10 @@
 use raum_spring;
+
 show databases like '%raum_spring%';
 
-SELECT * FROM systemComponents;
 
--- 컴포넌트 아이템 systemComponents
--- 컴포넌트 아이템 systemComponents
-CREATE TABLE systemComponents(
-	id BIGINT auto_increment NOT NULL PRIMARY KEY,
-	componentName varchar(50),
-	isExact boolean default true,
-	definitionUrl varchar(50),
-	etc TEXT default null,
-	isUsed boolean default true
-);
+-- 메뉴 아이템 systemComponents
+-- 메뉴 아이템 systemComponents
 
 start transaction;
 delete from systemComponents WHERE 1=1;
@@ -29,28 +21,18 @@ INSERT INTO systemComponents (  componentName , definitionUrl )
         ('Main','/main,/'),
         ('Object','/object,/object/main'),
         ('ShowRoom','/showRoom/:type');
+
+UPDATE systemComponents t1 SET  t1.isExact = false WHERE t1.componentName = 'ShowRoom';
 commit;
 
-UPDATE systemComponents t1 SET  t1.isExact = false , t1.definitionUrl = '/showRoom/:type' WHERE t1.componentName = 'ShowRoom';
-
-SELECT * FROM systemComponents;
 
 
 
 -- 메뉴 아이템 systemMenus
 -- 메뉴 아이템 systemMenus
-CREATE TABLE systemMenus (
-	id BIGINT auto_increment NOT NULL PRIMARY KEY,
-    parentId bigint default NULL,
-    displayName varchar(30),
-    url varchar(50),
-    etc text,
-    
-    foreign key (parentId) references systemMenus (id)
-);
 
 start transaction;
-delete from systemMenus;
+delete from systemMenus where 1=1;
 
 INSERT INTO systemMenus ( id , parentId ,  displayName , url) 
 	values
@@ -79,5 +61,3 @@ INSERT INTO systemMenus ( id , parentId ,  displayName , url)
 		(18, 5 , 'AS 문의' , '/consulting/as');
         
 commit;
-
-SELECT * FROM systemMenus;
