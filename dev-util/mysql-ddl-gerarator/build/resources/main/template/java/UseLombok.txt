@@ -1,0 +1,15 @@
+
+/**
+ * @author kuh
+ * @since [$$CREATE_DATE]
+ */
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+@Table(name = "[$$TABLE_NAME]")
+public class [$$CLASS_NAME] {
+    [$$BODY]
+}

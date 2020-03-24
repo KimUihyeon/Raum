@@ -1,0 +1,36 @@
+
+public class orderProducts
+{
+	public long productId;
+	public long orderId;
+}
+
+
+public class comment
+{
+	public long id;
+	public long commentId;
+	public long memberId;
+	public int goodScore;
+	public int badScore;
+	public LocalDateTime regDate;
+	public LocalDateTime editDate;
+	public LocalDateTime delDate;
+}
+
+
+
+
+
+public class commentReal
+{
+	public long id;
+	public long memberId;
+	public int goodScore;
+	public int badScore;
+	public LocalDateTime redDate;
+	public LocalDateTime editDate;
+	public LocalDateTime delDate;
+	public boolean isUse;
+	public long imageFIleId;
+}

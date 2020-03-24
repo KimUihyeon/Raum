@@ -43,6 +43,9 @@ public class Supplier {
     @Column(length = 100)
     private String address2;
 
+    @Column(length = 100)
+    public String address3;
+
     @Column(length = 20)
     private String postNumber;
 
@@ -56,6 +59,7 @@ public class Supplier {
                 ", etc='" + etc + '\'' +
                 ", address1='" + address1 + '\'' +
                 ", address2='" + address2 + '\'' +
+                ", address3='" + address3 + '\'' +
                 ", postNumber='" + postNumber + '\'' +
                 '}';
     }

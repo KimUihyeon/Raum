@@ -29,6 +29,8 @@ public class PostsQnA {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Long memberId;
+
     @CreatedDate
     private LocalDateTime regDate;
 

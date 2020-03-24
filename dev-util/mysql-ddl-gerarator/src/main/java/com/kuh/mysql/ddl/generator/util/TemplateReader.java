@@ -18,7 +18,7 @@ public class TemplateReader {
         private ProgramingLanguage language;
         private ProgramingLanguageOption option;
 
-        public void Setting(){
+        public void Setting() {
 
         }
 
@@ -38,34 +38,32 @@ public class TemplateReader {
     }
 
     private String read(ProgramingLanguage language, ProgramingLanguageOption optional) {
+        String template = null;
         switch (language) {
             case NONE: {
-                try{
+                try {
                     throw new Exception("language enum not definition");
-                }catch (Exception e){}
+                } catch (Exception e) {
+                }
             }
             case JAVA: {
-                if(optional == ProgramingLanguageOption.NONE) {
+                if (optional == ProgramingLanguageOption.NONE) {
 
+                } else if (optional == ProgramingLanguageOption.LOMBOK) {
                 }
-                else if(optional == ProgramingLanguageOption.LOMBOK) {
-                }
 
 
-                String root = this.getClass().getResource("/").getPath();
-
-
-                String path = this.getClass().getResource("./template/java/UseLombok.txt").toString();
-                fileRead(path);
+                String path = ClassLoader.getSystemResource("./template/java/UseLombok.txt").getPath();
+                template = fileRead(path);
                 break;
             }
         }
 
-        return ";";
+        return template;
     }
 
 
-    private String fileRead(String path){
+    private String fileRead(String path) {
 
 
         FileInputStream fileInputStream = null;
@@ -75,7 +73,7 @@ public class TemplateReader {
             fileInputStream = new FileInputStream(new File(path));
             fileInputStream.read();
 
-            while (fileInputStream.read() != -1){
+            while (fileInputStream.read() != -1) {
                 contents.append(fileInputStream.read());
             }
 

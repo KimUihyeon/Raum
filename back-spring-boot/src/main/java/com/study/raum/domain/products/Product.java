@@ -25,4 +25,20 @@ public class Product {
     private long id;
 
     private String name;
+
+    public long supplierId;
+
+    public long categoryId;
+
+    public String thumbnailPath;
+
+    public long memberId;
+
+    public double price;
+
+    public double sale;
+
+    public boolean isUse;
+
+    public int hit;
 }
