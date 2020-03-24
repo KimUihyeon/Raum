@@ -1,6 +1,9 @@
 package com.kuh.mysql.ddl.generator.java;
 
+import com.kuh.mysql.ddl.generator.enums.ProgramingLanguage;
+import com.kuh.mysql.ddl.generator.enums.ProgramingLanguageOption;
 import com.kuh.mysql.ddl.generator.util.IGenerator;
+import com.kuh.mysql.ddl.generator.util.TemplateReader;
 import jdk.nashorn.internal.objects.annotations.Getter;
 
 /**
@@ -43,6 +46,11 @@ public class JPAEntityGenerator implements IGenerator {
         String body = ddl.substring(bodyStartIndex+1, bodyLastIndex);
 
         StringBuilder classHeader  = new StringBuilder();
+
+        String template = new TemplateReader.Setting()
+                .language(ProgramingLanguage.JAVA)
+                .option(ProgramingLanguageOption.LOMBOK)
+                .read();
 
         if(isLombok){
             classHeader.append("@Getter");
