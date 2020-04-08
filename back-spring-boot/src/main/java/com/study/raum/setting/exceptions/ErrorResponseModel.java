@@ -1,9 +1,10 @@
-package com.study.raum.setting;
+package com.study.raum.setting.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -12,6 +13,6 @@ public class ErrorResponseModel {
 
     private final int status;
     private final String message;
-    private Date date = new Date();
+    private LocalDateTime date = LocalDateTime.now();
 
 }

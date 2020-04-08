@@ -1,4 +1,4 @@
-package com.study.raum.setting.util;
+package com.study.raum.setting.util.paging;
 
 import lombok.Builder;
 import lombok.Data;

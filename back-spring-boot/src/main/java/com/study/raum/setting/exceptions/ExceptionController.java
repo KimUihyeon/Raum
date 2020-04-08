@@ -1,6 +1,7 @@
-package com.study.raum.setting;
+package com.study.raum.setting.exceptions;
 
 
+import com.study.raum.setting.PropertyFileManager;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
@@ -8,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
  * Controller Exception Handler
@@ -37,6 +39,17 @@ public class ExceptionController {
 
 
     /**
+     * 미구현 인터페이스 요청시 발생하는 Exception
+     * @param e NotImplementedException
+     * @return
+     */
+    @ExceptionHandler(NotImplementedException.class)
+    public ResponseEntity<ErrorResponseModel> notImplementedMethodExceptionHandle(NotImplementedException e){
+        ErrorResponseModel error = new ErrorResponseModel(HttpStatus.BAD_REQUEST.value(), e.getMessage());
+        return new ResponseEntity<ErrorResponseModel>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    /**
      * NullPointerException , OutOfMemoryException 등
      * 정의되지 않은 Exception을 처리하기 위한 핸들
      * @param e Exception
@@ -48,4 +61,5 @@ public class ExceptionController {
         ErrorResponseModel error = new ErrorResponseModel(HttpStatus.INTERNAL_SERVER_ERROR.value(),e.getMessage());
         return new ResponseEntity<ErrorResponseModel>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
 }
