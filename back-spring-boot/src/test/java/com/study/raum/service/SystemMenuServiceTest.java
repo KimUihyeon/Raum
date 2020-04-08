@@ -14,7 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 /**
@@ -33,7 +32,7 @@ public class SystemMenuServiceTest {
     public void getListTest() {
 
         //given
-        List<SystemMenuDto> datas = this.systemMenuService.getList();
+        List<SystemMenuDto> datas = this.systemMenuService.findAll();
         //when
         datas.forEach(t -> {
             System.out.println(t.toString());

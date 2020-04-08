@@ -55,7 +55,7 @@ public class SystemApiControllerTest {
     public void getListTest() throws Exception {
 
 
-        systemMenuService.getList().forEach(t->{
+        systemMenuService.findAll().forEach(t->{
             System.out.println(t.getId());
         });
         //given
