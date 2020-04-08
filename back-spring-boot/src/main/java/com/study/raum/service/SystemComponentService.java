@@ -2,11 +2,9 @@ package com.study.raum.service;
 
 import com.study.raum.domain.system.SystemComponentRepository;
 import com.study.raum.dto.SystemComponentDTO;
-import com.study.raum.setting.util.PagingRequestPram;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

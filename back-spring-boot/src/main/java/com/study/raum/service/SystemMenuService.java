@@ -3,15 +3,16 @@ package com.study.raum.service;
 import com.study.raum.domain.system.SystemMenu;
 import com.study.raum.domain.system.SystemMenuRepository;
 import com.study.raum.dto.SystemMenuDto;
+import com.study.raum.service.common.ICommonService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 
 
 /**
@@ -21,13 +22,13 @@ import java.util.Map;
 
 @Service("systemMenuService")
 @RequiredArgsConstructor
-public class SystemMenuService {
+public class SystemMenuService implements ICommonService<SystemMenuDto> {
 
     private final SystemMenuRepository systemMenuRepository;
 
 
-
-    public List<SystemMenuDto> getList() {
+    @Override
+    public List<SystemMenuDto> findAll() {
         List<SystemMenu> tempList = systemMenuRepository.findAll(Sort.by("parentId").ascending());
         Map<Long, SystemMenuDto> menuItems = new HashMap<>();
 
@@ -46,5 +47,25 @@ public class SystemMenuService {
         });
 
         return new ArrayList(menuItems.values());
+    }
+
+    @Override
+    public SystemMenuDto save(SystemMenuDto dto) {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public SystemMenuDto update(long id, SystemMenuDto dto) {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public SystemMenuDto delete(long id) {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public SystemMenuDto findById(long id) {
+        throw new NotImplementedException();
     }
 }
