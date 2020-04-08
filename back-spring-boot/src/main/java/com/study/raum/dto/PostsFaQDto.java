@@ -1,6 +1,7 @@
 package com.study.raum.dto;
 
 import com.study.raum.domain.posts.PostsFaQ;
+import com.study.raum.dto.common.IEntityConverter;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PostsFaQDto {
+public class PostsFaQDto implements IEntityConverter<PostsFaQ> {
 
     private long id;
     private String category; //
@@ -33,6 +34,7 @@ public class PostsFaQDto {
         this.editDate = postsFaQ.getEditDate();
     }
 
+    @Override
     public PostsFaQ toEntity() {
 
         return PostsFaQ.builder()

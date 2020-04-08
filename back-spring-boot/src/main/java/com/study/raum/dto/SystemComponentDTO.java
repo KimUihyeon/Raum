@@ -1,8 +1,11 @@
 package com.study.raum.dto;
 
+import com.study.raum.domain.posts.PostsFaQ;
 import com.study.raum.domain.system.SystemComponent;
+import com.study.raum.dto.common.IEntityConverter;
 import lombok.*;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +18,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class SystemComponentDTO {
+public class SystemComponentDTO implements IEntityConverter<SystemComponent> {
 
     private String componentName;
     private String[] urls;
@@ -31,5 +34,14 @@ public class SystemComponentDTO {
         } catch (Exception e) {
             this.urls = new String[0];
         }
+    }
+
+    @Override
+    public SystemComponent toEntity() {
+
+        return SystemComponent.builder()
+                .componentName(this.componentName)
+                .definitionUrl(String.join(",", this.urls))
+                .isExact(this.isExact).build();
     }
 }

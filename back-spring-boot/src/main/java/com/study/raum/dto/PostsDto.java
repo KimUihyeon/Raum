@@ -1,6 +1,7 @@
 package com.study.raum.dto;
 
 import com.study.raum.domain.posts.Posts;
+import com.study.raum.dto.common.IEntityConverter;
 import lombok.*;
 
 @Getter
@@ -8,12 +9,13 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PostsDto {
+public class PostsDto implements IEntityConverter<Posts> {
 
     private String title;
     private String content;
     private String author;
 
+    @Override
     public Posts toEntity(){
 
         return Posts.builder()

@@ -1,6 +1,8 @@
 package com.study.raum.setting;
 
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -14,8 +16,11 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  * @since 20.03.03
  */
 @ControllerAdvice
+@PropertySource(PropertyFileManager.ERROR_MGS_PROP)
 public class ExceptionController {
 
+    @Value("${not_supported_http_method}")
+    private String NOT_SUPPORTED_HTTP_METHOD;
 
     /**
      * 정의되지 않은 http method 요청시 발생하는 Exception 핸들
@@ -23,10 +28,10 @@ public class ExceptionController {
      * @return
      */
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
-    public ResponseEntity<ErrorResponseModel> requestMethodNotSupprotedHandle(HttpRequestMethodNotSupportedException e){
+    public ResponseEntity<ErrorResponseModel> requestMethodNotSupportedHandle(HttpRequestMethodNotSupportedException e){
 
         ErrorResponseModel error = new ErrorResponseModel(HttpStatus.INTERNAL_SERVER_ERROR.value()
-                ,e.getMessage() + " (지원하지 않는 http method 입니다.)");
+                ,e.getMessage() + " ("+NOT_SUPPORTED_HTTP_METHOD+")");
         return new ResponseEntity<ErrorResponseModel>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

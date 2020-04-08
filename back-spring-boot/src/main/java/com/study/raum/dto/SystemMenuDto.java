@@ -1,6 +1,7 @@
 package com.study.raum.dto;
 
 import com.study.raum.domain.system.SystemMenu;
+import com.study.raum.dto.common.IEntityConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SystemMenuDto {
+public class SystemMenuDto implements IEntityConverter<SystemMenu> {
 
     private long id;
     private List<SystemMenuDto> children;
@@ -34,20 +35,21 @@ public class SystemMenuDto {
         this.children.add(children);
     }
 
-    public SystemMenu toEntity(SystemMenuDto dto){
-        return SystemMenu.builder()
-                    .id(dto.getId())
-                    .displayName(dto.getName())
-                    .etc(dto.etc)
-                    .url(dto.url)
-                    .build();
-    }
-
     public SystemMenuDto(SystemMenu entity){
         this.url = entity.getUrl();
         this.id = entity.getId();
         this.name = entity.getDisplayName();
         this.etc = entity.getEtc();
+    }
+
+    @Override
+    public SystemMenu toEntity(){
+        return SystemMenu.builder()
+                .id(this.getId())
+                .displayName(this.getName())
+                .etc(this.etc)
+                .url(this.url)
+                .build();
     }
 
     @Override

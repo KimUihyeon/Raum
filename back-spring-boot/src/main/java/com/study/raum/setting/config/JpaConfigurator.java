@@ -10,9 +10,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @Configuration
 @EnableJpaAuditing
-public class JpaConfiguration {
+public class JpaConfigurator {
 
-    public JpaConfiguration(){
+    public JpaConfigurator(){
         System.out.println("JpaConfiguration load");
     }
 }
