@@ -22,10 +22,10 @@ public class ProductCategory {
 
     @Id
     @GeneratedValue( strategy =  GenerationType.IDENTITY)
-    public long id;
+    private long id;
 
     @Column
-    public String name;
+    private String name;
 
-    public String etc;
+    private String etc;
 }

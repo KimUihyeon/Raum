@@ -1,7 +1,8 @@
-package com.study.raum.setting.exceptions;
+package com.study.raum.controller.common.system;
 
 
 import com.study.raum.setting.PropertyFileManager;
+import com.study.raum.setting.exceptions.ErrorResponseModel;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
