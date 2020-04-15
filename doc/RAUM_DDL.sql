@@ -75,6 +75,7 @@ CREATE TABLE `members` (
     `memberLevelId` BIGINT NOT NULL,
     `userId` varchar(200) NOT NULL,
     `userPw` TEXT NOT NULL,
+    `name` TEXT NOT NULL,
     `tel` VARCHAR(50)  NOT NULL,
     `emailSuffix` VARCHAR(50)  NOT NULL,
     `emailPrefix` VARCHAR(50)  NOT NULL,
@@ -83,7 +84,7 @@ CREATE TABLE `members` (
     `address3` VARCHAR(100) ,
     `postNumber` VARCHAR(20)  NOT NULL,
     `regDate` DATETIME default CURRENT_TIMESTAMP,
-    `singupType` VARCHAR(30) DEFAULT '직접가입',
+    `signupType` VARCHAR(30) DEFAULT '직접가입',
     UNIQUE (`userId`),
     foreign key (`memberLevelId`) references memberLevels (`id`)
 );

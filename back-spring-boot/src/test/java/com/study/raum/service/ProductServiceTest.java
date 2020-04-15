@@ -6,6 +6,7 @@ import com.study.raum.domain.products.ProductCategory;
 import com.study.raum.domain.products.ProductCategoryRepository;
 import com.study.raum.domain.products.ProductRepository;
 import com.study.raum.dto.ProductDto;
+import com.study.raum.setting.util.loggers.LoggerUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -41,6 +41,8 @@ public class MemberDto implements IEntityConverter<Member> {
 
     private String signupType;
 
+    private MemberLevelDto memberLevel;
+
 
     public MemberDto(Member entity){
         this.name=entity.getName();
@@ -53,11 +55,29 @@ public class MemberDto implements IEntityConverter<Member> {
         this.address2 = entity.getAddress2();
         this.postNumber = entity.getPostNumber();
         this.signupType = entity.getSignupType();
+
+        if(entity.getMemberLevel() != null){
+            this.memberLevel = new MemberLevelDto(entity.getMemberLevel());
+        }
+
     }
 
 
     @Override
     public Member toEntity() {
-        return null;
+        return Member.builder()
+                .userPw(this.userPw)
+                .id(this.id)
+                .userId(this.userId)
+                .tel(this.tel)
+                .name(this.name)
+                .emailPrefix(this.emailPrefix)
+                .emailSuffix(this.emailSuffix)
+                .address1(this.address1)
+                .address2(this.address2)
+                .postNumber(this.postNumber)
+                .signupType(this.signupType)
+                .memberLevel(this.memberLevel == null ? null : memberLevel.toEntity())
+                .build();
     }
 }

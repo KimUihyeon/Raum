@@ -1,5 +1,6 @@
 package com.study.raum.domain.posts;
 
+import com.study.raum.setting.util.loggers.LoggerUtil;
 import com.study.raum.setting.util.test.IUihyeonJapTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;

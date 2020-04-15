@@ -23,12 +23,15 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @ManyToOne
+    @JoinColumn(name = "memberLevelId")
+    private MemberLevel memberLevel;
+
     private String userPw;
 
     private String userId;
 
     private String name;
-
 
     @Column(length = 50)
     private String tel;
@@ -50,6 +53,7 @@ public class Member {
 
     @Column(length = 30)
     private String signupType;
+
 
     @Override
     public String toString() {
