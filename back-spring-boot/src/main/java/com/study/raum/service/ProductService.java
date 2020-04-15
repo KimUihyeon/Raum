@@ -1,8 +1,11 @@
 package com.study.raum.service;
 
+import com.study.raum.domain.products.Product;
+import com.study.raum.domain.products.ProductRepository;
 import com.study.raum.dto.ProductDto;
 import com.study.raum.service.common.ICommonService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,10 +19,14 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductService implements ICommonService<ProductDto> {
 
+    private final ProductRepository productRepository;
+
 
     @Override
     public ProductDto save(ProductDto dto) {
-        return null;
+        Product entity = dto.toEntity();
+        Product savedEntity = this.productRepository.save(entity);
+        return new ProductDto(savedEntity);
     }
 
     @Override

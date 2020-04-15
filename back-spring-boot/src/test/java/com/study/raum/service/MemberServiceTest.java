@@ -1,0 +1,19 @@
+package com.study.raum.service;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.junit4.SpringRunner;
+
+/**
+ * @author kuh
+ * @since 2020.04.15
+ */
+
+@SpringBootTest
+@RunWith(SpringRunner.class)
+public class MemberServiceTest {
+
+}

@@ -13,15 +13,15 @@ import javax.persistence.Table;
  * @since 2020.03.25
  */
 
-
-@Getter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@Entity
-@Table(name = "orderProducts")
-public class OrderProduct {
-
-    public long productId;
-    public long orderId;
-}
+//
+//@Getter
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@Entity
+//@Table(name = "orderProducts")
+//public class OrderProduct {
+//
+//    public long productId;
+//    public long orderId;
+//}

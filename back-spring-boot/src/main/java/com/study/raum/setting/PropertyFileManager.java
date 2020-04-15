@@ -8,6 +8,6 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ErrorMsg;
  */
 public class PropertyFileManager {
 
-    public final static String ERROR_MGS_PROP = "application-ErrorMsg.properties";
+    public final static String ERROR_MGS_PROP = "classpath:application-ErrorMsg.properties";
 
 }

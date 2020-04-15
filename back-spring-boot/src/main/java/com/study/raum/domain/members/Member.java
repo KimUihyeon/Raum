@@ -27,6 +27,8 @@ public class Member {
 
     private String userId;
 
+    private String name;
+
 
     @Column(length = 50)
     private String tel;
@@ -55,6 +57,7 @@ public class Member {
                 "id=" + id +
                 ", userPw='" + userPw + '\'' +
                 ", userId='" + userId + '\'' +
+                ", name='" + name + '\'' +
                 ", tel='" + tel + '\'' +
                 ", emailSuffix='" + emailSuffix + '\'' +
                 ", emailPrefix='" + emailPrefix + '\'' +

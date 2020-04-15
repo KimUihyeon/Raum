@@ -1,0 +1,63 @@
+package com.study.raum.dto;
+
+import com.study.raum.domain.members.Member;
+import com.study.raum.dto.common.IEntityConverter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+
+/**
+ * @author kuh
+ * @since 2020.04.15
+ */
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class MemberDto implements IEntityConverter<Member> {
+
+
+    private String name;
+
+    private long id;
+
+    private String userPw;
+
+    private String userId;
+
+    private String tel;
+
+    private String emailSuffix;
+
+    private String emailPrefix;
+
+    private String address1;
+
+    private String address2;
+
+    private String postNumber;
+
+    private String signupType;
+
+
+    public MemberDto(Member entity){
+        this.name=entity.getName();
+        this.userId = entity.getUserId();
+        this.userPw = entity.getUserPw();
+        this.tel = entity.getTel();
+        this.emailPrefix = entity.getEmailPrefix();
+        this.emailSuffix = entity.getEmailSuffix();
+        this.address1 = entity.getAddress1();
+        this.address2 = entity.getAddress2();
+        this.postNumber = entity.getPostNumber();
+        this.signupType = entity.getSignupType();
+    }
+
+
+    @Override
+    public Member toEntity() {
+        return null;
+    }
+}

@@ -5,8 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 /**
@@ -23,6 +22,8 @@ import java.time.LocalDateTime;
 @Table(name = "realComments")
 public class RealComment {
 
+    @Id
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
     public long id;
     public long memberId;
     public int goodScore;

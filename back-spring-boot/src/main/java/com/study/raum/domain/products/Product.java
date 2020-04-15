@@ -21,24 +21,28 @@ import javax.persistence.*;
 public class Product {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String name;
 
-    public long supplierId;
+    private long supplierId;
 
-    public long categoryId;
+//    private long categoryId;
 
-    public String thumbnailPath;
+    @ManyToOne(targetEntity = ProductCategory.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "categoryId")
+    private ProductCategory productCategory;
 
-    public long memberId;
+    private String thumbnailPath;
 
-    public double price;
+    private long memberId;
 
-    public double sale;
+    private double price;
 
-    public boolean isUse;
+    private double sale;
 
-    public int hit;
+    private boolean isUse;
+
+    private int hit;
 }

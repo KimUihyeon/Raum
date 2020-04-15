@@ -24,6 +24,7 @@ public class MemberLevel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
 
+    @Column(length = 30)
     public String title;
 
     public String description;

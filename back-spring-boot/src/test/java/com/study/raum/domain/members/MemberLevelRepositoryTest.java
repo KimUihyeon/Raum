@@ -1,6 +1,7 @@
-package com.study.raum.domain.system;
+package com.study.raum.domain.members;
 
 import com.study.raum.setting.util.test.IUihyeonJapTest;
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -51,7 +52,7 @@ public class MemberLevelRepositoryTest implements IUihyeonJapTest {
 
         //than
 
-        assertThat(memberLevels).isNotNull();
+        Assertions.assertThat(memberLevels).isNotNull();
         assertThat(memberLevels.size()).isEqualTo(collection.size());
     }
 }
