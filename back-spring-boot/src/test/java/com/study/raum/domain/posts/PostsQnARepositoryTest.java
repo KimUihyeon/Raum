@@ -60,7 +60,7 @@ public class PostsQnARepositoryTest implements IUihyeonJapTest {
         //when
         List<PostsQnA> qnas = this.postsQnARepository.findAll(Sort.by("id").descending());
         qnas.forEach(t -> {
-            System.out.println(t.toString());
+            LoggerUtil.sout(t.toString());
         });
 
         //then

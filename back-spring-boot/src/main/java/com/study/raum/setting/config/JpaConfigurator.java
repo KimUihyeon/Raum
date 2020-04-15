@@ -1,5 +1,6 @@
 package com.study.raum.setting.config;
 
+import com.study.raum.setting.util.loggers.LoggerUtil;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
@@ -13,6 +14,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 public class JpaConfigurator {
 
     public JpaConfigurator(){
-        System.out.println("JpaConfiguration load");
+        LoggerUtil.sout("JpaConfiguration load");
     }
 }

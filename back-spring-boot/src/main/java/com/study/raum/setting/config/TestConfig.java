@@ -1,5 +1,6 @@
 package com.study.raum.setting.config;
 
+import com.study.raum.setting.util.loggers.LoggerUtil;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
@@ -12,6 +13,6 @@ import org.springframework.context.annotation.PropertySource;
 public class TestConfig {
 
     public TestConfig(){
-        System.out.println("test Config load");
+        LoggerUtil.sout("test Config load");
     }
 }

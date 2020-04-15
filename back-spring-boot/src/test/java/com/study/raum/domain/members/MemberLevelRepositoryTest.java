@@ -47,7 +47,7 @@ public class MemberLevelRepositoryTest implements IUihyeonJapTest {
         List<MemberLevel> memberLevels = this.memberLevelRepository.findAll(Sort.by("id").descending());
         memberLevels.forEach(t -> {
             String testStr = t.getId() + "//" + t.getTitle() + "//" + t.getDescription();
-            System.out.println(testStr);
+            LoggerUtil.sout(testStr);
         });
 
         //than

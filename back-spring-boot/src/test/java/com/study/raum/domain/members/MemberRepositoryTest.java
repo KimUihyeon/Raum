@@ -49,7 +49,7 @@ public class MemberRepositoryTest implements IUihyeonJapTest {
         //when
         List<Member> members = this.memberRepository.findAll(Sort.by("id").descending());
         members.forEach(t->{
-            System.out.println(t.toString());
+            LoggerUtil.sout(t.toString());
         });
 
         //than

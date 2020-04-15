@@ -48,7 +48,7 @@ public class PostsFaQRepositoryTest implements IUihyeonJapTest {
         List<PostsFaQ> postFaQs = this.postsFaQRepository.findAll(Sort.by("id").ascending());
         postFaQs.forEach(t->{
             String testStr = t.getId() + "//" + t.getQuestion() + "//" + t.getAnswer();
-            System.out.println(testStr);
+            LoggerUtil.sout(testStr);
         });
 
 

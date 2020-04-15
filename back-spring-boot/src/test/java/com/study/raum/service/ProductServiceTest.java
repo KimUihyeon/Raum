@@ -54,7 +54,7 @@ public class ProductServiceTest {
         this.productService.save(new ProductDto((product)));
 
         this.productCategoryRepository.findAll().forEach(t->{
-            System.out.println(t.toString());
+            LoggerUtil.sout(t.toString());
         });
 
 //        this.productService.save(new ProductDto(product));

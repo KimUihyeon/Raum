@@ -34,7 +34,7 @@ public class SystemMenuRepositoryTest implements IUihyeonJapTest {
         //when
         List<SystemMenu> menus = this.systemMenuRepository.findAll(Sort.by("id").descending());
         menus.forEach(t -> {
-            System.out.println(t.toString());
+            LoggerUtil.sout(t.toString());
         });
 
         //than

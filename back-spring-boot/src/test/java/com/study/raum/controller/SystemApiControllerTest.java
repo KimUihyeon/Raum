@@ -56,7 +56,7 @@ public class SystemApiControllerTest {
 
 
         systemMenuService.findAll().forEach(t->{
-            System.out.println(t.getId());
+            LoggerUtil.sout(t.getId());
         });
         //given
         //when

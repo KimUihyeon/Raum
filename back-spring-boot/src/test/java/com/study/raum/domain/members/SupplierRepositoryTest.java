@@ -50,7 +50,7 @@ public class SupplierRepositoryTest implements IUihyeonJapTest {
         //when
         List<Supplier> suppliers = this.supplierRepository.findAll(Sort.by("id").descending());
         suppliers.forEach(t->{
-            System.out.println(t.toString());
+            LoggerUtil.sout(t.toString());
         });
 
         //than

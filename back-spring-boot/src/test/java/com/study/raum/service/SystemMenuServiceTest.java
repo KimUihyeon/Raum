@@ -37,7 +37,7 @@ public class SystemMenuServiceTest {
         List<SystemMenuDto> datas = this.systemMenuService.findAll();
         //when
         datas.forEach(t -> {
-            System.out.println(t.toString());
+            LoggerUtil.sout(t.toString());
         });
 
         //than

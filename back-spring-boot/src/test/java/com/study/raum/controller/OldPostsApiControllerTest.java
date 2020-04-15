@@ -58,7 +58,7 @@ public class OldPostsApiControllerTest {
         List<Posts> postsList = this.postsRepository.findAll();
 
         // then
-        postsList.forEach(t -> System.out.println(t.getTitle()));
+        postsList.forEach(t -> LoggerUtil.sout(t.getTitle()));
 
         assertThat(postsList.get(0).getTitle()).isEqualTo(title);
         assertThat(postsList.get(0).getContent()).isEqualTo(content);

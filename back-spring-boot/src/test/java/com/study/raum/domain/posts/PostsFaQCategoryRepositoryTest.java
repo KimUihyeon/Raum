@@ -49,7 +49,7 @@ public class PostsFaQCategoryRepositoryTest implements IUihyeonJapTest {
         List<PostsFaQCategory> categories = this.postsFaQCategoryRepo.findAll(Sort.by("id").descending());
         categories.forEach(t -> {
             String printStr = t.getId() + " // " + t.getName();
-            System.out.println(printStr);
+            LoggerUtil.sout(printStr);
         });
 
         //then
