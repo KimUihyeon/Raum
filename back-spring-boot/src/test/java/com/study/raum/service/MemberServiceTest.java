@@ -14,6 +14,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.UUID;
+
 /**
  * @author kuh
  * @since 2020.04.15
@@ -34,8 +36,10 @@ public class MemberServiceTest {
     public void memberInsertTest() {
 
         // given
+
+        String uniqUserId = "TestID_" + UUID.randomUUID().toString().substring(0,7);
         MemberDto memberDto = new MemberDto();
-        memberDto.setUserId("test2");
+        memberDto.setUserId(uniqUserId);
         memberDto.setAddress1("경기도 수원시 팔달구 권광로 ****");
         memberDto.setAddress2("떙떙 아파트 123동 33303호");
         memberDto.setPostNumber("12345");
