@@ -1,6 +1,5 @@
 package com.study.raum.service;
 
-import com.study.raum.domain.members.Member;
 import com.study.raum.domain.products.Product;
 import com.study.raum.domain.products.ProductCategory;
 import com.study.raum.domain.products.ProductCategoryRepository;
@@ -11,7 +10,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -57,8 +55,16 @@ public class ProductServiceTest {
         this.productCategoryRepository.findAll().forEach(t->{
             LoggerUtil.sout(t.toString());
         });
+    }
 
-//        this.productService.save(new ProductDto(product));
+
+    @Test
+    public void productFindAllTest(){
+        //given
+
+        //when
+
+        //then
     }
 
 }

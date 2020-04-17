@@ -1,9 +1,12 @@
 package com.study.raum.service;
 
 import com.study.raum.domain.members.Supplier;
-import com.study.raum.service.common.ServiceBase;
+import com.study.raum.domain.members.SupplierRepository;
+import com.study.raum.dto.SupplierDto;
+import com.study.raum.service.common.BaseCrudService;
 import com.sun.xml.internal.ws.developer.Serialization;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -12,38 +15,40 @@ import java.util.List;
  * @since 2020.04.17
  */
 @Serialization
-@RequiredArgsConstructor
-public class SupperialService extends ServiceBase<Supplier> {
+public class SupplierService extends BaseCrudService<Supplier, SupplierDto> {
+
+    @Autowired
+    public SupplierService(SupplierRepository supplierRepository){
+        super(supplierRepository);
+    }
 
     @Override
-    public Supplier save(Supplier dto) {
+    public SupplierDto save(SupplierDto dto) {
         return null;
     }
 
     @Override
-    public Supplier update(long id, Supplier dto) {
+    public SupplierDto update(long id, SupplierDto dto) {
         return null;
     }
 
     @Override
-    public Supplier delete(long id) {
+    public SupplierDto delete(long id) {
         return null;
     }
 
     @Override
-    public List<Supplier> findAll(int page, int size) {
+    public List<SupplierDto> findAll(int page, int size) {
         return null;
     }
 
     @Override
-    public List<Supplier> findAll() {
+    public List<SupplierDto> findAll() {
         return null;
     }
 
     @Override
-    public Supplier findById(long id) {
+    public SupplierDto findById(long id) {
         return null;
     }
-
-    private
 }

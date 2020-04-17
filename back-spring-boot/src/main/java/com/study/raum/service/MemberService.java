@@ -1,11 +1,12 @@
 package com.study.raum.service;
 
 import com.study.raum.domain.members.Member;
-import com.study.raum.domain.members.MemberLevelRepository;
 import com.study.raum.domain.members.MemberRepository;
 import com.study.raum.dto.MemberDto;
-import com.study.raum.service.common.IServiceBase;
-import lombok.RequiredArgsConstructor;
+import com.study.raum.service.common.BaseCrudService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,19 +16,18 @@ import java.util.List;
  * @since 2020.04.15
  */
 @Service
-@RequiredArgsConstructor
-public class MemberServiceBase implements IServiceBase<MemberDto> {
+//@RequiredArgsConstructor
+public class MemberService extends BaseCrudService<Member, MemberDto> {
 
-
-    private final MemberRepository memberRepository;
-    private final MemberLevelRepository memberLevelRepository;
+    @Autowired
+    public MemberService(MemberRepository memberRepository) {
+        super(memberRepository);
+    }
 
 
     @Override
     public MemberDto save(MemberDto dto) {
-        Member member = dto.toEntity();
-        Member savedMember = this.memberRepository.save(member);
-        return new MemberDto(savedMember);
+        return this.entitySave(dto.toEntity());
     }
 
     @Override

@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("postsService")
 @RequiredArgsConstructor
 @PropertySource(PropertyFileManager.ERROR_MGS_PROP)
-public class PostsService {
+public class PostsService  {
 
     private final PostsRepository postsRepository;
 

@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
  */
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductCategoryDto extends AbsDtoConverter<ProductCategory> {
@@ -44,4 +43,12 @@ public class ProductCategoryDto extends AbsDtoConverter<ProductCategory> {
         this.name = entity.getName();
     }
 
+    @Override
+    public String toString() {
+        return "ProductCategoryDto{" +
+                "id=" + id +
+                ", etc='" + etc + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

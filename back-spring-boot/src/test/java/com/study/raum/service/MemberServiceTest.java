@@ -1,6 +1,5 @@
 package com.study.raum.service;
 
-import com.study.raum.domain.members.Member;
 import com.study.raum.domain.members.MemberLevel;
 import com.study.raum.domain.members.MemberLevelRepository;
 import com.study.raum.dto.MemberDto;

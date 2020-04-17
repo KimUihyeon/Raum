@@ -1,6 +1,7 @@
 package com.study.raum.dto;
 
 import com.study.raum.domain.posts.Posts;
+import com.study.raum.dto.common.AbsDtoConverter;
 import com.study.raum.dto.common.IDtoConverter;
 import lombok.*;
 
@@ -9,7 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PostsDto implements IDtoConverter<Posts> {
+public class PostsDto extends AbsDtoConverter<Posts> {
 
     private String title;
     private String content;
@@ -25,9 +26,15 @@ public class PostsDto implements IDtoConverter<Posts> {
                     .build();
     }
 
-    public PostsDto (Posts posts){
-        this.title = posts.getTitle();
-        this.content = posts.getContent();
-        this.author = posts.getAuthor();
+    @Override
+    public void createDto(Posts entity) {
+        this.title = entity.getTitle();
+        this.content = entity.getContent();
+        this.author = entity.getAuthor();
+
+    }
+
+    public PostsDto (Posts entity){
+        super(entity);
     }
 }

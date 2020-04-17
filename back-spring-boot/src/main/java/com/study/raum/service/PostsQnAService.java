@@ -3,9 +3,12 @@ package com.study.raum.service;
 import com.study.raum.domain.posts.PostsQnA;
 import com.study.raum.domain.posts.PostsQnARepository;
 import com.study.raum.dto.PostsQnADto;
-import com.study.raum.service.common.ServiceBase;
+import com.study.raum.service.common.BaseCrudService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,42 +17,38 @@ import java.util.stream.Collectors;
  * @author kuh
  * @since 2020.03.08
  */
+@Service
+public class PostsQnAService extends BaseCrudService<PostsQnA, PostsQnADto> {
 
-@RequiredArgsConstructor
-public class PostsQnAServiceBase extends ServiceBase<PostsQnADto> {
 
-    private final PostsQnARepository postsQnARepository;
+    @Autowired
+    public PostsQnAService(PostsQnARepository postsQnARepository) {
+        super(postsQnARepository);
+    }
 
     @Override
     public List<PostsQnADto> findAll() {
-        return this.postsQnARepository.findAll(Sort.by("id").descending()).stream()
-                .map(t -> new PostsQnADto(t)).collect(Collectors.toList());
+        return entityFindAll();
     }
 
     @Override
     public PostsQnADto delete(long id) {
-        PostsQnA qna = this.postsQnARepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 게시물 입니다."));
-
-        this.postsQnARepository.deleteById(id);
-        return new PostsQnADto(qna);
+        return entityDelete(id);
     }
 
     @Override
     public List<PostsQnADto> findAll(int page, int size) {
-        return null;
+        return entityFindAll();
     }
 
     @Override
-    public PostsQnADto save(PostsQnADto postsQnADto) {
-        PostsQnA pna = this.postsQnARepository.save(postsQnADto.toEntity());
-        return new PostsQnADto(pna);
+    public PostsQnADto save(PostsQnADto dto) {
+        return entitySave(dto.toEntity());
     }
 
     @Override
     public PostsQnADto update(long id, PostsQnADto dto) {
-        PostsQnA qna = this.postsQnARepository.findById(id).orElseThrow(() ->
-                new IllegalArgumentException("존재하지 않는 게시물 입니다."));
+        PostsQnA qna = this.entityFindById(id);
         qna.patch(dto.getQuestion(), dto.getContact(), dto.getContactWay());
 
         return new PostsQnADto(qna);
@@ -57,9 +56,6 @@ public class PostsQnAServiceBase extends ServiceBase<PostsQnADto> {
 
     @Override
     public PostsQnADto findById(long id) {
-        PostsQnA dto = this.postsQnARepository.findById(id).orElseThrow(() ->
-                new IllegalArgumentException("존재하지 않는 게시물 입니다."));
-
-        return new PostsQnADto(dto);
+        return this.entityFindByIdCastDto(id);
     }
 }

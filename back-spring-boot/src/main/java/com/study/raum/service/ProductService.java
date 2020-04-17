@@ -3,8 +3,9 @@ package com.study.raum.service;
 import com.study.raum.domain.products.Product;
 import com.study.raum.domain.products.ProductRepository;
 import com.study.raum.dto.ProductDto;
-import com.study.raum.service.common.IServiceBase;
+import com.study.raum.service.common.BaseCrudService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,17 +16,17 @@ import java.util.List;
  */
 
 @Service
-@RequiredArgsConstructor
-public class ProductServiceBase implements IServiceBase<ProductDto> {
+public class ProductService extends BaseCrudService<Product, ProductDto> {
 
-    private final ProductRepository productRepository;
 
+    @Autowired
+    public ProductService(ProductRepository productRepository){
+        super(productRepository);
+    }
 
     @Override
     public ProductDto save(ProductDto dto) {
-        Product entity = dto.toEntity();
-        Product savedEntity = this.productRepository.save(entity);
-        return new ProductDto(savedEntity);
+        return entitySave(dto.toEntity());
     }
 
     @Override

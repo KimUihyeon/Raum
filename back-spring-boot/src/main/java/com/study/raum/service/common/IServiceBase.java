@@ -12,7 +12,8 @@ import java.util.List;
  * @author kuh
  * @since 2020.04.08
  */
-public interface IBasicService<T> {
+public interface IServiceBase<T> {
+
 
     @Transactional
     T save(T dto);

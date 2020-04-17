@@ -7,12 +7,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.linesOf;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -32,7 +34,7 @@ public class SystemMenuServiceTest {
     private SystemMenuService systemMenuService;
 
     @Test
-    public void getListTest() {
+    public void findAllTest() {
 
         //given
         List<SystemMenuDto> datas = this.systemMenuService.findAll();
@@ -41,7 +43,18 @@ public class SystemMenuServiceTest {
             LoggerUtil.sout(t.toString());
         });
 
-        //than
+        //then
         assertThat(datas.size()).isNotZero();
+    }
+
+    @Test
+    @Rollback
+    public void findAllDeprecatedTest(){
+        // given
+
+
+        // when
+
+        // then
     }
 }
