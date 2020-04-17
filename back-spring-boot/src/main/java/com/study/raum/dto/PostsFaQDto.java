@@ -1,7 +1,8 @@
 package com.study.raum.dto;
 
 import com.study.raum.domain.posts.PostsFaQ;
-import com.study.raum.dto.common.IEntityConverter;
+import com.study.raum.dto.common.AbsDtoConverter;
+import com.study.raum.dto.common.IDtoConverter;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -15,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PostsFaQDto implements IEntityConverter<PostsFaQ> {
+public class PostsFaQDto extends AbsDtoConverter<PostsFaQ> {
 
     private long id;
     private String category; //
@@ -25,13 +26,8 @@ public class PostsFaQDto implements IEntityConverter<PostsFaQ> {
     private LocalDateTime regDate;
     private LocalDateTime editDate;
 
-    public PostsFaQDto(PostsFaQ postsFaQ){
-        this.id = postsFaQ.getId();
-        this.answer = postsFaQ.getAnswer();
-        this.question = postsFaQ.getQuestion();
-        this.hit = postsFaQ.getHit();
-        this.regDate = postsFaQ.getRegDate();
-        this.editDate = postsFaQ.getEditDate();
+    public PostsFaQDto(PostsFaQ entity){
+        super(entity);
     }
 
     @Override
@@ -42,5 +38,15 @@ public class PostsFaQDto implements IEntityConverter<PostsFaQ> {
                 .question(this.question)
                 .hit(this.hit)
                 .build();
+    }
+
+    @Override
+    public void createDto(PostsFaQ entity) {
+        this.id = entity.getId();
+        this.answer = entity.getAnswer();
+        this.question = entity.getQuestion();
+        this.hit = entity.getHit();
+        this.regDate = entity.getRegDate();
+        this.editDate = entity.getEditDate();
     }
 }

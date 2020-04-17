@@ -1,5 +1,7 @@
 package com.study.raum.service.common;
 
+import org.springframework.data.domain.PageRequest;
+
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -10,7 +12,7 @@ import java.util.List;
  * @author kuh
  * @since 2020.04.08
  */
-public interface ICommonService<T> {
+public interface IBasicService<T> {
 
     @Transactional
     T save(T dto);
@@ -20,6 +22,8 @@ public interface ICommonService<T> {
 
     @Transactional
     T delete(long id);
+
+    List<T> findAll(int page, int size);
 
     List<T> findAll();
 

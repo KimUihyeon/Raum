@@ -1,15 +1,12 @@
 package com.study.raum.service;
 
-import com.study.raum.domain.posts.Posts;
 import com.study.raum.domain.posts.PostsQnA;
 import com.study.raum.domain.posts.PostsQnARepository;
 import com.study.raum.dto.PostsQnADto;
-import com.study.raum.service.common.ICommonService;
+import com.study.raum.service.common.ServiceBase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,9 +14,9 @@ import java.util.stream.Collectors;
  * @author kuh
  * @since 2020.03.08
  */
-@Service
+
 @RequiredArgsConstructor
-public class PostsQnAService implements ICommonService<PostsQnADto> {
+public class PostsQnAServiceBase extends ServiceBase<PostsQnADto> {
 
     private final PostsQnARepository postsQnARepository;
 
@@ -36,6 +33,11 @@ public class PostsQnAService implements ICommonService<PostsQnADto> {
 
         this.postsQnARepository.deleteById(id);
         return new PostsQnADto(qna);
+    }
+
+    @Override
+    public List<PostsQnADto> findAll(int page, int size) {
+        return null;
     }
 
     @Override

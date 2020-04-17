@@ -1,7 +1,8 @@
 package com.study.raum.dto;
 
 import com.study.raum.domain.system.SystemMenu;
-import com.study.raum.dto.common.IEntityConverter;
+import com.study.raum.dto.common.AbsDtoConverter;
+import com.study.raum.dto.common.IDtoConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,27 +20,17 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SystemMenuDto implements IEntityConverter<SystemMenu> {
+public class SystemMenuDto extends AbsDtoConverter<SystemMenu> {
 
     private long id;
-    private List<SystemMenuDto> children;
+    private List<SystemMenuDto> children = new ArrayList<>();
     private String name;
     private String url;
     private String etc;
 
-    public void addChildren(SystemMenuDto children) {
-        if (this.children == null) {
-            this.children = new ArrayList<>();
-        }
-
-        this.children.add(children);
-    }
 
     public SystemMenuDto(SystemMenu entity){
-        this.url = entity.getUrl();
-        this.id = entity.getId();
-        this.name = entity.getDisplayName();
-        this.etc = entity.getEtc();
+        super(entity);
     }
 
     @Override
@@ -50,6 +41,14 @@ public class SystemMenuDto implements IEntityConverter<SystemMenu> {
                 .etc(this.etc)
                 .url(this.url)
                 .build();
+    }
+
+    @Override
+    public void createDto(SystemMenu entity) {
+        this.url = entity.getUrl();
+        this.id = entity.getId();
+        this.name = entity.getDisplayName();
+        this.etc = entity.getEtc();
     }
 
     @Override

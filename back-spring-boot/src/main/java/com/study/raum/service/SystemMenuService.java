@@ -3,10 +3,8 @@ package com.study.raum.service;
 import com.study.raum.domain.system.SystemMenu;
 import com.study.raum.domain.system.SystemMenuRepository;
 import com.study.raum.dto.SystemMenuDto;
-import com.study.raum.service.common.ICommonService;
+import com.study.raum.service.common.IServiceBase;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
@@ -20,16 +18,15 @@ import java.util.Map;
  * @since 2020.03.17
  */
 
-@Service("systemMenuService")
 @RequiredArgsConstructor
-public class SystemMenuService implements ICommonService<SystemMenuDto> {
+public class SystemMenuServiceBase implements IServiceBase<SystemMenuDto> {
 
     private final SystemMenuRepository systemMenuRepository;
 
 
     @Override
     public List<SystemMenuDto> findAll() {
-        List<SystemMenu> tempList = systemMenuRepository.findAll(Sort.by("parentId").ascending());
+        List<SystemMenu> tempList = systemMenuRepository.findAll();
         Map<Long, SystemMenuDto> menuItems = new HashMap<>();
 
         tempList.forEach(t -> {
@@ -61,6 +58,11 @@ public class SystemMenuService implements ICommonService<SystemMenuDto> {
 
     @Override
     public SystemMenuDto delete(long id) {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public List<SystemMenuDto> findAll(int page, int size) {
         throw new NotImplementedException();
     }
 

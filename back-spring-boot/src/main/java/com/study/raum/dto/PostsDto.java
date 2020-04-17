@@ -1,7 +1,7 @@
 package com.study.raum.dto;
 
 import com.study.raum.domain.posts.Posts;
-import com.study.raum.dto.common.IEntityConverter;
+import com.study.raum.dto.common.IDtoConverter;
 import lombok.*;
 
 @Getter
@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PostsDto implements IEntityConverter<Posts> {
+public class PostsDto implements IDtoConverter<Posts> {
 
     private String title;
     private String content;

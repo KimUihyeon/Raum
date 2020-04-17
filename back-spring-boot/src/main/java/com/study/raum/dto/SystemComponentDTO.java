@@ -1,14 +1,9 @@
 package com.study.raum.dto;
 
-import com.study.raum.domain.posts.PostsFaQ;
 import com.study.raum.domain.system.SystemComponent;
-import com.study.raum.dto.common.IEntityConverter;
+import com.study.raum.dto.common.AbsDtoConverter;
+import com.study.raum.dto.common.IDtoConverter;
 import lombok.*;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author kuh
@@ -18,7 +13,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class SystemComponentDTO implements IEntityConverter<SystemComponent> {
+public class SystemComponentDTO extends AbsDtoConverter<SystemComponent> {
 
     private String componentName;
     private String[] urls;
@@ -26,14 +21,7 @@ public class SystemComponentDTO implements IEntityConverter<SystemComponent> {
 
 
     public SystemComponentDTO(SystemComponent entity) {
-        this.componentName = entity.getComponentName();
-        this.isExact = entity.isExact();
-
-        try {
-            this.urls = entity.getDefinitionUrl().split(",");
-        } catch (Exception e) {
-            this.urls = new String[0];
-        }
+        super(entity);
     }
 
     @Override
@@ -43,5 +31,17 @@ public class SystemComponentDTO implements IEntityConverter<SystemComponent> {
                 .componentName(this.componentName)
                 .definitionUrl(String.join(",", this.urls))
                 .isExact(this.isExact).build();
+    }
+
+    @Override
+    public void createDto(SystemComponent entity) {
+        this.componentName = entity.getComponentName();
+        this.isExact = entity.isExact();
+
+        try {
+            this.urls = entity.getDefinitionUrl().split(",");
+        } catch (Exception e) {
+            this.urls = new String[0];
+        }
     }
 }

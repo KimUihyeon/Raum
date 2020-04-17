@@ -1,19 +1,12 @@
 package com.study.raum.service;
 
-import com.study.raum.domain.products.Product;
 import com.study.raum.domain.products.ProductCategory;
 import com.study.raum.domain.products.ProductCategoryRepository;
-import com.study.raum.domain.products.ProductRepository;
 import com.study.raum.dto.ProductCategoryDto;
-import com.study.raum.dto.ProductDto;
-import com.study.raum.service.common.ICommonService;
-import com.study.raum.setting.PropertyFileManager;
+import com.study.raum.service.common.ServiceBase;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,15 +16,10 @@ import java.util.stream.Collectors;
  * @since 2020.04.11
  */
 
-@Service
 @RequiredArgsConstructor
-@PropertySource(PropertyFileManager.ERROR_MGS_PROP)
-public class ProductCategoryService implements ICommonService<ProductCategoryDto> {
+public class ProductCategoryServiceBase extends ServiceBase<ProductCategoryDto> {
 
     private final ProductCategoryRepository productCategoryRepository;
-
-    @Value("${not_find_data}")
-    private String NOT_FIND_DATA;
 
     @Override
     public ProductCategoryDto save(ProductCategoryDto dto) {
@@ -68,9 +56,17 @@ public class ProductCategoryService implements ICommonService<ProductCategoryDto
     }
 
     @Override
+    public List<ProductCategoryDto> findAll(int page, int size) {
+        return this.productCategoryRepository.findAll(PageRequest.of(page, size))
+                .stream()
+                .map(entity -> new ProductCategoryDto(entity))
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<ProductCategoryDto> findAll() {
 
-        return this.productCategoryRepository.findAll(Sort.by("id").descending())
+        return this.productCategoryRepository.findAll(Sort.by("id"))
                 .stream()
                 .map(entity -> new ProductCategoryDto(entity))
                 .collect(Collectors.toList());

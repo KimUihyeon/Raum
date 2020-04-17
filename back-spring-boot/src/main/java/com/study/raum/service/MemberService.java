@@ -4,7 +4,7 @@ import com.study.raum.domain.members.Member;
 import com.study.raum.domain.members.MemberLevelRepository;
 import com.study.raum.domain.members.MemberRepository;
 import com.study.raum.dto.MemberDto;
-import com.study.raum.service.common.ICommonService;
+import com.study.raum.service.common.IServiceBase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Service
 @RequiredArgsConstructor
-public class MemberService implements ICommonService<MemberDto> {
+public class MemberServiceBase implements IServiceBase<MemberDto> {
 
 
     private final MemberRepository memberRepository;
@@ -37,6 +37,11 @@ public class MemberService implements ICommonService<MemberDto> {
 
     @Override
     public MemberDto delete(long id) {
+        return null;
+    }
+
+    @Override
+    public List<MemberDto> findAll(int page, int size) {
         return null;
     }
 

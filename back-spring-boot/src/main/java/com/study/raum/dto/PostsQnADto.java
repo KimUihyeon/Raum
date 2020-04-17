@@ -1,8 +1,8 @@
 package com.study.raum.dto;
 
-import com.study.raum.domain.posts.PostsFaQ;
 import com.study.raum.domain.posts.PostsQnA;
-import com.study.raum.dto.common.IEntityConverter;
+import com.study.raum.dto.common.AbsDtoConverter;
+import com.study.raum.dto.common.IDtoConverter;
 import lombok.*;
 
 /**
@@ -15,7 +15,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PostsQnADto implements IEntityConverter<PostsQnA> {
+public class PostsQnADto extends AbsDtoConverter<PostsQnA> {
 
     private String question;
     private String contact; // 연락처
@@ -32,9 +32,14 @@ public class PostsQnADto implements IEntityConverter<PostsQnA> {
         return qna;
     }
 
-    public PostsQnADto(PostsQnA qna) {
-        this.question = qna.getQuestion();
-        this.contact = qna.getContact();
-        this.contactWay = qna.getContactWay();
+    @Override
+    public void createDto(PostsQnA entity) {
+        this.question = entity.getQuestion();
+        this.contact = entity.getContact();
+        this.contactWay = entity.getContactWay();
+    }
+
+    public PostsQnADto(PostsQnA entity) {
+        super(entity);
     }
 }

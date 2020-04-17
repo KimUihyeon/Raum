@@ -1,8 +1,7 @@
 package com.study.raum.dto;
 
-import com.study.raum.domain.products.Product;
 import com.study.raum.domain.products.ProductCategory;
-import com.study.raum.dto.common.IEntityConverter;
+import com.study.raum.dto.common.AbsDtoConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductCategoryDto implements IEntityConverter<ProductCategory> {
+public class ProductCategoryDto extends AbsDtoConverter<ProductCategory> {
 
 
     private long id;
@@ -26,9 +25,7 @@ public class ProductCategoryDto implements IEntityConverter<ProductCategory> {
 
 
     public ProductCategoryDto(ProductCategory entity) {
-        this.id = entity.getId();
-        this.etc = entity.getEtc();
-        this.name = entity.getName();
+        super(entity);
     }
 
     @Override
@@ -38,6 +35,13 @@ public class ProductCategoryDto implements IEntityConverter<ProductCategory> {
                 .etc(this.etc)
                 .name(this.name)
                 .build();
+    }
+
+    @Override
+    public void createDto(ProductCategory entity) {
+        this.id = entity.getId();
+        this.etc = entity.getEtc();
+        this.name = entity.getName();
     }
 
 }

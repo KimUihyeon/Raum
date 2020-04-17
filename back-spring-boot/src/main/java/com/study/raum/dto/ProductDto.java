@@ -1,14 +1,12 @@
 package com.study.raum.dto;
 
 import com.study.raum.domain.products.Product;
-import com.study.raum.domain.products.ProductCategory;
-import com.study.raum.dto.common.IEntityConverter;
+import com.study.raum.dto.common.AbsDtoConverter;
+import com.study.raum.dto.common.IDtoConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
 
 /**
  * @author kuh
@@ -19,7 +17,7 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductDto implements IEntityConverter<Product> {
+public class ProductDto extends AbsDtoConverter<Product> {
 
     private long id;
 
@@ -40,18 +38,7 @@ public class ProductDto implements IEntityConverter<Product> {
     private int hit;
 
     public ProductDto(Product entity){
-        this.id = entity.getId();
-        this.name = entity.getName();
-        this.supplierId = entity.getSupplierId();
-        this.thumbnailPath = entity.getThumbnailPath();
-        this.memberId = entity.getMemberId();
-        this.price = entity.getPrice();
-        this.hit = entity.getHit();
-
-        if(entity.getProductCategory() != null){
-            this.productCategory = new ProductCategoryDto(entity.getProductCategory());
-        }
-
+        super(entity);
     }
 
 
@@ -80,5 +67,21 @@ public class ProductDto implements IEntityConverter<Product> {
                 .supplierId(this.supplierId)
                 .productCategory(this.productCategory == null ? null : this.productCategory.toEntity())
                 .build();
+    }
+
+    @Override
+    public void createDto(Product entity) {
+        this.id = entity.getId();
+        this.name = entity.getName();
+        this.supplierId = entity.getSupplierId();
+        this.thumbnailPath = entity.getThumbnailPath();
+        this.memberId = entity.getMemberId();
+        this.price = entity.getPrice();
+        this.hit = entity.getHit();
+
+        if(entity.getProductCategory() != null){
+            this.productCategory = new ProductCategoryDto(entity.getProductCategory());
+        }
+
     }
 }

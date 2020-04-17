@@ -1,12 +1,11 @@
 package com.study.raum.dto;
 
 import com.study.raum.domain.members.Member;
-import com.study.raum.dto.common.IEntityConverter;
+import com.study.raum.dto.common.AbsDtoConverter;
+import com.study.raum.dto.common.IDtoConverter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.Column;
 
 /**
  * @author kuh
@@ -16,7 +15,7 @@ import javax.persistence.Column;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MemberDto implements IEntityConverter<Member> {
+public class MemberDto extends AbsDtoConverter<Member> {
 
 
     private String name;
@@ -45,21 +44,7 @@ public class MemberDto implements IEntityConverter<Member> {
 
 
     public MemberDto(Member entity){
-        this.name=entity.getName();
-        this.userId = entity.getUserId();
-        this.userPw = entity.getUserPw();
-        this.tel = entity.getTel();
-        this.emailPrefix = entity.getEmailPrefix();
-        this.emailSuffix = entity.getEmailSuffix();
-        this.address1 = entity.getAddress1();
-        this.address2 = entity.getAddress2();
-        this.postNumber = entity.getPostNumber();
-        this.signupType = entity.getSignupType();
-
-        if(entity.getMemberLevel() != null){
-            this.memberLevel = new MemberLevelDto(entity.getMemberLevel());
-        }
-
+        super(entity);
     }
 
 
@@ -79,5 +64,24 @@ public class MemberDto implements IEntityConverter<Member> {
                 .signupType(this.signupType)
                 .memberLevel(this.memberLevel == null ? null : memberLevel.toEntity())
                 .build();
+    }
+
+    @Override
+    public void createDto(Member entity) {
+        this.name=entity.getName();
+        this.userId = entity.getUserId();
+        this.userPw = entity.getUserPw();
+        this.tel = entity.getTel();
+        this.emailPrefix = entity.getEmailPrefix();
+        this.emailSuffix = entity.getEmailSuffix();
+        this.address1 = entity.getAddress1();
+        this.address2 = entity.getAddress2();
+        this.postNumber = entity.getPostNumber();
+        this.signupType = entity.getSignupType();
+
+        if(entity.getMemberLevel() != null){
+            this.memberLevel = new MemberLevelDto(entity.getMemberLevel());
+        }
+
     }
 }

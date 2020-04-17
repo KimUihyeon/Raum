@@ -3,12 +3,12 @@ package com.study.raum.service;
 import com.study.raum.domain.posts.PostsFaQ;
 import com.study.raum.domain.posts.PostsFaQRepository;
 import com.study.raum.dto.PostsFaQDto;
-import com.study.raum.service.common.ICommonService;
+import com.study.raum.service.common.IServiceBase;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class PostsFaQService implements ICommonService<PostsFaQDto> {
+public class PostsFaQServiceBase implements IServiceBase<PostsFaQDto> {
 
     private final PostsFaQRepository postsFaQRepository;
 
@@ -47,8 +47,14 @@ public class PostsFaQService implements ICommonService<PostsFaQDto> {
     }
 
     @Override
+    public List<PostsFaQDto> findAll(int page, int size) {
+        return this.postsFaQRepository.findAll(PageRequest.of(page, size))
+                .stream().map(t -> new PostsFaQDto(t)).collect(Collectors.toList());
+    }
+
+    @Override
     public List<PostsFaQDto> findAll() {
-        return this.postsFaQRepository.findAll(Sort.by("id").descending())
+        return this.postsFaQRepository.findAll(Sort.by("id"))
                 .stream().map(t -> new PostsFaQDto(t)).collect(Collectors.toList());
     }
 
