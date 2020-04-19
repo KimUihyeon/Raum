@@ -4,8 +4,8 @@ import com.study.raum.domain.system.SystemMenu;
 import com.study.raum.domain.system.SystemMenuRepository;
 import com.study.raum.dto.SystemMenuDto;
 import com.study.raum.service.common.BaseCrudService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -54,6 +54,11 @@ public class SystemMenuService extends BaseCrudService<SystemMenu, SystemMenuDto
     }
 
     @Override
+    public List<SystemMenuDto> findAllById(Iterable<Long> ids) {
+        return this.entityFindAllById(ids);
+    }
+
+    @Override
     @Deprecated
     public SystemMenuDto save(SystemMenuDto dto) {
         throw new NotImplementedException();
@@ -73,7 +78,7 @@ public class SystemMenuService extends BaseCrudService<SystemMenu, SystemMenuDto
 
     @Override
     @Deprecated
-    public List<SystemMenuDto> findAll(int page, int size) {
+    public Page<SystemMenuDto> findAll(int page, int size) {
         throw new NotImplementedException();
     }
 

@@ -1,5 +1,6 @@
 package com.study.raum.service;
 
+import com.study.raum.domain.members.Member;
 import com.study.raum.domain.members.MemberLevel;
 import com.study.raum.domain.members.MemberLevelRepository;
 import com.study.raum.dto.MemberDto;
@@ -13,7 +14,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * @author kuh
@@ -22,6 +27,7 @@ import java.util.UUID;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
+@Transactional
 public class MemberServiceTest {
 
     @Autowired
@@ -30,13 +36,9 @@ public class MemberServiceTest {
     @Autowired
     private MemberLevelRepository memberLevelRepository;
 
-    @Test
-    @Rollback
-    public void memberInsertTest() {
+    private MemberDto getMemberSample() {
 
-        // given
-
-        String uniqUserId = "TestID_" + UUID.randomUUID().toString().substring(0,7);
+        String uniqUserId = "TestID_" + UUID.randomUUID().toString().substring(0, 7);
         MemberDto memberDto = new MemberDto();
         memberDto.setUserId(uniqUserId);
         memberDto.setAddress1("경기도 수원시 팔달구 권광로 ****");
@@ -49,22 +51,67 @@ public class MemberServiceTest {
         memberDto.setTel("010-0000-0001");
         memberDto.setUserPw("1");
 
+        return memberDto;
+    }
 
-        MemberLevel level = memberLevelRepository.findById(new Long(2)).orElseThrow(()->
-                new  IllegalArgumentException(""));
+    @Test
+    @Rollback
+    public void memberInsertTest() {
+
+        // given
+
+        MemberDto memberDto = getMemberSample();
+
+
+        MemberLevel level = memberLevelRepository.findById(new Long(2)).orElseThrow(() ->
+                new IllegalArgumentException(""));
 
         memberDto.setMemberLevel(new MemberLevelDto(level));
 
 
-
         // when
         MemberDto savedMember = this.memberService.save(memberDto);
+        MemberDto dbMember = this.memberService.findById(savedMember.getId());
 
         // then
         LoggerUtil.sout(memberDto);
 
         Assert.assertNotNull(savedMember);
         Assert.assertEquals(savedMember.getName(), memberDto.getName());
+    }
 
+
+    @Test
+    @Rollback
+    public void findAllRelationTest() {
+
+        // given
+        MemberLevel level = memberLevelRepository.findById(new Long(2)).orElseThrow(() ->
+                new IllegalArgumentException(""));
+
+        List<MemberDto> members = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+
+            MemberDto member = getMemberSample();
+            member.setMemberLevel(new MemberLevelDto(level));
+            members.add(member);
+        }
+
+        List<Long> savedIds = new ArrayList<>();
+        members.forEach(member-> {
+            MemberDto savedMember = this.memberService.save(member);
+            savedIds.add(savedMember.getId());
+        });
+
+        // when
+        List<MemberDto> memberDto = this.memberService.findAllById(savedIds)
+                .stream()
+                .filter(dto->dto.getMemberLevel() !=null)
+                .collect(Collectors.toList());
+
+
+        // than
+        memberDto.forEach(LoggerUtil::sout);
+        Assert.assertEquals(members.size(), memberDto.size());
     }
 }

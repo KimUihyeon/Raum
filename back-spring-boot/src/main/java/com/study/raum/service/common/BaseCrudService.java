@@ -1,14 +1,10 @@
 package com.study.raum.service.common;
 
-import com.study.raum.dto.ProductDto;
 import com.study.raum.dto.common.AbsDtoConverter;
 import com.study.raum.dto.common.IDtoConverter;
 
 import java.lang.*;
 
-import com.study.raum.setting.PropertyFileManager;
-import jdk.nashorn.internal.ir.EmptyNode;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -17,7 +13,6 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.transaction.Transactional;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -29,7 +24,6 @@ import java.util.stream.Collectors;
  */
 
 
-@PropertySource(PropertyFileManager.ERROR_MGS_PROP)
 public abstract class BaseCrudService<Entity, Dto extends AbsDtoConverter<Entity>>
         extends ServiceErrorBundle implements IServiceBase<Dto> {
 
@@ -93,9 +87,17 @@ public abstract class BaseCrudService<Entity, Dto extends AbsDtoConverter<Entity
 
     }
 
-    protected List<Dto> entityFindAll(int page, int size) {
-        return this.jpaRepository.findAll(PageRequest.of(page, size)).stream()
-                .map(en -> getDtoInstance(en)).collect(Collectors.toList());
+    protected List<Dto> entityFindAllById(Iterable<Long> ids){
+        return this.jpaRepository.findAllById(ids)
+                .stream()
+                .map(entity->getDtoInstance(entity))
+                .collect(Collectors.toList());
+    }
+
+
+    protected Page<Dto> entityFindAll(int page, int size) {
+        return this.jpaRepository.findAll(PageRequest.of(page, size))
+                .map(en -> getDtoInstance(en));
     }
 
     protected List<Dto> entityFindAll() {

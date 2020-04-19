@@ -1,17 +1,14 @@
 package com.study.raum.service;
 
-import com.study.raum.domain.products.Product;
 import com.study.raum.domain.products.ProductCategory;
 import com.study.raum.domain.products.ProductCategoryRepository;
 import com.study.raum.dto.ProductCategoryDto;
 import com.study.raum.service.common.BaseCrudService;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author kuh
@@ -32,11 +29,6 @@ public class ProductCategoryService extends BaseCrudService<ProductCategory, Pro
 
     @Override
     public ProductCategoryDto update(long id, ProductCategoryDto dto) {
-//        ProductCategory productCategory = this.productCategoryRepository.findById(id)
-//                .orElseThrow(() -> new IllegalArgumentException(NOT_FIND_DATA));
-//
-//        productCategory.patch(dto.getName(), dto.getEtc());
-
         return new ProductCategoryDto(null);
     }
 
@@ -46,30 +38,24 @@ public class ProductCategoryService extends BaseCrudService<ProductCategory, Pro
     }
 
     @Override
-    public List<ProductCategoryDto> findAll(int page, int size) {
-        return entityFindAll(page, size);
-//        return this.productCategoryRepository.findAll(PageRequest.of(page, size))
-//                .stream()
-//                .map(entity -> new ProductCategoryDto(entity))
-//                .collect(Collectors.toList());
+    public Page<ProductCategoryDto> findAll(int page, int size) {
+        return this.entityFindAll(page, size);
     }
 
     @Override
     public List<ProductCategoryDto> findAll() {
-        return entityFindAll();
-//
-//        return this.productCategoryRepository.findAll(Sort.by("id"))
-//                .stream()
-//                .map(entity -> new ProductCategoryDto(entity))
-//                .collect(Collectors.toList());
+        return this.entityFindAll();
+    }
+
+    @Override
+    public List<ProductCategoryDto> findAllById(Iterable<Long> ids) {
+
+        return this.entityFindAllById(ids);
     }
 
     @Override
     public ProductCategoryDto findById(long id) {
 
         return entityFindByIdCastDto(id);
-//        ProductCategory productCategory = this.productCategoryRepository.findById(id)
-//                .orElseThrow(() -> new IllegalArgumentException(NOT_FIND_DATA));
-//        return new ProductCategoryDto(productCategory);
     }
 }

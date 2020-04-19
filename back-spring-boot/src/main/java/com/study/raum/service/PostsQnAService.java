@@ -4,14 +4,11 @@ import com.study.raum.domain.posts.PostsQnA;
 import com.study.raum.domain.posts.PostsQnARepository;
 import com.study.raum.dto.PostsQnADto;
 import com.study.raum.service.common.BaseCrudService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author kuh
@@ -32,13 +29,18 @@ public class PostsQnAService extends BaseCrudService<PostsQnA, PostsQnADto> {
     }
 
     @Override
+    public List<PostsQnADto> findAllById(Iterable<Long> ids) {
+        return this.entityFindAllById(ids);
+    }
+
+    @Override
     public PostsQnADto delete(long id) {
         return entityDelete(id);
     }
 
     @Override
-    public List<PostsQnADto> findAll(int page, int size) {
-        return entityFindAll();
+    public Page<PostsQnADto> findAll(int page, int size) {
+        return entityFindAll(page, size);
     }
 
     @Override

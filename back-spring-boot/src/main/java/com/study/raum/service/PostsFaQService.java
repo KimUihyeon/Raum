@@ -4,13 +4,11 @@ import com.study.raum.domain.posts.PostsFaQ;
 import com.study.raum.dto.PostsFaQDto;
 import com.study.raum.service.common.BaseCrudService;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author kuh
@@ -42,13 +40,18 @@ public class PostsFaQService extends BaseCrudService<PostsFaQ, PostsFaQDto> {
     }
 
     @Override
-    public List<PostsFaQDto> findAll(int page, int size) {
+    public Page<PostsFaQDto> findAll(int page, int size) {
         return this.entityFindAll(page, size);
     }
 
     @Override
     public List<PostsFaQDto> findAll() {
         return entityFindAll();
+    }
+
+    @Override
+    public List<PostsFaQDto> findAllById(Iterable<Long> ids) {
+        return this.entityFindAllById(ids);
     }
 
     @Override

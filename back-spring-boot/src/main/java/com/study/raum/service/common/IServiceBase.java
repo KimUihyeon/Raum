@@ -1,6 +1,6 @@
 package com.study.raum.service.common;
 
-import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Page;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -24,9 +24,13 @@ public interface IServiceBase<T> {
     @Transactional
     T delete(long id);
 
-    List<T> findAll(int page, int size);
+    Page<T> findAll(int page, int size);
 
     List<T> findAll();
 
+    List<T> findAllById(Iterable<Long> ids);
+
     T findById(long id);
+
+
 }

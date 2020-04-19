@@ -5,8 +5,7 @@ import com.study.raum.domain.members.MemberRepository;
 import com.study.raum.dto.MemberDto;
 import com.study.raum.service.common.BaseCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -41,17 +40,22 @@ public class MemberService extends BaseCrudService<Member, MemberDto> {
     }
 
     @Override
-    public List<MemberDto> findAll(int page, int size) {
-        return null;
+    public Page<MemberDto> findAll(int page, int size) {
+        return this.entityFindAll(page, size);
     }
 
     @Override
     public List<MemberDto> findAll() {
-        return null;
+        return this.entityFindAll();
+    }
+
+    @Override
+    public List<MemberDto> findAllById(Iterable<Long> ids) {
+        return this.entityFindAllById(ids);
     }
 
     @Override
     public MemberDto findById(long id) {
-        return null;
+        return this.entityFindByIdCastDto(id);
     }
 }

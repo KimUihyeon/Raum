@@ -78,6 +78,7 @@ public class MemberDto extends AbsDtoConverter<Member> {
         this.address2 = entity.getAddress2();
         this.postNumber = entity.getPostNumber();
         this.signupType = entity.getSignupType();
+        this.id = entity.getId();
 
         if(entity.getMemberLevel() != null){
             this.memberLevel = new MemberLevelDto(entity.getMemberLevel());

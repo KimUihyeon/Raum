@@ -1,5 +1,6 @@
 package com.study.raum.service.common;
 
+import com.study.raum.setting.PropertyFileManager;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 
@@ -8,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
  * @since 2020.04.17
  */
 
-@PropertySource("classpath:Application-ErrorMsg.properties")
+@PropertySource(PropertyFileManager.ERROR_MGS_PROP)
 public abstract class ServiceErrorBundle {
 
     @Value("${not_find_data}")

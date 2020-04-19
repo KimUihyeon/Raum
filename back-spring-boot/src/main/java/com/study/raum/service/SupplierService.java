@@ -5,8 +5,8 @@ import com.study.raum.domain.members.SupplierRepository;
 import com.study.raum.dto.SupplierDto;
 import com.study.raum.service.common.BaseCrudService;
 import com.sun.xml.internal.ws.developer.Serialization;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -38,13 +38,19 @@ public class SupplierService extends BaseCrudService<Supplier, SupplierDto> {
     }
 
     @Override
-    public List<SupplierDto> findAll(int page, int size) {
+    public Page<SupplierDto> findAll(int page, int size) {
         return null;
     }
 
     @Override
     public List<SupplierDto> findAll() {
         return null;
+    }
+
+    @Override
+    public List<SupplierDto> findAllById(Iterable<Long> ids) {
+
+        return this.entityFindAllById(ids);
     }
 
     @Override
