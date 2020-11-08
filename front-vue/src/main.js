@@ -15,6 +15,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 /** Element Ui dependencies */
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+// import locale from 'element-ui/lib/locale/lang/ko'
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false

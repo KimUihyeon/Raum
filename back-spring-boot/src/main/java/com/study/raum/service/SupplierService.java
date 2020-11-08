@@ -4,7 +4,7 @@ import com.study.raum.domain.members.Supplier;
 import com.study.raum.domain.members.SupplierRepository;
 import com.study.raum.dto.SupplierDto;
 import com.study.raum.service.common.BaseCrudService;
-import com.sun.xml.internal.ws.developer.Serialization;
+//import com.sun.xml.internal.ws.developer.Serialization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 
@@ -14,7 +14,7 @@ import java.util.List;
  * @author kuh
  * @since 2020.04.17
  */
-@Serialization
+//@Serialization
 public class SupplierService extends BaseCrudService<Supplier, SupplierDto> {
 
     @Autowired
