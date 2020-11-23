@@ -16,44 +16,69 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfigurator implements WebMvcConfigurer {
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-
-        String[] origins = {
-                "*",
-//                "http://localhost:3000/",
-//                "http://localhost:8080/"
-        };
-
-        registry.addMapping("/**") //모든 요청에 대해서
-                .allowedOrigins(origins)
-                .allowedHeaders(HttpMethod.GET.name(),
-                        HttpMethod.POST.name(),
-                        HttpMethod.PATCH.name(),
-                        HttpMethod.DELETE.name())
-                .allowedHeaders(HttpHeaders.AUTHORIZATION,
-                        "AUTHORIZATION",
-                        "authorization",
-                        HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,
-                        HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS)
-                .allowCredentials(false)
-                .exposedHeaders("AUTHORIZATION")
-                .maxAge(3600); //허용할 오리진들
-    }
-//    @Bean
-//    public WebMvcConfigurer webMvcConfigurer() {
-//        return new WebMvcConfigurer() {
-//            @Override
-//            public void addCorsMappings(CorsRegistry registry) {
-//                registry.addMapping("/**")
-//                        .allowedOrigins("*")
-//                        .allowedHeaders(HttpMethod.GET.name(),
-//                                HttpMethod.POST.name())
-//                        .allowCredentials(false)
-//                        .maxAge(3600);
-//            }
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//
+//        String[] origins = {
+//                "*",
+////                "http://localhost:3000/",
+////                "http://localhost:8080/"
 //        };
+//
+//        registry.addMapping("/**") //모든 요청에 대해서
+//                .allowedOrigins(origins)
+//                .allowedHeaders(HttpMethod.GET.name(),
+//                        HttpMethod.POST.name(),
+//                        HttpMethod.PATCH.name(),
+//                        HttpMethod.DELETE.name())
+//                .allowedHeaders(HttpHeaders.AUTHORIZATION,
+//                        "AUTHORIZATION",
+//                        "authorization",
+//                        HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,
+//                        HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS)
+//                .allowCredentials(false)
+//                .exposedHeaders("AUTHORIZATION")
+//                .maxAge(3600); //허용할 오리진들
 //    }
+
+    @Bean
+    public WebMvcConfigurer webMvcConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                String[] origins = {
+                "http://localhost:3000",
+                "http://localhost:8080"
+                };
+
+                registry.addMapping("/**") //모든 요청에 대해서
+                        .allowedOrigins(origins)
+                        .allowedHeaders(HttpMethod.GET.name(),
+                                HttpMethod.POST.name(),
+                                HttpMethod.PATCH.name(),
+                                HttpMethod.OPTIONS.name(),
+                                HttpMethod.DELETE.name())
+                        .allowedHeaders(HttpHeaders.AUTHORIZATION,
+                                "AUTHORIZATION",
+                                "authorization",
+                                "withcredentials",
+                                HttpHeaders.ORIGIN,
+                                HttpHeaders.CONTENT_TYPE,
+                                HttpHeaders.USER_AGENT,
+                                HttpHeaders.HOST,
+                                HttpHeaders.ACCEPT_LANGUAGE,
+                                HttpHeaders.ACCEPT_ENCODING,
+                                HttpHeaders.ACCEPT,
+                                HttpHeaders.CONNECTION,
+                                HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,
+                                HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS,
+                                HttpHeaders.WWW_AUTHENTICATE)
+                        .allowCredentials(true)
+                        .exposedHeaders("authorization","withcredentials")
+                        .maxAge(3600); //허용할 오리진들
+            }
+        };
+    }
 
 
     @Bean

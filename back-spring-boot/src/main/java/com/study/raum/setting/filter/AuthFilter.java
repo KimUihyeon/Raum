@@ -27,7 +27,7 @@ public class AuthFilter implements Filter {
                 headers.add(headerName);
             }
         }
-
+        chain.doFilter(request , response);
         String breakPoint = "";
     }
 }
