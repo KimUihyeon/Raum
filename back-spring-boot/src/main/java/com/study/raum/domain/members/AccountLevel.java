@@ -1,4 +1,4 @@
-package com.study.raum.domain.posts;
+package com.study.raum.domain.members;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,24 +8,26 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 /**
- * FaQ 자주찾는 질문답변 카테고리 Domain Object
- *
  * @author kuh
- * @since 20.03.06
+ * @since 2020.03.25
  */
 
 @Getter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
-@Table(name = "postsFaQCategories")
-public class PostsFaQCategory {
+@Table(name = "account_level")
+public class AccountLevel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column
-    private String name;
+    private String description; // 설명
+
+    @Column(length = 30)
+    private String grade; // 회원등급 명
+
+    private int level; // 회원등급 레벨
 }

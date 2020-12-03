@@ -40,11 +40,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ce91a29-d704-4acf-be81-cf200abd5674" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../back-spring-boot/src/main/java/com/study/raum/setting/config/WebConfigurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-spring-boot/src/main/java/com/study/raum/setting/config/WebConfigurator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back-spring-boot/src/main/java/com/study/raum/setting/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-spring-boot/src/main/java/com/study/raum/setting/filter/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-vue/src/components/common/MenuItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-vue/src/components/common/MenuItem.vue" afterDir="false" />
-    </list>
+    <list default="true" id="6ce91a29-d704-4acf-be81-cf200abd5674" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,6 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605505247177</updated>
       <workItem from="1605505254512" duration="332000" />
+      <workItem from="1606548347332" duration="20000" />
     </task>
     <servers />
   </component>
@@ -116,6 +113,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="310" key="FileChooserDialogImpl" timestamp="1605505584836">

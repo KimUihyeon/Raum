@@ -1,10 +1,6 @@
 package com.study.raum.setting.master;
 
-import com.study.raum.domain.members.Member;
 import com.study.raum.domain.system.SystemComponent;
-import com.study.raum.setting.master.interfacies.IMasterFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.ArrayList;
 import java.util.List;

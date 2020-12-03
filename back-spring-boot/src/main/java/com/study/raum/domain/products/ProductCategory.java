@@ -1,6 +1,5 @@
 package com.study.raum.domain.products;
 
-import com.study.raum.dto.ProductCategoryDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

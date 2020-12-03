@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 /**
@@ -24,11 +25,21 @@ public class ShowRoomProduct {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long id;
-    public long showroomId;
-    public long productId;
-    public String url;
-    public LocalDateTime regDate;
-    public LocalDateTime delDate;
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
+
+    private int x; // x
+    private int y; // y 좌표
+
+    private Timestamp createAt;
+    private Timestamp deleteAt;
+    private Timestamp updateAt;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "showroom_id")
+    private ShowRoom showRoom;
 
 }

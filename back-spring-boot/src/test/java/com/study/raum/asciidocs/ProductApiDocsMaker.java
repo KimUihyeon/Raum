@@ -1,6 +1,5 @@
 package com.study.raum.asciidocs;
 
-import com.study.raum.controller.ProductsApiController;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
@@ -18,7 +17,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
  */
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(ProductsApiController.class)
 @AutoConfigureRestDocs
 public class ProductApiDocsMaker {
 

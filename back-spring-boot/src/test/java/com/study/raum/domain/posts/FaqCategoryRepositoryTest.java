@@ -25,10 +25,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PostsFaQCategoryRepositoryTest implements IUihyeonJapTest {
+public class FaqCategoryRepositoryTest implements IUihyeonJapTest {
 
-    @Autowired
-    private PostsFaQCategoryRepository postsFaQCategoryRepo;
 
     @Test
     public void name() {
@@ -40,25 +38,13 @@ public class PostsFaQCategoryRepositoryTest implements IUihyeonJapTest {
     public void jpaTest() {
 
         //given
-        List<PostsFaQCategory> collection = new ArrayList<>();
+        List<FaqCategory> collection = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            PostsFaQCategory category = PostsFaQCategory.builder()
-                    .id(i)
+            FaqCategory category = FaqCategory.builder()
+                    .id(new Long(i))
                     .name("항목 " + String.valueOf(i)).build();
             collection.add(category);
         }
-
-        this.postsFaQCategoryRepo.saveAll(collection);
-
-        //when
-        List<PostsFaQCategory> categories = this.postsFaQCategoryRepo.findAll(Sort.by("id").descending());
-        categories.forEach(t -> {
-            String printStr = t.getId() + " // " + t.getName();
-            LoggerUtil.sout(printStr);
-        });
-
-        //then
-        assertThat(categories).isNotNull();
 
     }
 

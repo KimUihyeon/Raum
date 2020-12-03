@@ -1,13 +1,18 @@
 package com.study.raum.domain.members;
 
+import com.study.raum.domain.products.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
+ * 구매자.
+ * <p>
  * supplier Domain Object
  *
  * @author kuh
@@ -19,11 +24,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "suppliers")
-public class Supplier {
+@Table(name = "supplier")
+public class Supplier { //판매자
 
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(length = 50)
@@ -48,6 +53,10 @@ public class Supplier {
 
     @Column(length = 20)
     private String postNumber;
+
+    @OneToMany(mappedBy = "supplier")
+    @Builder.Default
+    private List<Product> products = new ArrayList<>();
 
     @Override
     public String toString() {

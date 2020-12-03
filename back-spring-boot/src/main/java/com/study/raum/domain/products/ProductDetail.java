@@ -24,10 +24,16 @@ public class ProductDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
-    public long productId;
+
+    @OneToOne(mappedBy = "productDetail")
+    @JoinColumn(name = "product_id")
+    private Product product;
+
     public long objectFileId;
+
     public LocalDateTime regDate;
     public LocalDateTime delDate;
+
     public String context;
 
 }

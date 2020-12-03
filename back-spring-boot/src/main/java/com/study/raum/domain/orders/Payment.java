@@ -1,5 +1,6 @@
 package com.study.raum.domain.orders;
 
+import com.study.raum.domain.members.Account;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -30,5 +31,9 @@ public class Payment {
     public String paymentType;
 
     public LocalDateTime paymentDate;
+
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    private Account account;
 
 }

@@ -2,15 +2,15 @@ package com.study.raum.dto;
 
 import com.study.raum.domain.members.Supplier;
 import com.study.raum.dto.common.AbsDtoConverter;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * @author kuh
  * @since 2020.04.17
  */
-@Data
+
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class SupplierDto extends AbsDtoConverter<Supplier> {

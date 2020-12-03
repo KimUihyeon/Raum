@@ -24,18 +24,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MemberRepositoryTest implements IUihyeonJapTest {
+public class AccountRepositoryTest implements IUihyeonJapTest {
     @Resource
-    private MemberRepository memberRepository;
+    private AccountRepository memberRepository;
 
     @Test
     @Rollback
     @Override
     public void jpaTest() {
         //given
-        List<Member> collection = new ArrayList<>();
+        List<Account> collection = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            Member member = Member.builder()
+            Account account = Account.builder()
                     .address1("경기도 수원시")
                     .address2("팔달구 권광로 231" + i)
                     .postNumber("5514" + i)
@@ -43,18 +43,18 @@ public class MemberRepositoryTest implements IUihyeonJapTest {
                     .userPw("-----") // Todo: SHA-256 적용하기.
                     .build();
 
-            collection.add(member);
+            collection.add(account);
         }
         this.memberRepository.saveAll(collection);
 
         //when
-        List<Member> members = this.memberRepository.findAll(Sort.by("id").descending());
-        members.forEach(t->{
+        List<Account> accounts = this.memberRepository.findAll(Sort.by("id").descending());
+        accounts.forEach(t->{
             LoggerUtil.sout(t.toString());
         });
 
         //than
-        assertThat(members).isNotNull();
-        assertThat(members.size()).isEqualTo(collection.size());
+        assertThat(accounts).isNotNull();
+        assertThat(accounts.size()).isEqualTo(collection.size());
     }
 }

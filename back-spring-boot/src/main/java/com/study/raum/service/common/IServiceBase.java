@@ -1,8 +1,10 @@
 package com.study.raum.service.common;
 
 import org.springframework.data.domain.Page;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.transaction.Transactional;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 /**
@@ -12,25 +14,22 @@ import java.util.List;
  * @author kuh
  * @since 2020.04.08
  */
-public interface IServiceBase<T> {
-
-
-    @Transactional
-    T save(T dto);
+public interface IServiceBase<T, ID> {
 
     @Transactional
-    T update(long id,T dto);
+    T save(T dto) throws NoSuchAlgorithmException;
 
     @Transactional
-    T delete(long id);
+    T update(ID pk, T dto) throws NotImplementedException;
+
+    @Transactional
+    T delete(ID pk);
+
+    List<T> deleteAll(Iterable<ID> ids);
+
+    T findById(ID pk);
 
     Page<T> findAll(int page, int size);
 
-    List<T> findAll();
-
-    List<T> findAllById(Iterable<Long> ids);
-
-    T findById(long id);
-
-
+    List<T> findAllById(Iterable<ID> ids);
 }

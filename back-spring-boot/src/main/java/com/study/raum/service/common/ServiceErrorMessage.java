@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
  */
 
 @PropertySource(PropertyFileManager.ERROR_MGS_PROP)
-public abstract class ServiceErrorBundle {
+public abstract class ServiceErrorMessage {
 
     @Value("${not_find_data}")
     protected String NOT_FIND_DATA;

@@ -1,12 +1,6 @@
 package com.study.raum.setting.master;
 
-import com.study.raum.domain.members.Member;
 import com.study.raum.setting.master.interfacies.IMasterFactory;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Component;
-
-import javax.persistence.EntityManager;
-import java.util.List;
 
 /**
  * @author kuh

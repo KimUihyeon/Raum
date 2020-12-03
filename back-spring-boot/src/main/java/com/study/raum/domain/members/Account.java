@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 /**
+ * 계정
+ *
  * @author kuh
  * @since 2020.03.08
  */
@@ -16,16 +18,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "members")
-public class Member {
+@Table(name = "account")
+public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "memberLevelId")
-    private MemberLevel memberLevel;
+    @JoinColumn(name = "account_level")
+    private AccountLevel accountLevel;
 
     private String userPw;
 
