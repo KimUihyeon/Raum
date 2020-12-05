@@ -48,7 +48,7 @@ public class SupplierDtoTest {
     }
 
     @Test
-    public void Supplier로_변환() {
+    public void Supplier로_변환_test() {
         //given
         SupplierDto supplier = SupplierDto.builder()
                 .id(id)
@@ -79,7 +79,7 @@ public class SupplierDtoTest {
 
 
     @Test
-    public void SupplierDto로_변환() {
+    public void SupplierDto로_변환_test() {
         //given
         Supplier supplier = Supplier.builder()
                 .id(id)
@@ -116,7 +116,7 @@ public class SupplierDtoTest {
 
 
     @Test
-    public void SupplierDto로_변환후_Entity로_변환() {
+    public void SupplierDto로_변환후_Entity로_변환_test() {
         //given
         Supplier supplier = Supplier.builder()
                 .id(id)
