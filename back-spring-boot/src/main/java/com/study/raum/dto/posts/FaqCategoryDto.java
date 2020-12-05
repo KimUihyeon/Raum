@@ -1,7 +1,6 @@
 package com.study.raum.dto.posts;
 
 import com.study.raum.domain.posts.FaqCategory;
-import com.study.raum.dto.members.AccountDto;
 import com.study.raum.service.common.ToConverter;
 import com.study.raum.setting.util.data.ModelConverter;
 import lombok.*;

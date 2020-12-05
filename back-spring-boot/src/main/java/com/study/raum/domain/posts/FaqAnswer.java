@@ -1,9 +1,7 @@
 package com.study.raum.domain.posts;
 
 import com.study.raum.domain.members.Account;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -16,6 +14,7 @@ import java.sql.Timestamp;
  */
 
 @Getter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -26,10 +25,12 @@ public class FaqAnswer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Setter
     @ManyToOne(targetEntity = Account.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id")
     private Account account;
 
+    @Setter
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "faqAnswer")
     private FaqQuestion faqQuestion;
 

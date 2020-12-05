@@ -43,5 +43,6 @@ public class FaqQuestion {
 
     private Timestamp createAt;
     private Timestamp updateAt;
+    private Timestamp deleteAt;
     private int hit;
 }

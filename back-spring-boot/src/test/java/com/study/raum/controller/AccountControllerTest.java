@@ -1,7 +1,6 @@
 package com.study.raum.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.study.raum.model.Member;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,52 +22,52 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @since 20.03.02
  */
 @RunWith(SpringRunner.class)
-@WebMvcTest(controllers = MemberController.class)
+@WebMvcTest(controllers = AccountController.class)
 public class AccountControllerTest {
 
     @Autowired
     private MockMvc mock;
-
-    @Test
-    @Rollback
-    public void MvcTest() throws Exception {
-
-        Member member = new Member();
-        member.setName("test");
-        member.setId(3);
-
-        ObjectMapper mapper = new ObjectMapper();
-        String memberSerializeStr = mapper.writeValueAsString(member);
-
-        mock.perform(get("/api/v1/member/3"))
-                .andDo(print())
-                .andExpect(content().string(memberSerializeStr))
-                .andExpect(jsonPath("$.id").value(3));
-    }
-
-    @Test
-    public void MvcJsonTest() throws Exception {
-        int memberID = 2;
-
-        Member member = Member.builder()
-                .id(memberID)
-                .name("김의현")
-                .build();
-
-
-        mock.perform(get("/api/member/" + memberID))
-                .andDo(print())
-                .andExpect(jsonPath("$.id").value(memberID));
-    }
-
-    @Test
-    public void objectTest() throws Exception {
-
-        Member member = new Member();
-        member.setName("test");
-        String data = String.valueOf(member.getName());
-
-
-        assertThat(member).isNotNull();
-    }
+//
+//    @Test
+//    @Rollback
+//    public void MvcTest() throws Exception {
+//
+//        Member member = new Member();
+//        member.setName("test");
+//        member.setId(3);
+//
+//        ObjectMapper mapper = new ObjectMapper();
+//        String memberSerializeStr = mapper.writeValueAsString(member);
+//
+//        mock.perform(get("/api/v1/member/3"))
+//                .andDo(print())
+//                .andExpect(content().string(memberSerializeStr))
+//                .andExpect(jsonPath("$.id").value(3));
+//    }
+//
+//    @Test
+//    public void MvcJsonTest() throws Exception {
+//        int memberID = 2;
+//
+//        Member member = Member.builder()
+//                .id(memberID)
+//                .name("김의현")
+//                .build();
+//
+//
+//        mock.perform(get("/api/member/" + memberID))
+//                .andDo(print())
+//                .andExpect(jsonPath("$.id").value(memberID));
+//    }
+//
+//    @Test
+//    public void objectTest() throws Exception {
+//
+//        Member member = new Member();
+//        member.setName("test");
+//        String data = String.valueOf(member.getName());
+//
+//
+//        assertThat(member).isNotNull();
+//    }
 }

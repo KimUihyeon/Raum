@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 /**
  * ProductAnswer
@@ -44,4 +45,6 @@ public class ProductAnswer {
 
     private boolean processed; // 처리완료 된 문의
 
+    private Timestamp createAt;
+    private Timestamp responseAt;
 }

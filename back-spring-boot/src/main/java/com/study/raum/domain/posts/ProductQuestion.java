@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 /**
  * ProductQuestion
@@ -51,4 +52,5 @@ public class ProductQuestion {
     private String responseEmail; // 답변 받을 이메일
     private String responsePhoneNumber; // 답변 받을 전화번호
 
+    private Timestamp requestAt;
 }
