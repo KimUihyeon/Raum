@@ -29,11 +29,14 @@ public class Account {
     @JoinColumn(name = "account_level")
     private AccountLevel accountLevel;
 
+    @Column(unique = true)
+    private String userId; // 이메일 형식
+
     private String userPw;
 
-    private String userId;
-
     private String name;
+
+    private String nickname;
 
     @Column(length = 50)
     private String tel;

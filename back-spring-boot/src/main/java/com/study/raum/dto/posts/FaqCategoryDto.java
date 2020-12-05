@@ -1,6 +1,7 @@
 package com.study.raum.dto.posts;
 
 import com.study.raum.domain.posts.FaqCategory;
+import com.study.raum.dto.members.AccountDto;
 import com.study.raum.service.common.ToConverter;
 import com.study.raum.setting.util.data.ModelConverter;
 import lombok.*;
@@ -19,7 +20,7 @@ import lombok.*;
 @AllArgsConstructor
 public class FaqCategoryDto implements ToConverter<FaqCategory, FaqCategoryDto> {
 
-    private long id;
+    private Long id;
     private String description;
     private String name;
 
@@ -29,7 +30,7 @@ public class FaqCategoryDto implements ToConverter<FaqCategory, FaqCategoryDto> 
         return FaqCategory.builder()
                 .description(description)
                 .name(name)
-                .id(new Long(this.id))
+                .id(id)
                 .build();
     }
 

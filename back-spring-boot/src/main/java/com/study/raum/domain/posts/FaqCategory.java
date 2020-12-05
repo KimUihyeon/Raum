@@ -27,4 +27,14 @@ public class FaqCategory {
     private Long id;
     private String name; // 카테고리명
     private String description; // 설명
+
+
+    public void patch(FaqCategory faqCategory){
+        if(this.name == null || !this.name.equals(faqCategory.getName())){
+            this.name = faqCategory.getName();
+        }
+        if(this.description == null || !this.description.equals(faqCategory.getDescription())){
+            this.name = faqCategory.getDescription();
+        }
+    }
 }

@@ -29,7 +29,7 @@ public class Supplier { //판매자
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(length = 50)
     private String companyName;

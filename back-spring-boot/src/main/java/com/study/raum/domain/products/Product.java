@@ -1,10 +1,7 @@
 package com.study.raum.domain.products;
 
 import com.study.raum.domain.members.Supplier;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -23,17 +20,20 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String name;
 
+    @Setter
     @ManyToOne(targetEntity = ProductCategory.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "categoryId")
     private ProductCategory productCategory;
 
-    @OneToOne(fetch = FetchType.LAZY, targetEntity = ProductDetail.class)
+    @Setter
+    @OneToOne(fetch = FetchType.LAZY, targetEntity = ProductDetail.class, mappedBy = "product")
     private ProductDetail productDetail;
 
+    @Setter
     @ManyToOne(fetch = FetchType.LAZY , targetEntity = Supplier.class)
     @JoinColumn(name = "supplier_id")
     private Supplier supplier; // 판매자

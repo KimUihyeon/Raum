@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 /**
@@ -23,17 +24,17 @@ public class ProductDetail {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long id;
+    private Long id;
 
-    @OneToOne(mappedBy = "productDetail")
+    @OneToOne()
     @JoinColumn(name = "product_id")
     private Product product;
 
-    public long objectFileId;
+    private String objectFileId; // TODO : 차후 객체로 따로 뺄것 .. !
 
-    public LocalDateTime regDate;
-    public LocalDateTime delDate;
+    private Timestamp createAt;
+    private Timestamp deleteAt;
 
-    public String context;
+    private String context;
 
 }
