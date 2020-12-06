@@ -34,7 +34,7 @@ public class Delivery {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "delivery")
     @JoinColumn(name = "order_id")

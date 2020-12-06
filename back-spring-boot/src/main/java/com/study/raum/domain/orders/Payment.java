@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 /**
@@ -24,13 +25,14 @@ public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long id;
+    private Long id;
 
-    public long orderId;
+    @OneToOne
+    private Order Order;
 
-    public String paymentType;
+    private String paymentType;
 
-    public LocalDateTime paymentDate;
+    private Timestamp paymentAt;
 
     @ManyToOne
     @JoinColumn(name = "account_id")

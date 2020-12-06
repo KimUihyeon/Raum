@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(unique = true)
     private String orderSerialNumber;
@@ -54,5 +55,5 @@ public class Order {
     private double productTotalPrice; // 상품 총액
     private double deliveryPrice;  // 배송비  
     private double paymentPrice; // 실제 결제 대금
-    private LocalDateTime orderDate;
+    private Timestamp orderAt;
 }
