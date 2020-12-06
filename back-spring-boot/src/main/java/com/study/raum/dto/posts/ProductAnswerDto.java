@@ -48,6 +48,7 @@ public class ProductAnswerDto implements ToConverter<ProductAnswer, ProductAnswe
     @Override
     public ProductAnswer toEntity() {
         return ProductAnswer.builder()
+                .id(id)
                 .title(title)
                 .context(context)
                 .isSendEmail(isSendEmail)
