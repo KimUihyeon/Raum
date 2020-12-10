@@ -62,6 +62,9 @@ public class OrderDto implements ToConverter<Order, OrderDto> {
         if (o.getAccount() != null) {
             dto.setAccount(new AccountDefaultDto(o.getAccount()));
         }
+        if(o.getOrderProduct() !=null){
+            dto.setOrderProduct(new OrderProductDto().of(o.getOrderProduct()));
+        }
         if (o.getDelivery() != null) {
             // 따로 주입하기
         }

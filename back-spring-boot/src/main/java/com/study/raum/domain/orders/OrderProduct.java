@@ -1,10 +1,7 @@
 package com.study.raum.domain.orders;
 
 import com.study.raum.domain.products.Product;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -28,9 +25,11 @@ public class OrderProduct {
     @GeneratedValue( strategy = GenerationType.AUTO)
     private Long id;
 
+    @Setter
     @OneToOne(mappedBy = "orderProduct")
     private Order order;
 
+    @Setter
     @OneToMany
     @Builder.Default
     private List<Product> products = new ArrayList<>();
